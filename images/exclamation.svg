@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EE6FF17B-967D-4368-B5A8-188CD45BA01E@1</title>
+    <g id="Details-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Details-Page---Inspection-Edits" transform="translate(-746.000000, -2476.000000)" fill-rule="nonzero">
+            <g id="Group-20" transform="translate(746.000000, 2300.000000)">
+                <g id="check-mark-(2)-copy" transform="translate(0.000000, 176.000000)">
+                    <path d="M22,11 C22,17.080246 17.0794067,22 11,22 C4.91975404,22 0,17.0794067 0,11 C0,4.91975404 4.92059326,0 11,0 C17.080246,0 22,4.92059326 22,11 Z" id="Shape" fill="#FFB900"></path>
+                    <g id="exclamation-mark" transform="translate(10.000000, 5.000000)" fill="#FFFFFF">
+                        <path d="M1,9.890625 C0.447711111,9.890625 0,10.3628203 0,10.9453125 C0,11.5278047 0.447711111,12 1,12 C1.55228889,12 2,11.5278047 2,10.9453125 C2,10.3628203 1.55228889,9.890625 1,9.890625 Z" id="Path"></path>
+                        <path d="M1,0 C0.447711111,0 0,0.472195312 0,1.0546875 L0,8.0625 C0,8.64499219 0.447711111,9.1171875 1,9.1171875 C1.55228889,9.1171875 2,8.64499219 2,8.0625 L2,1.0546875 C2,0.472195312 1.55228889,0 1,0 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
