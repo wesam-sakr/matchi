@@ -536,7 +536,8 @@ a.nav-link {
    --bs-breadcrumb-divider: '//';
    /* margin-bottom: 4rem; */
 }
-.breadcrumb-wrapper .overlay{
+
+.breadcrumb-wrapper .overlay {
    padding-block: 10rem 4.5rem;
 
 }
@@ -773,14 +774,14 @@ a.nav-link {
    justify-content: center;
 }
 
-.about-us .about-img ,
+.about-us .about-img,
 .why-us .about-img {
    background: #fcfcfc;
    border-radius: 15px;
    overflow: hidden;
 }
 
-.about-us .about-img img ,
+.about-us .about-img img,
 .why-us .about-img img {
    aspect-ratio: 5 / 4;
 }
@@ -1109,7 +1110,6 @@ a.nav-link {
    padding: 6px;
 }
 
-.car-details h5,
 .workshop-details h5 {
    font-size: 18px;
    font-weight: bold;
@@ -1118,17 +1118,20 @@ a.nav-link {
 }
 
 .car_feature .c_badge {
-   background: #1c608d11 0% 0% no-repeat padding-box;
-   border-radius: 25px;
+   background: #FFFFFF80 0% 0% no-repeat padding-box;
+   box-shadow: 0px 3px 6px #00000029;
+   border-radius: 9px;
+   opacity: 1;
+   backdrop-filter: blur(3px);
    padding: 4px 15px;
    border-radius: 8px;
    position: relative;
    padding-inline-end: 8px;
-   color: var(--main);
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   -ms-border-radius: 8px;
-   -o-border-radius: 8px;
+   /* color: var(--main); */
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   -ms-border-radius: 9px;
+   -o-border-radius: 9px;
 }
 
 .search-filter .form-select {
@@ -1211,35 +1214,35 @@ a.nav-link {
    z-index: 9;
 }
 
-.car-wrapper main {
+/* .car-wrapper main {
    float: left;
 }
 
 .car-wrapper aside {
    float: right;
-}
+} */
 
 .sticky-wrapper {
    position: relative;
 }
 
-.sticky.stuck {
+/* .sticky.stuck {
    position: fixed;
-   top: 100px;
-}
+   top: 10px;
+} */
 
 /* .sticky {
    position: absolute;
    top: 0%;
    right: 0;
 } */
-.bottom {
+/* .bottom {
    transform: translateY(-100%);
    -webkit-transform: translateY(-100%);
    -moz-transform: translateY(-100%);
    -ms-transform: translateY(-100%);
    -o-transform: translateY(-100%);
-}
+} */
 
 .car_info_title {
    color: var(--main);
@@ -1832,7 +1835,11 @@ footer .copyrights img {
 
 /*==-------- cars page --------==*/
 .car_filter {
-   padding-inline-end: var(--gutter-x);
+   padding-inline-end: calc(var(--gutter-x)*.5);
+}
+
+.car_filter label {
+   margin-bottom: .5rem;
 }
 
 .filter {
@@ -1841,8 +1848,8 @@ footer .copyrights img {
    -moz-border-radius: 24px 0 0 24px;
    -ms-border-radius: 24px 0 0 24px;
    -o-border-radius: 24px 0 0 24px;
-   border: 2px solid #f1f1f1;
-   padding: 2rem 1.5rem;
+   padding: 2rem 2rem;
+   background: var(--secondary);
 }
 
 .selected-filters-title,
@@ -1877,7 +1884,6 @@ footer .copyrights img {
 
 .middle .multi-range-slider {
    direction: ltr;
-   /* position: relative; */
 }
 
 .middle .slider {
@@ -1941,7 +1947,7 @@ footer .copyrights img {
 input[type=range] {
    position: absolute;
    pointer-events: none;
-   -webkit-appearance: none;
+   -webkit-appearanceع9: none;
    z-index: 2;
    height: 10px;
    width: 100%;
@@ -2034,9 +2040,15 @@ input[type=range]::-webkit-slider-thumb {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-bottom: 0.75rem;
+   margin-bottom: 1.5rem;
    padding: 1.25rem;
+   padding-top: .5rem;
    border-bottom: 1px solid #dddddd;
+}
+
+.filter-header .btn-close {
+   filter: brightness(0) invert(1);
+   -webkit-filter: brightness(0) invert(1);
 }
 
 /* .form-check-input:checked[type=checkbox] */
@@ -2050,7 +2062,7 @@ input[type=range]::-webkit-slider-thumb {
    border-color: var(--main);
 }
 
-#filter {
+/* #filter {
    position: fixed;
    top: 35vh;
    inset-inline-start: 0;
@@ -2060,7 +2072,7 @@ input[type=range]::-webkit-slider-thumb {
    border-radius: 8px 0px 0px 8px;
    display: none;
    z-index: 99;
-}
+} */
 
 /*==-------- blogs page *card style the same with cars* --------==*/
 .blogs .card {
@@ -2929,63 +2941,33 @@ body:has(.login-form)::before {
    -o-border-radius: 18px;
 }
 
-.slider-counter {
-   position: absolute;
-   bottom: 10px;
-   padding: 1rem;
-   z-index: 9;
-   color: var(--white);
-   font-weight: bold;
-   text-align: center;
-   inset-inline-start: 0;
-   inset-inline-end: 1px;
-   text-shadow: 2px 2px var(--dark-sky-blue);
-}
-
-.car-info .accordion-button {
-   box-shadow: unset !important;
-   background: transparent !important;
-   padding: 1.25rem 0rem;
-}
-
-.car-info .accordion-button:not(.collapsed) {
-   border-bottom: 1px solid #ddd !important;
-}
-
-.car-info .accordion-body {
-   padding-inline: 0;
-}
-
-.car-info .accordion-item:first-child .accordion-body ul {
+/* .car-info ul {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    column-gap: 18px;
-}
+} */
 
-.car-info .accordion-item:first-child .accordion-body ul li:not(:nth-last-child(-n + 2)) {
-   border-bottom: 1px solid #ddd !important;
-}
 
 .stick-next-to li {
-   color: #4E4E4E;
-   font-size: 15px;
-   padding: .75rem 0;
+   padding: 1rem 0;
+   display: flex;
+   justify-content: space-between;
 }
 
-.car-info .accordion-item:not(:first-child) .accordion-body li:not(:last-child) {
+.car-info li:not(:last-child) {
    border-bottom: 1px solid #ddd;
 }
 
-.car-info .accordion-item {
-   background-color: #FAFBFB;
+.car-info {
+   background-color: var(--lite-sec);
    margin-bottom: 10px;
    border: unset !important;
-   border-radius: 10px;
+   border-radius: 24px;
    padding: 0rem 1.75rem;
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   -ms-border-radius: 10px;
-   -o-border-radius: 10px;
+   -webkit-border-radius: 24px;
+   -moz-border-radius: 24px;
+   -ms-border-radius: 24px;
+   -o-border-radius: 24px;
 }
 
 .item-box:after {
@@ -3380,13 +3362,14 @@ body:has(.login-form)::before {
       position: absolute;
       top: 0%;
       right: 0;
+      left: 0;
    }
 }
 
 @media (max-width: 578px) {
-   .breadcrumb-wrapper {
+   /* .breadcrumb-wrapper {
       margin-bottom: 3rem;
-   }
+   } */
 
    .section-title {
       font-size: 1.5rem;
@@ -3400,11 +3383,11 @@ body:has(.login-form)::before {
       padding-inline: var(--gutter-x);
    }
 
-   #filter {
+   /* #filter {
       display: block;
-   }
+   } */
 
-   .filter,
+   /* .filter, */
    .profile-nav {
       display: block;
       width: 400px;

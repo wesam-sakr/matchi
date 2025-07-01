@@ -78,41 +78,40 @@ $(document).ready(function () {
   }
 
   // side sticky funcution
-  function stickySidebar(mainBlk, sidebarWrapper, sidebarBlk) {
-    var main = $(mainBlk); //Our sticky block will scroll next to this one
-    var stickyWrapper = $(sidebarWrapper); // General position relative wrapper for main and sticky block
-    var stickyBlk = $(sidebarBlk); // Our sticky block
-    var startPos = stickyBlk.offset().top; // Starting position where the block should stick
-    var finishPos = main.offset().top + main.outerHeight() - stickyBlk.outerHeight();
-    // Finishing position where the block should stick
+  // function stickySidebar(mainBlk, sidebarWrapper, sidebarBlk) {
+  //   var main = $(mainBlk); 
+  //   var stickyWrapper = $(sidebarWrapper); 
+  //   var stickyBlk = $(sidebarBlk); 
+  //   var startPos = stickyBlk.offset().top; 
+  //   var finishPos = main.offset().top + main.outerHeight() - stickyBlk.outerHeight();
 
-    stickyWrapper.height(main.height()); // Make our sticky block have the same height of main
+  //   stickyWrapper.height(main.height());
 
-    $(window).scroll(function () {
-      var currentScrollPos = $(document).scrollTop();
+  //   $(window).scroll(function () {
+  //     var currentScrollPos = $(document).scrollTop();
 
-      var test;
+  //     var test;
 
-      if ((currentScrollPos > startPos) && (currentScrollPos <= finishPos)) {
-        test = currentScrollPos + startPos;
-        stickyBlk.addClass('bottom');
-        stickyBlk.css('top', test);
-      } else if (currentScrollPos <= startPos) {
-        stickyBlk.removeClass('bottom');
-        stickyBlk.css('top', 0);
-      } else if (currentScrollPos > finishPos) {
-        stickyBlk.addClass('bottom');
-        stickyBlk.css('top', '100%');
-      } else {
-        stickyBlk.css('top', 100);
-      }
-    });
-  } // call function
-  if ($(window).width() >= 992 && $('.car-single').length > 0) {
-    $(window).on('load', function () {
-      stickySidebar('.stick-next-to', '.sticky-wrapper', '.sticky');
-    });
-  }
+  //     if ((currentScrollPos > startPos) && (currentScrollPos <= finishPos)) {
+  //       test = currentScrollPos + startPos;
+  //       stickyBlk.addClass('bottom');
+  //       stickyBlk.css('top', test);
+  //     } else if (currentScrollPos <= startPos) {
+  //       stickyBlk.removeClass('bottom');
+  //       stickyBlk.css('top', 0);
+  //     } else if (currentScrollPos > finishPos) {
+  //       stickyBlk.addClass('bottom');
+  //       stickyBlk.css('top', '100%');
+  //     } else {
+  //       stickyBlk.css('top', 100);
+  //     }
+  //   });
+  // } 
+  // if ($(window).width() >= 992 && $('.car-single').length > 0) {
+  //   $(window).on('load', function () {
+  //     stickySidebar('.stick-next-to', '.sticky-wrapper', '.sticky');
+  //   });
+  // }
 
 
   // home carousels
