@@ -157,6 +157,28 @@ $(document).ready(function () {
       }
     }
   });
+  $(".related_car .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    responsiveClass: true,
+    stagePadding: 30,
+    margin: 16,
+    rtl: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      578: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
    $(".partners .owl-carousel").owlCarousel({
     nav: false,
     loop: false,

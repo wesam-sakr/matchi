@@ -1047,7 +1047,7 @@ a.nav-link {
 .workshop-details .workshop_feature {
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   /* align-items: center; */
    padding: 1.25rem 0;
    border-bottom: 1px solid #ECECEC;
 }
@@ -1056,6 +1056,23 @@ a.nav-link {
    font-size: 23px;
    margin-bottom: 12px;
    color: var(--main);
+}
+
+.car_feature .owner-name {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.car_feature .owner-name img{
+   width: 30px;
+   height: 30px;
+   object-fit: cover;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
 }
 
 .hint {
@@ -1120,18 +1137,19 @@ a.nav-link {
 .car_feature .c_badge {
    background: #FFFFFF80 0% 0% no-repeat padding-box;
    box-shadow: 0px 3px 6px #00000029;
-   border-radius: 9px;
+   border-radius: 6px;
    opacity: 1;
    backdrop-filter: blur(3px);
    padding: 4px 15px;
    border-radius: 8px;
    position: relative;
    padding-inline-end: 8px;
-   /* color: var(--main); */
-   -webkit-border-radius: 9px;
-   -moz-border-radius: 9px;
-   -ms-border-radius: 9px;
-   -o-border-radius: 9px;
+   /*color: var(--main);
+   */-webkit-border-radius: 9px;
+   -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+   -o-border-radius: 6px;
+   -webkit-border-radius: 6px;
 }
 
 .search-filter .form-select {
@@ -2959,11 +2977,11 @@ body:has(.login-form)::before {
 }
 
 .car-info {
-   background-color: var(--lite-sec);
+   background-color: #2f2f2f;
    margin-bottom: 10px;
    border: unset !important;
    border-radius: 24px;
-   padding: 0rem 1.75rem;
+   padding: 2rem ;
    -webkit-border-radius: 24px;
    -moz-border-radius: 24px;
    -ms-border-radius: 24px;
