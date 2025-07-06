@@ -4,6 +4,7 @@
    --main: #890000;
    --secondary: #121212;
    --lite-sec: #171717;
+   --dark-gray: #2f2f2f;
    --white: #fff;
    --light: #DBDBDB;
    --ultra-lite: #F9F9F9;
@@ -218,7 +219,7 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: var(--dark-sky-blue);
+   background-color: var(--dark-gray);
    border-radius: 8px;
    -webkit-border-radius: 8px;
    -moz-border-radius: 8px;
@@ -370,7 +371,7 @@ a.white-btn,
 button.white-btn {
    color: var(--main) !important;
    background-color: var(--white);
-   padding: .75rem 0px !important;
+   padding: .625rem 0px !important;
    border-radius: 10px;
    min-width: 150px;
    width: fit-content;
@@ -821,7 +822,8 @@ a.nav-link {
 
 .financing-box {
    height: 100%;
-   padding: 1.5rem;
+   padding: 1.5rem 1rem;
+   text-align: center;
    background: var(--secondary);
    border-radius: 12px;
    -webkit-border-radius: 12px;
@@ -867,7 +869,11 @@ a.nav-link {
 }
 
 .financing-name {
-   font-size: 17px;
+   font-size: 16px;
+}
+
+.financing-desc {
+   font-size: 15px;
 }
 
 .join-us {
@@ -895,7 +901,7 @@ a.nav-link {
 .section-title h6 {
    font-size: 22px;
    font-weight: 700;
-   color: var(--dark-sky-blue);
+   color: var(--dark-gray);
    display: flex;
    align-items: center;
 }
@@ -950,7 +956,7 @@ a.nav-link {
 
 .workshop .details h6 {
    font-size: 18px;
-   color: var(--dark-sky-blue);
+   color: var(--dark-gray);
    font-weight: 700;
    margin-bottom: 0 !important;
 }
@@ -1064,7 +1070,7 @@ a.nav-link {
    gap: 10px;
 }
 
-.car_feature .owner-name img{
+.car_feature .owner-name img {
    width: 30px;
    height: 30px;
    object-fit: cover;
@@ -1140,15 +1146,13 @@ a.nav-link {
    border-radius: 6px;
    opacity: 1;
    backdrop-filter: blur(3px);
-   padding: 4px 15px;
+   padding: .425rem 1.25rem;
    border-radius: 8px;
    position: relative;
-   padding-inline-end: 8px;
-   /*color: var(--main);
-   */-webkit-border-radius: 9px;
-   -moz-border-radius: 6px;
-   -ms-border-radius: 6px;
-   -o-border-radius: 6px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   -ms-border-radius: 8px;
+   -o-border-radius: 8px;
    -webkit-border-radius: 6px;
 }
 
@@ -1429,7 +1433,7 @@ a.nav-link {
    font-size: 11px;
    font-weight: 600;
    color: var(--white);
-   background: var(--dark-sky-blue);
+   background: var(--dark-gray);
    width: 140px;
    height: 90px;
    border-radius: 0 0 50% 50%;
@@ -1618,13 +1622,13 @@ a.nav-link {
    }
 }
 
-footer .social {
+footer .social-icons {
    display: flex;
    justify-content: center;
    gap: .85rem;
 }
 
-footer .social div a {
+footer .social-icons i {
    width: 44px;
    height: 44px;
    border-radius: 50%;
@@ -1866,8 +1870,8 @@ footer .copyrights img {
    -moz-border-radius: 24px 0 0 24px;
    -ms-border-radius: 24px 0 0 24px;
    -o-border-radius: 24px 0 0 24px;
-   padding: 2rem 2rem;
-   background: var(--secondary);
+   padding: 1rem 2rem;
+   background: var(--lite-sec);
 }
 
 .selected-filters-title,
@@ -2056,11 +2060,15 @@ input[type=range]::-webkit-slider-thumb {
 .filter-header,
 .profile-header {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
-   margin-bottom: 1.5rem;
    padding: 1.25rem;
    padding-top: .5rem;
+}
+
+.profile-header {
+   justify-content: space-between;
+   margin-bottom: 1.5rem;
    border-bottom: 1px solid #dddddd;
 }
 
@@ -2123,15 +2131,15 @@ input[type=range]::-webkit-slider-thumb {
 
 .blog-head {
    background: var(--secondary);
-   padding: 6px 10px;
+   padding: 3px 10px;
    width: fit-content;
-   border-radius: 10px;
+   border-radius: 6px;
    font-size: smaller;
    gap: 8px;
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   -ms-border-radius: 10px;
-   -o-border-radius: 10px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+   -o-border-radius: 6px;
 }
 
 .blog-head span {
@@ -2977,11 +2985,11 @@ body:has(.login-form)::before {
 }
 
 .car-info {
-   background-color: #2f2f2f;
+   background-color: var(--dark-gray);
    margin-bottom: 10px;
    border: unset !important;
    border-radius: 24px;
-   padding: 2rem ;
+   padding: 2rem;
    -webkit-border-radius: 24px;
    -moz-border-radius: 24px;
    -ms-border-radius: 24px;
@@ -3059,7 +3067,8 @@ body:has(.login-form)::before {
 }
 
 .all .slider-two .item.active {
-   border: solid 1px var(--dark-sky-blue);
+   border: solid 1px var(--white);
+   box-shadow: 0px 3px 6px #00000029;
 }
 
 .all .slider-two .owl-stage {
@@ -3384,10 +3393,18 @@ body:has(.login-form)::before {
    }
 }
 
+.modal-backdrop {
+   display: none !important;
+}
+
 @media (max-width: 578px) {
    /* .breadcrumb-wrapper {
       margin-bottom: 3rem;
    } */
+
+   .navbar-light .navbar-brand img {
+      width: 100px;
+   }
 
    .section-title {
       font-size: 1.5rem;
@@ -3448,11 +3465,7 @@ body:has(.login-form)::before {
       width: 100px;
    }
 
-   .check_step {
-      padding: 1.5rem .5rem;
-   }
-
-   .car_actions {
+   /* .car_actions {
       position: fixed;
       bottom: 0;
       inset-inline: 0;
@@ -3466,68 +3479,6 @@ body:has(.login-form)::before {
       -moz-border-radius: 20px 20px 0 0;
       -ms-border-radius: 20px 20px 0 0;
       -o-border-radius: 20px 20px 0 0;
-   }
-
-   .car_actions .main-btn,
-   .car_actions .main-outline-btn {
-      padding-inline: 10px;
-   }
-
-   .car_contact {
-      position: fixed;
-      z-index: 999;
-      backdrop-filter: blur(5px);
-      background-color: rgba(255, 255, 255, .5);
-      inset-inline: 0;
-      bottom: 0;
-      height: 100vh;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-   }
-
-   .car_contact .bg-white {
-      padding: 2rem 1rem;
-      box-shadow: 0 0 5px 0 rgb(0 0 0 / 13%);
-      border-radius: 20px 20px 0 0;
-      -webkit-border-radius: 20px 20px 0 0;
-      -moz-border-radius: 20px 20px 0 0;
-      -ms-border-radius: 20px 20px 0 0;
-      -o-border-radius: 20px 20px 0 0;
-   }
-
-   .car-wrapper aside,
-   .car-wrapper main {
-      float: unset;
-   }
-
-   .modal {
-      z-index: 999;
-      backdrop-filter: blur(5px);
-      background-color: rgba(255, 255, 255, .5);
-   }
-
-   .modal-dialog-centered {
-      align-items: end;
-      margin: 0;
-      height: 100%;
-   }
-
-   .modal-content {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      box-shadow: 0 0 5px 0 rgb(0 0 0 / 13%);
-
-   }
-
-   .car-info .accordion-item:first-child .accordion-body ul,
-   .check_report ul {
-      display: block;
-   }
-
-   .check_report_wrapp {
-      padding-top: 40px;
-   }
+   } */
 
 }

@@ -124,7 +124,7 @@ $(document).ready(function () {
     rtl: true,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         stagePadding: 12
       },
       768: {
@@ -166,10 +166,10 @@ $(document).ready(function () {
     rtl: true,
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       578: {
-        items: 2
+        items: 1
       },
       768: {
         items: 3
