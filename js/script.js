@@ -18,6 +18,7 @@ $(document).ready(function () {
     });
   }
 
+  
   // verification code OTP
   if ($('#verification-input').length > 0) {
     const inputs = Array.from(document.getElementById("verification-input").children);
@@ -119,13 +120,11 @@ $(document).ready(function () {
     nav: false,
     loop: false,
     responsiveClass: true,
-    stagePadding: 30,
     margin: 16,
     rtl: true,
     responsive: {
       0: {
         items: 1,
-        stagePadding: 12
       },
       768: {
         items: 3
@@ -139,7 +138,6 @@ $(document).ready(function () {
     nav: false,
     loop: false,
     responsiveClass: true,
-    stagePadding: 30,
     margin: 16,
     rtl: true,
     responsive: {
@@ -161,7 +159,6 @@ $(document).ready(function () {
     nav: false,
     loop: false,
     responsiveClass: true,
-    stagePadding: 30,
     margin: 16,
     rtl: true,
     responsive: {
@@ -183,7 +180,6 @@ $(document).ready(function () {
     nav: false,
     loop: false,
     responsiveClass: true,
-    stagePadding: 30,
     margin: 16,
     rtl: true,
     responsive: {
@@ -202,13 +198,11 @@ $(document).ready(function () {
     nav: false,
     loop: false,
     responsiveClass: true,
-    stagePadding: 30,
     margin: 16,
     rtl: true,
     responsive: {
       0: {
         items: 2,
-        stagePadding: 12
       },
       768: {
         items: 3
@@ -218,7 +212,31 @@ $(document).ready(function () {
       }
     }
   });
+  $(".pricing .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    responsiveClass: true,
+    margin: 16,
+    rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        dots: true
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3 ,
+        mouseDrag: false,
+        touchDrag: false
 
+      }
+    }
+  });
+
+  $('.filter select').select2();
+  
   // car details carousel
   var changeSlide = 4; // mobile -1, desktop + 1
   // Resize and refresh page. slider-two slideBy bug remove
@@ -491,8 +509,5 @@ $(document).ready(function () {
     });
   }
 
+  
 });
-
-$(function () {
-  new WOW().init();
-})
