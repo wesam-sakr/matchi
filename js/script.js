@@ -5,20 +5,18 @@ $(document).ready(function () {
   $("body").css('overflow-y', 'auto');
   $('#loading').fadeOut(500);
 
-  // show & hide password
-  if ($('.pass').length > 0) {
-    $('.pass').click(function () {
-      $(this).toggleClass("bi-eye-slash bi-eye");
-      var pass = $(this).closest('.input-group').find('input');
-      if (pass.attr("type") == "password") {
-        pass.attr("type", "text");
-      } else {
-        pass.attr("type", "password");
-      }
-    });
-  }
+  // toggle password type
+  $('.pass').click(function () {
+    $(this).children('i').toggleClass("bi-unlock bi-lock");
+    var pass = $(this).closest('.input-group').find('input')[0];
+    console.log(pass);
+    if (pass.type == "password") {
+      pass.setAttribute("type", "text");
+    } else {
+      pass.setAttribute("type", "password");
+    }
+  })
 
-  
   // verification code OTP
   if ($('#verification-input').length > 0) {
     const inputs = Array.from(document.getElementById("verification-input").children);
@@ -32,45 +30,45 @@ $(document).ready(function () {
             inputs[i - 1].value = "";
             inputs[i - 1].focus();
           }
-  
+
           for (let j = i; j < inputs.length; j++) {
             let value = inputs[j + 1] ? inputs[j + 1].value : "";
             inputs[j].setRangeText(value, 0, 1, "start");
           }
         }
-  
+
         if (e.key === "ArrowLeft" && i > 0) {
           inputs[i - 1].focus();
         }
-  
+
         if (e.key === "ArrowRight" && i < inputs.length - 1) {
           inputs[i + 1].focus();
         }
       });
-  
+
       input.addEventListener("input", (e) => {
         input.value = "";
-  
+
         const start = getFirstEmptyIndex();
         inputs[start].value = e.data;
-  
+
         if (start + 1 < inputs.length) inputs[start + 1].focus();
       });
-  
+
       input.addEventListener("paste", (e) => {
         e.preventDefault();
-  
+
         const text = (event.clipboardData || window.clipboardData).getData("text");
         const firstEmpty = getFirstEmptyIndex();
         const start = firstEmpty !== -1 ? Math.min(i, firstEmpty) : i;
-  
+
         for (let i = 0; start + i < inputs.length && i < text.length; i++) {
           inputs[start + i].value = text.charAt(i);
         }
-  
+
         inputs[Math.min(start + text.length, inputs.length - 1)].focus();
       });
-  
+
       input.addEventListener("focus", () => {
         const start = getFirstEmptyIndex();
         if (start !== -1 && i > start) inputs[start].focus();
@@ -176,7 +174,7 @@ $(document).ready(function () {
       }
     }
   });
-   $(".partners .owl-carousel").owlCarousel({
+  $(".partners .owl-carousel").owlCarousel({
     nav: false,
     loop: false,
     responsiveClass: true,
@@ -227,7 +225,7 @@ $(document).ready(function () {
         items: 2,
       },
       992: {
-        items: 3 ,
+        items: 3,
         mouseDrag: false,
         touchDrag: false
 
@@ -235,8 +233,6 @@ $(document).ready(function () {
     }
   });
 
-  $('.filter select').select2();
-  
   // car details carousel
   var changeSlide = 4; // mobile -1, desktop + 1
   // Resize and refresh page. slider-two slideBy bug remove
@@ -306,167 +302,15 @@ $(document).ready(function () {
   });
 
 
-  // === start filter page === //
-  $("#filter").click(function () {
-    console.log('filteeeeer')
-    $(".filter").toggleClass("filter-toggle");
+  $('.subscribe-btn').on('click', function () {
+    var name = $(this).data('package');
+    var price = $(this).data('price');
+
+    $('#packageName').val(name);
+    $('#packagePrice').val(price);
+
+    $('#subscribeFormWrapper').removeClass('d-none')[0].scrollIntoView({ behavior: 'smooth' });
   });
-  $(".filter-header .btn-close").click(function () {
-    $(".filter").toggleClass("filter-toggle");
-  });
-  if ($('.car_filter').length > 0) {
-    // Add event listeners to filter options
-    const selectedFiltersList = document.getElementById('selected-filters-list');
-    const filterInputs = document.querySelectorAll('.car_filter .form-check-input');
-    const clearAllBtn = document.getElementById('clear-all-filters');
-    if (filterInputs.length > 0) {
-      filterInputs.forEach(input => {
-        input.addEventListener('change', function () {
-          const label = this.nextElementSibling.textContent.trim();
-          if (this.checked) {
-            // Add selected filter if it's not already added
-            let existingFilter = selectedFiltersList.querySelector(`[data-filter="${this.id}"]`);
-            if (!existingFilter) {
-              const li = document.createElement('li');
-              li.textContent = label;
-              li.setAttribute('data-filter', this.id);
-
-              // For radio buttons, associate the filter with the radio group
-              if (this.type === 'radio') {
-                const groupName = this.name;
-                const previousSelection = selectedFiltersList.querySelector(`[data-group="${groupName}"]`);
-                if (previousSelection) {
-                  selectedFiltersList.removeChild(previousSelection);
-                }
-                li.setAttribute('data-group', this.name);
-              }
-
-              const removeBtn = document.createElement('button');
-              removeBtn.className = 'remove-filter-btn';
-              removeBtn.innerHTML = '<i class="fas fa-times"></i>'; // Using Font Awesome icon
-              removeBtn.onclick = function () {
-                document.getElementById(li.getAttribute('data-filter')).checked = false;
-                selectedFiltersList.removeChild(li);
-              };
-
-              li.appendChild(removeBtn);
-              selectedFiltersList.appendChild(li);
-            }
-          } else {
-            // Remove unselected filter
-            const itemToRemove = selectedFiltersList.querySelector(`[data-filter="${this.id}"]`);
-            if (itemToRemove) {
-              selectedFiltersList.removeChild(itemToRemove);
-            }
-          }
-
-          if (selectedFiltersList.children.length > 0) {
-            selectedFiltersList.style.display = 'flex'
-          }
-          else {
-            console.log('empty')
-            selectedFiltersList.style.display = 'none'
-          }
-        });
-      });
-
-      // Function to clear all filters
-      clearAllBtn.addEventListener('click', function () {
-        selectedFiltersList.style.display = 'none'
-        // Uncheck all inputs
-        filterInputs.forEach(input => input.checked = false);
-
-        // Remove all selected filters from the list
-        while (selectedFiltersList.firstChild) {
-          selectedFiltersList.removeChild(selectedFiltersList.firstChild);
-        }
-      });
-    }
-    if (selectedFiltersList.children.length > 0) {
-      selectedFiltersList.style.display = 'flex'
-    }
-    else {
-      console.log('empty')
-      selectedFiltersList.style.display = 'none'
-    }
-    // price from .. to ..
-    var inputLeft = document.getElementById("input-left");
-    var inputRight = document.getElementById("input-right");
-    var thumbLeft = document.querySelector(".slider > .thumb.left");
-    var thumbRight = document.querySelector(".slider > .thumb.right");
-    var range = document.querySelector(".slider > .range");
-    var priceFrom = document.querySelector(".price-from");
-    var priceTo = document.querySelector(".price-to");
-    if (inputLeft !== null) {
-      function setLeftValue() {
-        var _this = inputLeft,
-          min = parseInt(_this.min),
-          max = parseInt(_this.max);
-
-        _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
-
-        var percent = ((_this.value - min) / (max - min)) * 100;
-
-        thumbLeft.style.left = percent + "%";
-        range.style.left = percent + "%";
-
-        // Calculate price based on range value
-        var price = parseInt(inputLeft.value) * 3; // Adjust this formula based on your requirements
-        priceFrom.textContent = price + " ج.م";
-      }
-      setLeftValue();
-
-      function setRightValue() {
-        var _this = inputRight,
-          min = parseInt(_this.min),
-          max = parseInt(_this.max);
-
-        _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
-
-        var percent = ((_this.value - min) / (max - min)) * 100;
-
-        thumbRight.style.right = (100 - percent) + "%";
-        range.style.right = (100 - percent) + "%";
-
-        // Calculate price based on range value
-        var price = parseInt(inputRight.value) * 3; // Adjust this formula based on your requirements
-        priceTo.textContent = price + "  ج.م";
-      }
-      setRightValue();
-
-      inputLeft.addEventListener("input", setLeftValue);
-      inputRight.addEventListener("input", setRightValue);
-
-      // Add event listeners for thumb hover and active states
-      // These listeners are not directly related to updating the price
-      inputLeft.addEventListener("mouseover", function () {
-        thumbLeft.classList.add("hover");
-      });
-      inputLeft.addEventListener("mouseout", function () {
-        thumbLeft.classList.remove("hover");
-      });
-      inputLeft.addEventListener("mousedown", function () {
-        thumbLeft.classList.add("active");
-      });
-      inputLeft.addEventListener("mouseup", function () {
-        thumbLeft.classList.remove("active");
-      });
-
-      inputRight.addEventListener("mouseover", function () {
-        thumbRight.classList.add("hover");
-      });
-      inputRight.addEventListener("mouseout", function () {
-        thumbRight.classList.remove("hover");
-      });
-      inputRight.addEventListener("mousedown", function () {
-        thumbRight.classList.add("active");
-      });
-      inputRight.addEventListener("mouseup", function () {
-        thumbRight.classList.remove("active");
-      });
-    }
-  }
-  // === end filter page === //
 
   // apply job upload cv
   $(".file-input").change(function () {
@@ -509,5 +353,7 @@ $(document).ready(function () {
     });
   }
 
-  
+  $('.filter select').select2();
+
+
 });
