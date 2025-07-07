@@ -353,7 +353,7 @@ $(document).ready(function () {
     });
   }
 
-  $('.filter select').select2();
+  // $('.filter select').select2();
 
 
 });
