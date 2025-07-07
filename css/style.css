@@ -2245,10 +2245,10 @@ input[type=range]::-webkit-slider-thumb {
 } */
 
 /*==-------- blogs page *card style the same with cars* --------==*/
-.blogs .card {
+/* .blogs .card {
    color: #4E4E4E;
    padding-bottom: 1.5rem;
-}
+} */
 
 .blogs .card-img-top {
    width: 92%;
@@ -2315,6 +2315,16 @@ input[type=range]::-webkit-slider-thumb {
 .blogs .blog_details .blog-desc {
    display: block;
    color: #4E4E4E;
+}
+
+.blog-search{
+   background: var(--dark-gray);
+   padding: .3rem .5rem;
+   border-radius: 12px;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   -ms-border-radius: 12px;
+   -o-border-radius: 12px;
 }
 
 /*==-------- login page  --------==*/
