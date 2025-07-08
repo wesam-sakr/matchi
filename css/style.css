@@ -2552,6 +2552,22 @@ input[type=range]::-webkit-slider-thumb {
    position: relative;
    z-index: 99;
 }
+.profile-data .filter-orders a{
+   padding: .5rem 1rem;
+   min-width: 18%;
+   text-align: center;
+   border: 1px solid white;
+   border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   -ms-border-radius: 8px;
+   -o-border-radius: 8px;
+   font-weight: 600;
+}
+.profile-data .filter-orders a.active{
+   background-color: var(--white);
+   color: var(--secondary);
+}
 
 [dir=rtl] [type=email],
 [dir=rtl] [type=number],
@@ -3169,14 +3185,14 @@ input[type=range]::-webkit-slider-thumb {
       right: 0;
       left: 0;
    }
-   
-.profile-data .favourite .card-img-top {
-   max-width: 45%;
-}
 
-.profile-data .favourite .card-img-top img {
-   height: 100%;
-}
+   .profile-data .favourite .card-img-top {
+      max-width: 45%;
+   }
+
+   .profile-data .favourite .card-img-top img {
+      height: 100%;
+   }
 }
 
 .modal-backdrop {
@@ -3213,9 +3229,9 @@ input[type=range]::-webkit-slider-thumb {
    }
 
    .profile-data:has(.cars) {
-        padding: 0;
-        background: transparent;
-    }
+      padding: 0;
+      background: transparent;
+   }
 
    /* #filter {
       display: block;
