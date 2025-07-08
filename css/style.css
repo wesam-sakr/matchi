@@ -473,7 +473,7 @@ button.white-btn {
    background-color: var(--lite-sec);
 }
 
-.modal-header .btn-close {
+.btn-close {
    filter: brightness(0) invert(1);
    margin: unset !important;
    margin-inline-start: auto !important;
@@ -2243,18 +2243,6 @@ input[type=range]::-webkit-slider-thumb {
    border-color: var(--main);
 }
 
-/* #filter {
-   position: fixed;
-   top: 35vh;
-   inset-inline-start: 0;
-   color: var(--white) !important;
-   background: var(--main);
-   padding: 0.5rem .75rem;
-   border-radius: 8px 0px 0px 8px;
-   display: none;
-   z-index: 99;
-} */
-
 /*==-------- blogs page *card style the same with cars* --------==*/
 /* .blogs .card {
    color: #4E4E4E;
@@ -2428,13 +2416,13 @@ input[type=range]::-webkit-slider-thumb {
    background: var(--main);
    border-radius: 6px;
    color: var(--white);
-   padding: .75rem 1rem;
+   padding: 1rem;
    margin-bottom: 1.5rem;
    font-size: 18px;
 }
 
 .profile-nav {
-   background: #FAFAFA;
+   background: var(--dark-gray);
    padding: .5rem 0;
    border-radius: 8px;
 }
@@ -2525,13 +2513,13 @@ input[type=range]::-webkit-slider-thumb {
    background: transparent;
 }
 
-.profile-nav .nav-link :first-child {
-   width: 20px;
+.profile-nav .nav-link i:first-child {
+   width: 22px;
 }
 
 .profile-nav .nav-link.active {
    color: var(--main);
-   background: #2778b210;
+   background: rgba(var(--whiteOp), 0.5);
 }
 
 .profile-nav .nav-link.active::before {
@@ -2542,60 +2530,27 @@ input[type=range]::-webkit-slider-thumb {
    top: 15%;
    inset-inline-start: 0;
    border-radius: 8px;
-   background: #FFCC00;
+   background: var(--white);
 }
 
 .profile-nav .logout {
-   color: rgb(255, 20, 20);
-   display: flex;
    width: 100%;
-   align-items: center;
-   gap: 10px;
-   background-color: transparent;
    font-weight: bold;
-   margin-top: 1rem;
    padding-top: 1rem;
-   padding-inline-start: 1.8rem;
-   border-top: 1px solid #E8E8E8;
+   justify-content: center;
 }
 
 .profile-data {
    height: auto;
-   background: #FAFAFA;
+   background: var(--dark-gray);
    border-radius: 8px;
-   padding: 3rem 4.5rem;
+   padding: 5rem 3rem;
 }
 
-.profile label {
-   margin-bottom: .75rem;
-   color: var(--main);
-   font-weight: 600;
-}
 
-.profile-data .form-control {
-   border: unset;
-   padding: .75rem 1.25rem;
-   box-shadow: unset !important;
-}
-
-.profile-data .input-group {
-   border-radius: .375rem;
-   -webkit-border-radius: .375rem;
-   -moz-border-radius: .375rem;
-   -ms-border-radius: .375rem;
-   -o-border-radius: .375rem;
-   margin: 0;
-}
-
-.profile-data .input-group-text {
-   background: var(--white);
-   border: unset;
-   color: #6C6C6C;
-}
-
-.profile-data .input-group-text.edit {
-   text-decoration: underline;
-   font-size: small;
+.profile-data .favourite .heart {
+   position: relative;
+   z-index: 99;
 }
 
 [dir=rtl] [type=email],
@@ -2611,22 +2566,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .profile-data .text-edit:hover {
    background: var(--sky) !important;
-}
-
-.profile-data .heart {
-   background: var(--white) !important;
-   box-shadow: 0px 3px 6px #00000029;
-   width: 30px;
-   height: 30px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   -ms-border-radius: 50%;
-   -o-border-radius: 50%;
-   z-index: 99;
 }
 
 .own_car {
@@ -3230,6 +3169,14 @@ input[type=range]::-webkit-slider-thumb {
       right: 0;
       left: 0;
    }
+   
+.profile-data .favourite .card-img-top {
+   max-width: 45%;
+}
+
+.profile-data .favourite .card-img-top img {
+   height: 100%;
+}
 }
 
 .modal-backdrop {
@@ -3265,6 +3212,11 @@ input[type=range]::-webkit-slider-thumb {
       padding-inline: var(--gutter-x);
    }
 
+   .profile-data:has(.cars) {
+        padding: 0;
+        background: transparent;
+    }
+
    /* #filter {
       display: block;
    } */
@@ -3277,14 +3229,14 @@ input[type=range]::-webkit-slider-thumb {
       max-width: 80%;
       position: fixed;
       margin-top: 0;
-      z-index: 999;
+      z-index: 1099;
       top: 0;
       right: 0;
       height: 100%;
       border-radius: 12px 0 0 12px;
       transition: 0.3s;
-      background: white;
-      box-shadow: -1px 2px 17px 3px #1c608d24;
+      /* background: white; */
+      box-shadow: -1px 2px 17px 3px #18181824;
       -webkit-border-radius: 12px 0 0 12px;
       -moz-border-radius: 12px 0 0 12px;
       -ms-border-radius: 12px 0 0 12px;
