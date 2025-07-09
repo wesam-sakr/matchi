@@ -492,7 +492,7 @@ button.white-btn {
 /* ------------- navbar ------------ */
 header {
    padding: .15rem 1.85rem;
-   z-index: 999;
+   z-index: 1099;
    inset-inline-start: calc(var(--gutter-x)*.5) !important;
    inset-inline-end: calc(var(--gutter-x)*.5) !important;
    top: 1rem;
@@ -2504,7 +2504,7 @@ input[type=range]::-webkit-slider-thumb {
 .profile-nav .nav-link {
    display: flex;
    align-items: center;
-   gap: 12px;
+   gap: 8px;
    color: #C2C2C2;
    position: relative;
    margin-bottom: .5rem;
@@ -2515,6 +2515,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .profile-nav .nav-link i:first-child {
    width: 22px;
+   text-align: center;
 }
 
 .profile-nav .nav-link.active {
@@ -2552,7 +2553,8 @@ input[type=range]::-webkit-slider-thumb {
    position: relative;
    z-index: 99;
 }
-.profile-data .filter-orders a{
+
+.profile-data .filter-orders a {
    padding: .5rem 1rem;
    min-width: 18%;
    text-align: center;
@@ -2564,10 +2566,123 @@ input[type=range]::-webkit-slider-thumb {
    -o-border-radius: 8px;
    font-weight: 600;
 }
-.profile-data .filter-orders a.active{
+
+.profile-data th,
+.profile-data td {
+   background-color: transparent !important;
+   color: var(--white);
+   padding-block: .85rem;
+   border-bottom: 1px solid rgba(var(--whiteOp), 0.5);
+}
+
+.profile-data .filter-orders a.active {
    background-color: var(--white);
    color: var(--secondary);
 }
+
+.car_action .white-btn {
+   position: relative;
+   min-width: unset !important;
+   padding: .35rem 2.5rem !important;
+   color: var(--secondary) !important;
+
+}
+
+.car_action_list {
+   padding: .5rem 0;
+   display: none;
+   position: absolute;
+   z-index: 1009;
+   /* inset-inline-start: 0; */
+}
+
+.car_action_list ul {
+   background: var(--white);
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   padding: 1rem 2.25rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.car_action_list li * {
+   color: var(--secondary) !important;
+   width: 100%;
+}
+
+.car_action:hover .car_action_list {
+   display: flex;
+}
+
+.upload__inputfile {
+   inset: 0;
+   opacity: 0;
+   overflow: hidden;
+   position: absolute;
+   cursor: pointer;
+}
+
+.upload__btn-box button {
+   background-color: transparent;
+   border: 1px solid #dedede;
+   padding: 2.5rem 1rem;
+   border-radius: 4px;
+   font-size: 17px;
+   margin-bottom: 0.85rem;
+   position: relative;
+}
+
+.upload__img-wrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.upload__img-wrap img {
+   max-width: 100%;
+   object-fit: cover;
+   aspect-ratio: 1/1;
+}
+
+.upload__img-box {
+   position: relative;
+   height: 100%;
+   border-radius: 10px;
+   overflow: hidden;
+   background: rgba(var(--mainOp), .05);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+.upload__img-close {
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   background-color: rgba(0, 0, 0, 0.5);
+   position: absolute;
+   top: 10px;
+   inset-inline-start: 10px;
+   text-align: center;
+   line-height: 24px;
+   z-index: 2;
+   cursor: pointer;
+}
+
+.upload__img-close:after {
+   content: "\2716";
+   font-size: 14px;
+   color: white;
+}
+
 
 [dir=rtl] [type=email],
 [dir=rtl] [type=number],
@@ -3233,9 +3348,9 @@ input[type=range]::-webkit-slider-thumb {
       background: transparent;
    }
 
-   /* #filter {
-      display: block;
-   } */
+   .login-form {
+      padding: 5rem 2rem;
+   }
 
    /* .filter, */
    .profile-nav {
@@ -3251,7 +3366,6 @@ input[type=range]::-webkit-slider-thumb {
       height: 100%;
       border-radius: 12px 0 0 12px;
       transition: 0.3s;
-      /* background: white; */
       box-shadow: -1px 2px 17px 3px #18181824;
       -webkit-border-radius: 12px 0 0 12px;
       -moz-border-radius: 12px 0 0 12px;
@@ -3272,28 +3386,16 @@ input[type=range]::-webkit-slider-thumb {
       text-align: center;
    }
 
+   footer a.nav-link {
+      padding: .5rem;
+   }
+
    footer .copyrights {
-      font-size: 14px;
+      font-size: 13px;
    }
 
    footer .copyrights img {
-      width: 100px;
+      width: 95px;
    }
-
-   /* .car_actions {
-      position: fixed;
-      bottom: 0;
-      inset-inline: 0;
-      display: flex;
-      gap: 10px;
-      background: var(--white);
-      padding: 2rem 1rem;
-      border-radius: 20px 20px 0 0;
-      box-shadow: 0 0 5px 0 rgb(0 0 0 / 13%);
-      -webkit-border-radius: 20px 20px 0 0;
-      -moz-border-radius: 20px 20px 0 0;
-      -ms-border-radius: 20px 20px 0 0;
-      -o-border-radius: 20px 20px 0 0;
-   } */
 
 }

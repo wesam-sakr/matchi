@@ -162,30 +162,47 @@
               <!-- profile navigation -->
               <ul class="nav w-100 flex-column">
                 <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="dashboard.html">
+                    <i class="bi bi-unlock2"></i>
+                    <span> لوحة التحكم </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="profile.html">
                     <i class="bi bi-person"></i>
                     <span> الملف الشخصي </span>
                   </a>
                 </li>
+
                 <li class="nav-item">
-                  <a class="nav-link" href="p_changePass.html">
+                  <a class="nav-link" href="changePass.html">
                     <i class="bi bi-lock"></i>
                     <span> كلمة المرور </span>
                   </a>
                 </li>
+
                 <li class="nav-item">
-                  <a class="nav-link active" href="p_favourite.html">
-                    <i class="bi bi-heart"></i>
-                    <span> المفضلة </span>
+                  <a class="nav-link" href="orders.html">
+                    <i class="bi bi-journal-text"></i>
+                    <span> الطلبات </span>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="p_orders.html">
-                    <i class="bi bi-journal-text"></i>
-                    <span> طلباتي </span>
+                  <a class="nav-link" href="vendor_cars.html">
+                    <i class="bi bi-car-front-fill"></i>
+                    <span> السيارات </span>
                   </a>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="add_car.html">
+                    <i class="bi bi-plus-lg"></i>
+                    <span> إضافة سيارة </span>
+                  </a>
+                </li>
+
                 <li class="nav-item">
                   <form action="">
                     <button class="logout nav-link">تسجيل خروج</button>
@@ -201,153 +218,155 @@
               <i class="bi bi-sliders fs-5"></i>
             </button>
             <!-- end -->
-            <div class="profile-data">
-              <div class="cars favourite row row-cols-1 g-3">
-                <div class="col">
-                  <div class="card flex-lg-row">
-                    <div class="badge">
-                      <i class="fa-solid fa-key"></i>
-                      جديدة
-                    </div>
-                    <a href="../car_details.html" class="link"></a>
-                    <div class="card-img-top">
-                      <img src="../images/06.jpg" alt />
-                    </div>
-                    <div class="wrapper p-3 w-100">
-                      <div class="card-body">
-                        <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                        <p class="price">
-                          <b>51,000</b>
-                          <b>ريال</b>
-                          <span>/</span>
-                          <span>3200</span>
-                          <span>شهريًا</span>
-                        </p>
-                      </div>
-                      <div class="card-footer pb-2">
-                        <div class="button-group d-flex gap-2">
+            <div class="profile-data py-4">
+              <h2 class="fs-5 fw-bold mb-4">إضافة سيارة</h2>
+              <form action="" method="post">
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="اسم السيارة"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <select name="" id="" class="form-select">
+                      <option value="" hidden>النوع</option>
+                      <option value="">النوع</option>
+                      <option value="">النوع</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="الموديل"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="اللون"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="عدد الكيلومترات"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="نوع الوقود"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="ناقل الحركة"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="سعة المحرك"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="السعر"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <select name="" id="" class="form-select">
+                      <option value="" hidden>هل تقبل التمويل؟</option>
+                      <option value="">نعم</option>
+                      <option value="">لا</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <textarea
+                      name=""
+                      class="form-control"
+                      id=""
+                      placeholder="تفاصيل السيارة"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="upload-wrapper mb-3">
+                      <div class="upload__box">
+                        <div class="upload__btn-box">
                           <button
                             type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingRequest_modal"
-                            class="main-outline-btn flex-grow-1"
+                            class="upload__btn col-lg-3 col-6 d-inline-flex flex-column gap-3"
                           >
-                            طلب تمويل
-                          </button>
-                          <button
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingCalculator_modal"
-                            class="main-outline-btn brdrt flex-grow-1"
-                          >
-                            حاسبة التمويل
+                            <h5 class="fw-normal fs-6 upload__box_title">
+                              صور السيارة
+                            </h5>
+                            <i class="bi bi-camera fs-2"></i>
+
+                            <input
+                              type="file"
+                              accept="images/*"
+                              name="document[]"
+                              multiple=""
+                              data-max_length="20"
+                              class="upload__inputfile"
+                            />
                           </button>
                         </div>
-                        <button class="heart fw-semibold mt-3">
-                          <i class="fa-solid fa-heart"></i>
-                          <span>حذف من المفضلة</span>
-                        </button>
+
+                        <div
+                          class="upload__img-wrap row g-3 row-cols-lg-5"
+                        ></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card flex-lg-row">
-                    <div class="badge">
-                      <i class="fa-solid fa-key"></i>
-                      جديدة
-                    </div>
-                    <a href="../car_details.html" class="link"></a>
-                    <div class="card-img-top">
-                      <img src="../images/06.jpg" alt />
-                    </div>
-                    <div class="wrapper p-3 w-100">
-                      <div class="card-body">
-                        <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                        <p class="price">
-                          <b>51,000</b>
-                          <b>ريال</b>
-                          <span>/</span>
-                          <span>3200</span>
-                          <span>شهريًا</span>
-                        </p>
-                      </div>
-                      <div class="card-footer pb-2">
-                        <div class="button-group d-flex gap-2">
-                          <button
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingRequest_modal"
-                            class="main-outline-btn flex-grow-1"
-                          >
-                            طلب تمويل
-                          </button>
-                          <button
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingCalculator_modal"
-                            class="main-outline-btn brdrt flex-grow-1"
-                          >
-                            حاسبة التمويل
-                          </button>
-                        </div>
-                        <button class="heart fw-semibold mt-3">
-                          <i class="fa-solid fa-heart"></i>
-                          <span>حذف من المفضلة</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-md-4">
+                  <button
+                    type="submit"
+                    class="main-outline-btn brdrt w-100 mt-3"
+                  >
+                    إضافة
+                  </button>
                 </div>
-                <div class="col">
-                  <div class="card flex-lg-row">
-                    <div class="badge">
-                      <i class="fa-solid fa-key"></i>
-                      جديدة
-                    </div>
-                    <a href="../car_details.html" class="link"></a>
-                    <div class="card-img-top">
-                      <img src="../images/06.jpg" alt />
-                    </div>
-                    <div class="wrapper p-3 w-100">
-                      <div class="card-body">
-                        <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                        <p class="price">
-                          <b>51,000</b>
-                          <b>ريال</b>
-                          <span>/</span>
-                          <span>3200</span>
-                          <span>شهريًا</span>
-                        </p>
-                      </div>
-                      <div class="card-footer pb-2">
-                        <div class="button-group d-flex gap-2">
-                          <button
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingRequest_modal"
-                            class="main-outline-btn flex-grow-1"
-                          >
-                            طلب تمويل
-                          </button>
-                          <button
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#financingCalculator_modal"
-                            class="main-outline-btn brdrt flex-grow-1"
-                          >
-                            حاسبة التمويل
-                          </button>
-                        </div>
-                        <button class="heart fw-semibold mt-3">
-                          <i class="fa-solid fa-heart"></i>
-                          <span>حذف من المفضلة</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </main>
         </div>
@@ -358,13 +377,13 @@
     <section class="subscribe">
       <div class="send-email">
         <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+          <div class="col-md-6 col-lg-5 mb-4 mb-lg-0">
             <div class="d-flex flex-column gap-2 fs-4 fw-semibold">
               <span> هل أنــــت مستعـــــــد للبـــدء؟</span>
               <span> اشترك في النشرة البريدية لدينا </span>
             </div>
           </div>
-          <div class="col-12 col-lg-5">
+          <div class="col-md-6 col-lg-5">
             <div class="send-email-box">
               <input type="text" placeholder="اكتب بريدك الالكترونى" />
               <button><i class="bi bi-arrow-up-left"></i></button>

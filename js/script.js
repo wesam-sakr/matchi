@@ -331,6 +331,95 @@ $(document).ready(function () {
     $(".profile-nav").toggleClass("Pnav-toggle");
   });
 
+  // upload and preview multiple images such as dropzone
+function ImgUpload() {
+  var imgWrap = "";
+  var imgArray = [];
+
+  $('.upload__inputfile').each(function () {
+    $(this).on('change', function (e) {
+      imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+      var maxLength = $(this).attr('data-max_length');
+
+      var files = e.target.files;
+      var filesArr = Array.prototype.slice.call(files);
+      var iterator = 0;
+      filesArr.forEach(function (f, index) {
+
+        if (!f.type.match('image.*')) {
+          return;
+        }
+
+        if (imgArray.length > maxLength) {
+          return false
+        } else {
+          var len = 0;
+          for (var i = 0; i < imgArray.length; i++) {
+            if (imgArray[i] !== undefined) {
+              len++;
+            }
+          }
+          if (len > maxLength) {
+            return false;
+          } else {
+            imgArray.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var html = `
+                <div class="col">
+                    <div class='upload__img-box'>
+                        <div 
+                        data-number='${$(".upload__img-close").length}' 
+                        data-file='${f.name}' 
+                        class='img-bg'>
+                            <div class='upload__img-close'></div>
+                            <img src='${e.target.result}'>
+                        </div>
+                    </div>
+                </div>`;
+              imgWrap.append(html);
+              iterator++;
+            }
+            reader.readAsDataURL(f);
+          }
+        }
+        console.log(imgArray)
+      });
+    });
+  });
+
+  $(document).on('click', ".upload__img-close", function (e) {
+    var inputElement = $('.upload__inputfile')[0];
+
+    // Select the image to be deleted.
+    var fileName = $(this).parent().data("file");
+
+    // Create a DataTransfer object to save new files after deletion
+    var dt = new DataTransfer();
+
+    // Update the array with the specified file deleted
+    imgArray = imgArray.filter(file => file.name !== fileName);
+
+    // Update input[type=file] with remaining files.
+    for (var i = 0; i < inputElement.files.length; i++) {
+      if (inputElement.files[i].name !== fileName) {
+        dt.items.add(inputElement.files[i]);
+      }
+    }
+
+    // Reset files to input[type=file]
+    inputElement.files = dt.files;
+
+    // Remove item from UI
+    $(this).closest('.col').remove();
+
+    console.log("remaining files :", imgArray);
+  });
+
+}
+ImgUpload()
+
   /* -------------- upload profile pic ---------------- */
   if ($(".profile-pic").length > 0) {
     const imgDiv = document.querySelector(".profile-pic");
