@@ -305,9 +305,11 @@ $(document).ready(function () {
   $('.subscribe-btn').on('click', function () {
     var name = $(this).data('package');
     var price = $(this).data('price');
+    var id = $(this).data('id');
 
     $('#packageName').val(name);
     $('#packagePrice').val(price);
+    $('#packageId').val(id);
 
     $('#subscribeFormWrapper').removeClass('d-none')[0].scrollIntoView({ behavior: 'smooth' });
   });
@@ -442,7 +444,7 @@ ImgUpload()
     });
   }
 
-  // $('.filter select').select2();
+  $('select').select2();
 
 
 });
