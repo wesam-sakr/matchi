@@ -76,6 +76,16 @@ $(document).ready(function () {
     });
   }
 
+
+  document.querySelectorAll('[role="progressbar"]').forEach(bar => {
+    const value = parseFloat(bar.getAttribute('aria-valuenow')) || 0;
+    const max = parseFloat(bar.getAttribute('aria-valuemax')) || 100;
+    const progress = (value / max) * 100;
+    bar.style.setProperty('--progress', progress);
+    bar.style.setProperty('--value', value); // optional: for counter display
+  });
+
+
   // side sticky funcution
   // function stickySidebar(mainBlk, sidebarWrapper, sidebarBlk) {
   //   var main = $(mainBlk); 

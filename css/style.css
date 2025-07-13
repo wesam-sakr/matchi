@@ -422,7 +422,7 @@ button.white-btn {
 
 .main-btn {
    background-color: var(--main) !important;
-   border-color: var(--main);
+   border: 1px solid var(--main);
    color: var(--white) !important;
 }
 
@@ -439,6 +439,16 @@ button.white-btn {
 
 .white-btn i {
    color: var(--main);
+}
+
+.main-btn.btn-sm,
+.main-outline-btn.btn-sm,
+.white-btn.btn-sm {
+   font-size: 14px;
+   padding: 3px 10px !important;
+   min-width: unset;
+   border-radius: 6px;
+   font-weight: normal;
 }
 
 .accordion-button::after {
@@ -2538,7 +2548,11 @@ input[type=range]::-webkit-slider-thumb {
    font-weight: bold;
    padding-top: 1rem;
    justify-content: center;
+   /* color: var(--main); */
 }
+/* .profile-nav .logout img{
+   width: 20px;
+} */
 
 .profile-data {
    height: auto;
@@ -2565,6 +2579,66 @@ input[type=range]::-webkit-slider-thumb {
    -o-border-radius: 8px;
    font-weight: 600;
 }
+
+.car_filters .select2-container .select2-selection--single {
+   border: unset !important;
+   background: #000 !important;
+   height: 40px;
+}
+
+@keyframes progress {
+   0% {
+      --percentage: 0;
+   }
+
+   100% {
+      --percentage: var(--progress);
+   }
+}
+
+@property --percentage {
+   syntax: "<number>";
+   inherits: true;
+   initial-value: 0;
+}
+
+[role="progressbar"] {
+   --primary: var(--main);
+   --secondary: var(--lite-sec);
+   --percentage: var(--value);
+   /* this will animate to --progress */
+   animation: progress 2s 0.5s forwards;
+   width: var(--size, 300px);
+   aspect-ratio: 1;
+   border-radius: 50%;
+   position: relative;
+   overflow: hidden;
+   display: grid;
+   place-items: center;
+}
+
+[role="progressbar"]::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: conic-gradient(var(--primary) calc(var(--percentage) * 1%),
+         var(--secondary) 0);
+   mask: radial-gradient(white 55%, transparent 0);
+   mask-mode: alpha;
+   -webkit-mask: radial-gradient(#0000 55%, #000 0);
+   -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+   counter-reset: percentage var(--value);
+   content: counter(percentage);
+   font-size: 30px;
+   color: var(--white);
+}
+
 
 .profile-data th,
 .profile-data td {

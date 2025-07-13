@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
 
     <!-- select2 link -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/style.css" />
@@ -205,7 +208,10 @@
 
                 <li class="nav-item">
                   <form action="">
-                    <button class="logout nav-link">تسجيل خروج</button>
+                    <button class="logout nav-link">
+                      <!-- <img src="../images/power-button.svg" alt=""> -->
+                      تسجيل خروج
+                    </button>
                   </form>
                 </li>
               </ul>
@@ -220,36 +226,94 @@
             </button>
             <!-- end -->
 
+            <div class="profile-data py-4 mb-3">
+              <div class="profile-welcome">
+                <p class="fs-5 fw-bold">مرحباً اسم المستخدم 👋</p>
+              </div>
+            </div>
+
+            <div class="profile-data py-4 mb-3">
+              <div
+                class="profile-package gap-4 d-flex flex-md-nowrap flex-wrap justify-content-between align-items-center"
+              >
+                <div>
+                  <div class="d-flex flex-wrap gap-2 align-items-center gap-md-3 mb-3">
+                    <p class="fs-5 fw-bold">اسم الباقة</p>
+                    <!-- if has package -->
+                    <div class="blog-head">
+                      <small>تاريخ الانتهاء</small>
+                      <small>19-06-2025</small>
+                    </div>
+                    <!-- else -->
+                    <div class="d-flex gap-2">
+                      <button class="main-btn btn-sm">
+                        تجديد الاشتراك
+                      </button>
+                      <a class="main-outline-btn btn-sm">
+                        تغيير الباقة 
+                      </a>
+                    </div>
+                    <!-- end if -->
+
+                  </div>
+                  <p>
+                    لقد نشرت 7 من أصل 15 إعلانات هذا الشهر — ما زال بإمكانك
+                    إضافة المزيد!
+                  </p>
+                </div>
+                <!-- 
+                aria-valuenow =" current monthly ads count "
+                aria-valuemax =" monthly ads limit "
+                 -->
+                <div
+                  role="progressbar"
+                  aria-valuenow="7"
+                  aria-valuemax="15"
+                  style="--size: 100px"
+                ></div>
+              </div>
+            </div>
+
             <div class="statistics mb-3">
               <div class="row g-3">
                 <div class="col">
-                  <div class="profile-data d-flex flex-column gap-3 justify-content-center text-center p-3 h-100">
-                    <b class="fs-5">اجمالي عدد السيارات</b>
-                    <p class="fw-semibold">160 سيارة</p>
-                  </div>
-                </div>
-               <div class="col">
-                  <div class="profile-data d-flex flex-column gap-3 justify-content-center text-center p-3 h-100">
+                  <div
+                    class="profile-data d-flex flex-column gap-3 justify-content-center text-center p-3 h-100"
+                  >
                     <b class="fs-5">اجمالي عدد السيارات</b>
                     <p class="fw-semibold">160 سيارة</p>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="profile-data d-flex flex-column gap-3 justify-content-center text-center p-3 h-100">
-                    <b class="fs-5">اجمالي عدد السيارات</b>
-                    <p class="fw-semibold">160 سيارة</p>
+                  <div
+                    class="profile-data d-flex flex-column gap-3 justify-content-center text-center p-3 h-100"
+                  >
+                    <b class="fs-5">اجمالي عدد الطلبات</b>
+                    <p class="fw-semibold">19 طلب</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="profile-data py-4">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <h2 class="fs-5 fw-bold">أحدث السيارات</h2>
-                <a href="add_car.html" -class="main-outline-btn brdrt">
-                  <i class="bi bi-plus-lg"></i>
-                  إضافة سيارة
-                </a>
-              </div>
+
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h2 class="fs-5 fw-bold">اعلانات الشهر</h2>
+              <form action="">
+                <div class="car_filters d-flex align-items-center gap-3">
+                  <a href="add_car.html" -class="main-outline-btn brdrt">
+                    <i class="bi bi-plus-lg"></i>
+                    إضافة سيارة
+                  </a>
+                  <select name="" id="" class="form-select form-control">
+                    <option value="" hidden="">الشهر الحالي</option>
+                    <option value="">07-2025</option>
+                    <option value="">08-2025</option>
+                    <option value="">09-2025</option>
+                    <option value="">10-2025</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="profile-data p-3">
               <div class="table-responsive">
                 <table class="table table-hover m-0">
                   <thead>
@@ -257,6 +321,8 @@
                       <th>اسم السيارة</th>
                       <th>السعر</th>
                       <th>تاريخ الإضافة</th>
+                      <th>عدد الزيارات</th>
+                      <th>عدد الطلبات</th>
                       <th>الإجراء</th>
                     </tr>
                   </thead>
@@ -265,6 +331,8 @@
                       <td>.... سوزوكي فرونكس</td>
                       <td>78.000</td>
                       <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
                       <td>
                         <div class="car_action">
                           <button class="white-btn" aria-label="إجراء">
@@ -290,31 +358,8 @@
                       <td>.... سوزوكي فرونكس</td>
                       <td>78.000</td>
                       <td>25/5/2025</td>
-                      <td>
-                        <div class="car_action">
-                          <button class="white-btn" aria-label="إجراء">
-                            إجراء
-                          </button>
-                          <div class="car_action_list">
-                            <ul>
-                              <li>
-                                <a href="../car_details.html"> عرض </a>
-                              </li>
-                              <li>
-                                <a href="add_car.html"> تعديل </a>
-                              </li>
-                              <li>
-                                <button class="bg-transparent">حذف</button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                     <tr>
-                      <td>.... سوزوكي فرونكس</td>
-                      <td>78.000</td>
-                      <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
                       <td>
                         <div class="car_action">
                           <button class="white-btn" aria-label="إجراء">
@@ -340,6 +385,89 @@
                       <td>.... سوزوكي فرونكس</td>
                       <td>78.000</td>
                       <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
+                      <td>
+                        <div class="car_action">
+                          <button class="white-btn" aria-label="إجراء">
+                            إجراء
+                          </button>
+                          <div class="car_action_list">
+                            <ul>
+                              <li>
+                                <a href="../car_details.html"> عرض </a>
+                              </li>
+                              <li>
+                                <a href="add_car.html"> تعديل </a>
+                              </li>
+                              <li>
+                                <button class="bg-transparent">حذف</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>.... سوزوكي فرونكس</td>
+                      <td>78.000</td>
+                      <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
+                      <td>
+                        <div class="car_action">
+                          <button class="white-btn" aria-label="إجراء">
+                            إجراء
+                          </button>
+                          <div class="car_action_list">
+                            <ul>
+                              <li>
+                                <a href="../car_details.html"> عرض </a>
+                              </li>
+                              <li>
+                                <a href="add_car.html"> تعديل </a>
+                              </li>
+                              <li>
+                                <button class="bg-transparent">حذف</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>.... سوزوكي فرونكس</td>
+                      <td>78.000</td>
+                      <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
+                      <td>
+                        <div class="car_action">
+                          <button class="white-btn" aria-label="إجراء">
+                            إجراء
+                          </button>
+                          <div class="car_action_list">
+                            <ul>
+                              <li>
+                                <a href="../car_details.html"> عرض </a>
+                              </li>
+                              <li>
+                                <a href="add_car.html"> تعديل </a>
+                              </li>
+                              <li>
+                                <button class="bg-transparent">حذف</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>.... سوزوكي فرونكس</td>
+                      <td>78.000</td>
+                      <td>25/5/2025</td>
+                      <td>98</td>
+                      <td>7</td>
                       <td>
                         <div class="car_action">
                           <button class="white-btn" aria-label="إجراء">
@@ -660,7 +788,7 @@
 
     <!-- owl-carousel script -->
     <script src="../js/owl.carousel.min.js"></script>
-    
+
     <!-- select2 script -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
