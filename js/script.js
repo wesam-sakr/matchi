@@ -1,9 +1,15 @@
 
-$(document).ready(function () {
 
-  // loading
-  $("body").css('overflow-y', 'auto');
-  $('#loading').fadeOut(500);
+$(document).ready(function () {
+  // website lang
+  var bodyDir = $("body").css("direction");
+  console.log(bodyDir);
+  var dirAr;
+  if (bodyDir == "rtl") {
+    dirAr = true;
+  } else {
+    dirAr = false;
+  }
 
   // toggle password type
   $('.pass').click(function () {
@@ -76,60 +82,22 @@ $(document).ready(function () {
     });
   }
 
-
+  // ads limit progress
   document.querySelectorAll('[role="progressbar"]').forEach(bar => {
     const value = parseFloat(bar.getAttribute('aria-valuenow')) || 0;
     const max = parseFloat(bar.getAttribute('aria-valuemax')) || 100;
     const progress = (value / max) * 100;
     bar.style.setProperty('--progress', progress);
-    bar.style.setProperty('--value', value); // optional: for counter display
+    bar.style.setProperty('--value', value);
   });
 
-
-  // side sticky funcution
-  // function stickySidebar(mainBlk, sidebarWrapper, sidebarBlk) {
-  //   var main = $(mainBlk); 
-  //   var stickyWrapper = $(sidebarWrapper); 
-  //   var stickyBlk = $(sidebarBlk); 
-  //   var startPos = stickyBlk.offset().top; 
-  //   var finishPos = main.offset().top + main.outerHeight() - stickyBlk.outerHeight();
-
-  //   stickyWrapper.height(main.height());
-
-  //   $(window).scroll(function () {
-  //     var currentScrollPos = $(document).scrollTop();
-
-  //     var test;
-
-  //     if ((currentScrollPos > startPos) && (currentScrollPos <= finishPos)) {
-  //       test = currentScrollPos + startPos;
-  //       stickyBlk.addClass('bottom');
-  //       stickyBlk.css('top', test);
-  //     } else if (currentScrollPos <= startPos) {
-  //       stickyBlk.removeClass('bottom');
-  //       stickyBlk.css('top', 0);
-  //     } else if (currentScrollPos > finishPos) {
-  //       stickyBlk.addClass('bottom');
-  //       stickyBlk.css('top', '100%');
-  //     } else {
-  //       stickyBlk.css('top', 100);
-  //     }
-  //   });
-  // } 
-  // if ($(window).width() >= 992 && $('.car-single').length > 0) {
-  //   $(window).on('load', function () {
-  //     stickySidebar('.stick-next-to', '.sticky-wrapper', '.sticky');
-  //   });
-  // }
-
-
-  // home carousels
+  // carousels
   $(".car_offers .owl-carousel").owlCarousel({
     nav: false,
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 1,
@@ -147,7 +115,7 @@ $(document).ready(function () {
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 2
@@ -168,7 +136,7 @@ $(document).ready(function () {
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 1
@@ -189,7 +157,7 @@ $(document).ready(function () {
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 2
@@ -207,7 +175,7 @@ $(document).ready(function () {
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 2,
@@ -225,7 +193,7 @@ $(document).ready(function () {
     loop: false,
     responsiveClass: true,
     margin: 16,
-    rtl: true,
+    rtl: dirAr,
     responsive: {
       0: {
         items: 1,
@@ -244,8 +212,8 @@ $(document).ready(function () {
   });
 
   // car details carousel
-  var changeSlide = 4; // mobile -1, desktop + 1
   // Resize and refresh page. slider-two slideBy bug remove
+  var changeSlide = 4; // mobile -1, desktop + 1
   var slide = changeSlide;
   if ($(window).width() < 600) {
     var slide = changeSlide;
@@ -256,62 +224,82 @@ $(document).ready(function () {
   } else {
     var slide = changeSlide;
   }
-  // Make num >=9 have 0 before 01 02 ....
-  function NumOf(n) {
-    return (n < 10 && n != 0) ? '0' + n : '' + n;
-  }
-  $('.one').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-    if (!e.namespace) {
-      return;
-    }
-    var carousel = e.relatedTarget;
-    $('.slider-counter .len').html(`${NumOf(carousel.items().length)}`)
-    $('.slider-counter .current').html(`${NumOf(carousel.relative(carousel.current()) + 1)}`)
-  }).owlCarousel({
-    nav: true,
-    navText: [`<i class="fa-solid fa-chevron-right"></i>`, `<i class="fa-solid fa-chevron-left"></i>`],
-    items: 1,
-    margin: 3,
-    autoplay: 5000,
-    autoplayHoverPause: true,
-    rtl: true
-  })
-  $('.two').owlCarousel({
+
+  $(".one").owlCarousel({
     nav: false,
-    margin: 4,
-    rtl: true,
+    items: 1,
+    margin: 5,
+    autoplay: 5000,
+    rtl: dirAr,
+  });
+  $(".two").owlCarousel({
+    nav: false,
+    margin: 5,
+    rtl: dirAr,
     responsive: {
       0: {
         items: changeSlide - 1,
-        slideBy: changeSlide - 1
+        slideBy: changeSlide - 1,
       },
       600: {
         items: changeSlide,
-        slideBy: changeSlide
+        slideBy: changeSlide,
       },
       1000: {
         items: changeSlide + 1,
-        slideBy: changeSlide + 1
-      }
-    }
-  })
-  var owl = $('.one');
+        slideBy: changeSlide + 1,
+      },
+    },
+  });
+  var owl = $(".one");
   owl.owlCarousel();
-  owl.on('translated.owl.carousel', function (event) {
-    $('.slider-two .item').removeClass("active");
+  owl.on("translated.owl.carousel", function (event) {
+    $(".right").removeClass("nonr");
+    $(".left").removeClass("nonl");
+    if ($(".one .owl-next").is(".disabled")) {
+      $(".slider .right").addClass("nonr");
+    }
+    if ($(".one .owl-prev").is(".disabled")) {
+      $(".slider .left").addClass("nonl");
+    }
+    $(".slider-two .item").removeClass("active");
     var c = $(".slider .owl-item.active").index();
-    $('.slider-two .item').eq(c).addClass("active");
-    var d = Math.ceil((c + 1) / (slide)) - 1;
-    $(".slider-two .owl-dots .owl-dot").eq(d).trigger('click');
-  })
-  $('.slider-two .item').click(function () {
-    var stickyOffset = $(".item").index(this);
-    $(".slider .owl-dots .owl-dot").eq(stickyOffset).trigger('click');
+    $(".slider-two .item").eq(c).addClass("active");
+    var d = Math.ceil((c + 1) / slide) - 1;
+    $(".slider-two .owl-dots .owl-dot").eq(d).trigger("click");
+  });
+  $(".right").click(function () {
+    $(".slider .owl-next").trigger("click");
+  });
+  $(".left").click(function () {
+    $(".slider .owl-prev").trigger("click");
+  });
+  $(".slider-two .item").click(function () {
+    var b = $(".item").index(this);
+    $(".slider .owl-dots .owl-dot").eq(b).trigger("click");
     $(".slider-two .item").removeClass("active");
     $(this).addClass("active");
   });
+  var owl2 = $(".two");
+  owl2.owlCarousel();
+  owl2.on("translated.owl.carousel", function (event) {
+    $(".right-t").removeClass("nonr-t");
+    $(".left-t").removeClass("nonl-t");
+    if ($(".two .owl-next").is(".disabled")) {
+      $(".slider-two .right-t").addClass("nonr-t");
+    }
+    if ($(".two .owl-prev").is(".disabled")) {
+      $(".slider-two .left-t").addClass("nonl-t");
+    }
+  });
+  $(".right-t").click(function () {
+    $(".slider-two .owl-prev").trigger("click");
+  });
+  $(".left-t").click(function () {
+    $(".slider-two .owl-next").trigger("click");
+  });
 
-
+  // package action
   $('.subscribe-btn').on('click', function () {
     var name = $(this).data('package');
     var price = $(this).data('price');
@@ -324,7 +312,7 @@ $(document).ready(function () {
     $('#subscribeFormWrapper').removeClass('d-none')[0].scrollIntoView({ behavior: 'smooth' });
   });
 
-  // apply job upload cv
+  // upload file or image
   $(".file-input").change(function () {
     const fileInput = $(this).find('[type="file"]')[0];
     const label = $(this).find("[data-js-label]")[0];
@@ -336,6 +324,7 @@ $(document).ready(function () {
     $(label).html(value);
   });
 
+  // profile nav responsive
   $("#profile_nav").click(function () {
     $(".profile-nav").toggleClass("Pnav-toggle");
   });
@@ -344,41 +333,41 @@ $(document).ready(function () {
   });
 
   // upload and preview multiple images such as dropzone
-function ImgUpload() {
-  var imgWrap = "";
-  var imgArray = [];
+  function ImgUpload() {
+    var imgWrap = "";
+    var imgArray = [];
 
-  $('.upload__inputfile').each(function () {
-    $(this).on('change', function (e) {
-      imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
-      var maxLength = $(this).attr('data-max_length');
+    $('.upload__inputfile').each(function () {
+      $(this).on('change', function (e) {
+        imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+        var maxLength = $(this).attr('data-max_length');
 
-      var files = e.target.files;
-      var filesArr = Array.prototype.slice.call(files);
-      var iterator = 0;
-      filesArr.forEach(function (f, index) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        var iterator = 0;
+        filesArr.forEach(function (f, index) {
 
-        if (!f.type.match('image.*')) {
-          return;
-        }
-
-        if (imgArray.length > maxLength) {
-          return false
-        } else {
-          var len = 0;
-          for (var i = 0; i < imgArray.length; i++) {
-            if (imgArray[i] !== undefined) {
-              len++;
-            }
+          if (!f.type.match('image.*')) {
+            return;
           }
-          if (len > maxLength) {
-            return false;
-          } else {
-            imgArray.push(f);
 
-            var reader = new FileReader();
-            reader.onload = function (e) {
-              var html = `
+          if (imgArray.length > maxLength) {
+            return false
+          } else {
+            var len = 0;
+            for (var i = 0; i < imgArray.length; i++) {
+              if (imgArray[i] !== undefined) {
+                len++;
+              }
+            }
+            if (len > maxLength) {
+              return false;
+            } else {
+              imgArray.push(f);
+
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                var html = `
                 <div class="col">
                     <div class='upload__img-box'>
                         <div 
@@ -390,49 +379,49 @@ function ImgUpload() {
                         </div>
                     </div>
                 </div>`;
-              imgWrap.append(html);
-              iterator++;
+                imgWrap.append(html);
+                iterator++;
+              }
+              reader.readAsDataURL(f);
             }
-            reader.readAsDataURL(f);
           }
-        }
-        console.log(imgArray)
+          console.log(imgArray)
+        });
       });
     });
-  });
 
-  $(document).on('click', ".upload__img-close", function (e) {
-    var inputElement = $('.upload__inputfile')[0];
+    $(document).on('click', ".upload__img-close", function (e) {
+      var inputElement = $('.upload__inputfile')[0];
 
-    // Select the image to be deleted.
-    var fileName = $(this).parent().data("file");
+      // Select the image to be deleted.
+      var fileName = $(this).parent().data("file");
 
-    // Create a DataTransfer object to save new files after deletion
-    var dt = new DataTransfer();
+      // Create a DataTransfer object to save new files after deletion
+      var dt = new DataTransfer();
 
-    // Update the array with the specified file deleted
-    imgArray = imgArray.filter(file => file.name !== fileName);
+      // Update the array with the specified file deleted
+      imgArray = imgArray.filter(file => file.name !== fileName);
 
-    // Update input[type=file] with remaining files.
-    for (var i = 0; i < inputElement.files.length; i++) {
-      if (inputElement.files[i].name !== fileName) {
-        dt.items.add(inputElement.files[i]);
+      // Update input[type=file] with remaining files.
+      for (var i = 0; i < inputElement.files.length; i++) {
+        if (inputElement.files[i].name !== fileName) {
+          dt.items.add(inputElement.files[i]);
+        }
       }
-    }
 
-    // Reset files to input[type=file]
-    inputElement.files = dt.files;
+      // Reset files to input[type=file]
+      inputElement.files = dt.files;
 
-    // Remove item from UI
-    $(this).closest('.col').remove();
+      // Remove item from UI
+      $(this).closest('.col').remove();
 
-    console.log("remaining files :", imgArray);
-  });
+      console.log("remaining files :", imgArray);
+    });
 
-}
-ImgUpload()
+  }
+  ImgUpload()
 
-  /* -------------- upload profile pic ---------------- */
+  // upload profile pic 
   if ($(".profile-pic").length > 0) {
     const imgDiv = document.querySelector(".profile-pic");
     const img = document.querySelector("#photo");
@@ -454,7 +443,7 @@ ImgUpload()
     });
   }
 
+  // select2
   $('select').select2();
-
 
 });
