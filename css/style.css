@@ -14,10 +14,10 @@
    --dark: #191919;
    --black: #000000;
    --gray: #A4A4A4;
-   
+
    /* Layout */
    --gutter-x: 8rem;
-   
+
    /* Opacity channels */
    --mainOp: 137, 0, 0;
    --whiteOp: 255, 255, 255;
@@ -36,9 +36,10 @@
    text-decoration: none;
    color: var(--white);
 }
+
 *::before,
 *::after {
-  box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 
@@ -201,7 +202,7 @@ option {
    -o-border-radius: 8px;
 }
 
-::selection{
+::selection {
    background: rgba(var(--mainOp), .65);
 }
 
@@ -284,8 +285,8 @@ option {
    background: var(--light);
 }
 
-.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
-   inset-inline-end: 5px;
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+   inset-inline-end: 5px !important;
    height: 40px;
 }
 
@@ -486,11 +487,13 @@ header {
    -ms-border-radius: 12px;
    -o-border-radius: 12px;
 }
+
 .navbar-nav {
    justify-content: space-evenly;
    margin: 0 auto;
    gap: 1rem;
 }
+
 .navbar-light .navbar-brand img {
    width: 140px;
    object-fit: contain;
@@ -499,12 +502,15 @@ header {
    filter: brightness(0) invert(1);
    -webkit-filter: brightness(0) invert(1);
 }
+
 a.nav-link {
    color: var(--white) !important;
 }
+
 .navbar .nav-link.active {
    font-weight: bold;
 }
+
 .auth {
    color: var(--white);
    display: flex;
@@ -515,15 +521,18 @@ a.nav-link {
    background: var(--main);
    border-radius: 50%;
 }
+
 .navbar .auth a.nav-link {
    color: var(--white) !important;
    font-size: 18px;
 }
+
 .auth.light {
    background: var(--white);
    box-shadow: 0px 3px 6px #00000029;
    border: 1px solid #BAD4E8;
 }
+
 .navbar .auth.light a.nav-link {
    color: var(--main) !important;
 }
@@ -535,10 +544,12 @@ a.nav-link {
    background-size: cover !important;
    background-position: center center !important;
 }
+
 .breadcrumb-wrapper .overlay {
    padding-block: 10rem 4.5rem;
 
 }
+
 .breadcrumb {
    position: relative;
    justify-content: center;
@@ -546,19 +557,23 @@ a.nav-link {
    padding: 3rem 0;
    font-size: 1.1rem;
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
    float: inline-start;
    padding-inline: .5rem;
    font-weight: lighter;
 }
+
 .breadcrumb .breadcrumb-item a {
    color: var(--white);
    font-weight: 300;
 }
+
 .breadcrumb .breadcrumb-item.active {
    color: var(--white);
    font-weight: bold;
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
    color: var(--white);
 }
@@ -566,10 +581,13 @@ a.nav-link {
 /* --------------- .hero-sec --------------------- */
 .hero-sec {
    position: relative;
-   height: 90vh;
+   /* height: 90vh; */
    background-size: cover !important;
    background-repeat: no-repeat !important;
    background-position: center center !important;
+}
+.hero-sec .overlay {
+   padding-block: 12rem 5rem;
 }
 
 .hero-sec .content {
@@ -1220,12 +1238,15 @@ footer .copyrights img {
 }
 
 
+
 /* ---------------------------------- */
 /*  filter Styles  */
 /* ---------------------------------- */
 .price-range-slider {
    width: 100%;
    padding-top: .5rem;
+   /* float: left;
+   padding: 1.5rem 0; */
 }
 
 .price-range-slider .range-value {
@@ -1236,19 +1257,20 @@ footer .copyrights img {
    width: 100%;
    background: none;
    color: var(--main);
-   font-size: 15px;
    font-weight: initial;
    box-shadow: none;
    border: none;
-   margin-top: 14px;
+   font-weight: bold;
+   margin-bottom: 1rem;
 }
 
 .price-range-slider .range-bar {
+   position: relative;
    border: none;
-   background: #CEE8FF;
+   background: rgba(var(--whiteOp), 0.85);
    height: 5px;
    width: 100%;
-   margin-left: 8px;
+   margin-bottom: 1rem;
    border-radius: 5px;
 }
 
@@ -1257,22 +1279,22 @@ footer .copyrights img {
 }
 
 .price-range-slider .range-bar .ui-slider-handle {
+   position: absolute;
    border: none;
    border-radius: 25px;
    background: #fff;
    box-shadow: 0 0 8px 2px #33333340;
+   display: block;
    height: 20px;
    width: 4px;
    top: -0.42em;
    cursor: pointer;
-   transform: translateX(8px);
+   /* transform: translateX(8px); */
 }
 
 .price-range-slider .range-bar .ui-slider-handle+span {
    background: var(--main);
 }
-
-/*==-------- cars page --------==*/
 .car_filter {
    padding-inline-end: calc(var(--gutter-x)*.5);
 }
@@ -1291,11 +1313,11 @@ footer .copyrights img {
    background: var(--lite-sec);
 }
 
-.selected-filters-title,
+/* .selected-filters-title,
 #selected-filters-list {
    color: var(--main);
    border-bottom: 1px solid #f1f1f1;
-}
+} */
 
 .filter .accordion-item,
 .filter .accordion-button,
@@ -1336,6 +1358,12 @@ footer .copyrights img {
    padding: 0 !important;
 }
 
+.selected-filters {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
 .selected-filters ul {
    padding: 1rem 0 !important;
    list-style: none;
@@ -1352,12 +1380,16 @@ footer .copyrights img {
    align-items: center;
    background: var(--white);
    background: #1c608d11 0% 0% no-repeat padding-box;
-   border-radius: 25px;
+   border-radius: 12px;
    padding: 4px 15px;
    border-radius: 20px;
    position: relative;
    padding-inline-end: 8px;
    color: var(--main);
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   -ms-border-radius: 12px;
+   -o-border-radius: 12px;
 }
 
 .remove-filter-btn {
@@ -1379,12 +1411,10 @@ footer .copyrights img {
 }
 
 #clear-all-filters {
-   min-width: max-content;
-   width: auto;
-   height: fit-content;
-   padding-inline: 14px;
-   padding-block: 4px;
-   margin-bottom: 0;
+   padding-inline: 16px !important;
+   padding-block: 4.825px !important;
+   font-weight: 300 !important;
+   font-size: 14px;
 }
 
 .filter-header,
@@ -1518,6 +1548,27 @@ footer .copyrights img {
    -o-border-radius: 20px;
 }
 
+#verification-input {
+   direction: ltr;
+   margin: 1.5rem 0;
+   text-align: center;
+}
+
+#verification-input>input {
+   width: 55px;
+   height: 55px;
+   margin: 0 6px;
+   font-size: 18px;
+   border-radius: 12px;
+   text-align: center;
+   background: transparent;
+   border: 1px solid #e9e9e9;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   -ms-border-radius: 12px;
+   -o-border-radius: 12px;
+}
+
 
 .forgot {
    font-size: 12px;
@@ -1558,21 +1609,6 @@ footer .copyrights img {
    color: var(--white);
 }
 
-#verification-input {
-   direction: ltr;
-   margin: 1.5rem 0;
-}
-
-#verification-input>input {
-   width: 55px;
-   height: 55px;
-   margin: 0 6px;
-   font-size: 18px;
-   text-align: center;
-   border-radius: 50%;
-   background: #FAFAFA;
-   border: 1px solid #E9E9E9;
-}
 
 
 /* --------== profile page ==-------- */
