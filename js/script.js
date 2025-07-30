@@ -92,47 +92,10 @@ $(document).ready(function () {
   });
 
   // carousels
-  $(".car_offers .owl-carousel").owlCarousel({
+  // السلايدر الرئيسي
+  $(".outer-carousel").owlCarousel({
     nav: false,
-    loop: false,
-    responsiveClass: true,
-    margin: 16,
-    rtl: dirAr,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 3
-      },
-      992: {
-        items: 4
-      }
-    }
-  });
-  $(".car_brand .owl-carousel").owlCarousel({
-    nav: false,
-    loop: false,
-    responsiveClass: true,
-    margin: 16,
-    rtl: dirAr,
-    responsive: {
-      0: {
-        items: 2
-      },
-      578: {
-        items: 3
-      },
-      768: {
-        items: 4
-      },
-      992: {
-        items: 6
-      }
-    }
-  });
-  $(".related_car .owl-carousel").owlCarousel({
-    nav: false,
+    dots: false,
     loop: false,
     responsiveClass: true,
     margin: 16,
@@ -142,74 +105,72 @@ $(document).ready(function () {
         items: 1
       },
       578: {
-        items: 1
-      },
-      768: {
-        items: 3
-      },
-      992: {
-        items: 3
-      }
-    }
-  });
-  $(".partners .owl-carousel").owlCarousel({
-    nav: false,
-    loop: false,
-    responsiveClass: true,
-    margin: 16,
-    rtl: dirAr,
-    responsive: {
-      0: {
         items: 2
       },
-      768: {
-        items: 3
-      },
       992: {
-        items: 4
+        items: 3
       }
     }
   });
-  $(".ads-section .owl-carousel").owlCarousel({
-    nav: false,
-    loop: false,
-    responsiveClass: true,
-    margin: 16,
-    rtl: dirAr,
-    responsive: {
-      0: {
-        items: 2,
-      },
-      768: {
-        items: 3
-      },
-      992: {
-        items: 4
-      }
-    }
-  });
-  $(".pricing .owl-carousel").owlCarousel({
-    nav: false,
-    loop: false,
-    responsiveClass: true,
-    margin: 16,
-    rtl: dirAr,
-    responsive: {
-      0: {
-        items: 1,
-        dots: true
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-        mouseDrag: false,
-        touchDrag: false
 
+  // السلايدر الداخلي
+  $(".inner-carousel").each(function () {
+    $(this).owlCarousel({
+      nav: false,
+      dots: true,
+      loop: false,
+      margin: 8,
+      rtl: dirAr,
+      items: 1
+    });
+  });
+
+  $(".inner-carousel").on("touchstart mousedown pointerdown", function (e) {
+    e.stopPropagation();
+  });
+
+  $(".review .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    dots: true,
+    responsiveClass: true,
+    margin: 16,
+    rtl: dirAr,
+    responsive: {
+      0: {
+        items: 1
+      },
+      578: {
+        items: 2
+      },
+      992: {
+        items: 3
       }
     }
   });
+
+  $(".blogs .owl-carousel").owlCarousel({
+    nav: false,
+    dots: false,
+    loop: false,
+    responsiveClass: true,
+    margin: 16,
+    rtl: dirAr,
+    responsive: {
+      0: {
+        items: 1
+      },
+      578: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+
+
+
 
   // car details carousel
   // Resize and refresh page. slider-two slideBy bug remove
@@ -322,6 +283,10 @@ $(document).ready(function () {
       .val()
       .replace(/^.*[\\\/]/, "");
     $(label).html(value);
+  });
+
+  $(".fav").click(function () {
+    $(this).find("i").toggleClass("bi-heart bi-heart-fill");
   });
 
   // profile nav responsive
@@ -446,4 +411,11 @@ $(document).ready(function () {
   // select2
   $('select').select2();
 
+  AOS.init({
+  duration: 1000
 });
+
+
+});
+
+new WOW().init();

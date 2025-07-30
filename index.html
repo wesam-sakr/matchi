@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AL WATANIA CAR</title>
+    <title>Matchi</title>
 
-    <link rel="icon" type="image/x-icon" href="images/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="images/f_logo.png" />
 
     <!-- Bootstrap link  -->
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" id="bootstrap-style"/>
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.rtl.min.css"
+      id="bootstrap-style"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
@@ -21,8 +25,8 @@
     <!-- font awesom link  -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -31,130 +35,768 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-    <!-- select2 link -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css" />
 
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light p-0 top-0">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand m-0" href="index.html">
-          <img src="images/logo.svg" alt />
-        </a>
-        <div
-          class="collapse navbar-collapse justify-content-between align-items-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active"> الرئيسية</a>
-            </li>
-            <li class="nav-item">
-              <a href="about_us.html" class="nav-link">من نحن ؟</a>
-            </li>
-            <li class="nav-item">
-              <a href="cars.html" class="nav-link">السيارات</a>
-            </li>
-            <li class="nav-item">
-              <a href="blogs.html" class="nav-link">المدونة</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact_us.html" class="nav-link">تواصل معنا</a>
-            </li>
-            <li class="nav-item">
-              <a href="join_us.html" class="nav-link">تسجيل صاحب معرض</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav m-0">
-            <li class="nav-item lang">
-              <a href="#" class="nav-link" id="lang">English</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="login.html" class="nav-link white-btn"> التسجيل </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <section
-      class="hero-sec mb-4"
+    <div
+      class="head-hero-wrapper"
       style="background: url('images/hero-sec-bg.png')"
     >
       <div class="overlay">
-        <div class="container-fluid h-100">
-          <div class="content">
-            <div class="row gy-3 align-items-center">
-              <div class="col-md-8">
-                <div>
-                  <h1>تمويل سيارتك بكل سهولة مع السيارة الوطنية</h1>
-                  <p class="col-md-7">
-                    اختر سيارتك المفضلة، وقدّم على التمويل خلال دقائق! حلول
-                    مرنة، موافقات سريعة، ودعم متكامل لتحقيق حلمك بسيارة جديدة
-                  </p>
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#financingRequest_modal"
-                      class="white-btn"
+        <header data-aos="fade-down">
+          <div class="container-fluid">
+            <nav class="navbar top-nav p-0">
+              <div
+                class="helper-links w-100 d-flex align-items-center justify-content-between py-2"
+              >
+                <ul class="helper-pages m-0 d-flex align-items-center">
+                  <li class="d-block">
+                    <a href="login.html" aria-label=" الذهاب إلى التسجيل ">
+                      <i class="bi bi-person"></i>
+                      <span>التسجيل</span>
+                    </a>
+                  </li>
+                  <li class="d-md-block d-none">
+                    <a
+                      href="policy.html"
+                      aria-label="الذهاب إلى سياسة الخصوصية"
                     >
-                      طلب تمويل
-                      <i class="bi bi-arrow-left"></i>
-                    </button>
+                      <span>سياسة الخصوصية</span>
+                    </a>
+                  </li>
+                  <li class="d-md-block d-none">
+                    <a href="terms.html" aria-label="الذهاب إلى  ">
+                      <span>الشروط والأحكام</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="m-0 d-flex gap-4 align-items-center">
+                  <li>
+                    <a href="" aria-label="">
+                      <i class="bi bi-brightness-high fs-4"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      id="lang"
+                      aria-label="تغيير اللغة إلى الإنجليزية"
+                    >
+                      <span id="lang-text">English</span>
+                      <i class="bi bi-globe"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light p-0 pt-2 top-0">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand m-0" href="index.html">
+                <img src="images/logo.png" alt />
+              </a>
+              <div
+                class="collapse navbar-collapse justify-content-between align-items-center"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link custom-link active">
+                      <i class="fa-regular fa-house"></i>
+                      <span class="nav-text">الرئيسية</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about_us.html" class="nav-link">من نحن ؟</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="stadiums.html" class="nav-link">الملاعب</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">المدونة</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact_us.html" class="nav-link">تواصل معنا</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="join_us.html" class="nav-link">التسجيل</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav m-0">
+                  <li class="nav-item">
+                    <a href="login.html" class="nav-link book-btn white-btn">
+                      احجز الآن
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <section class="hero-sec" data-aos="fade-up">
+          <div class="container-fluid h-100">
+            <div class="content">
+              <h1>احجز ملعبك بسهولة مع ماتشي</h1>
+              <p class="col-md-7 mx-auto">
+                استكشف أفضل الملاعب القريبة منك، وحدد الوقت المناسب، واحجز في
+                ثواني. ماتشي هو رفيقك الرياضي للحجز السريع والمريح، من أي مكان
+                وفي أي وقت
+              </p>
+              <ul class="btn-group">
+                <li>
+                  <a href="login.html" class="white-btn book-btn"> احجز الآن </a>
+                </li>
+                <li>
+                  <a href="login.html" class="enroll main-outline-btn">
+                    انضم كصاحب ملعب
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- من نحن -->
+    <section class="about-us">
+      <div class="about-wrapper">
+        <div class="container-fluid py-5">
+          <div class="row gy-3 align-items-center justify-content-between">
+            <div
+              class="col-12 col-md-6 col-lg-5"
+              data-aos="fade-up-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
+              <p>
+                ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
+                بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
+                التوفر، والحجز الفوري من خلال موقعنا انطلقنا بهدف تسهيل الوصول
+                إلى الملاعب وتشجيع الناس على ممارسة الرياضة بشكل منتظم، سواء كنت
+                لاعب محترف أو هاوي. ومع ماتشي، كل اللي عليك تختار الرياضة، تحدد
+                الوقت، وتحجز ماتشك في دقائق
+              </p>
+              <p>
+                ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
+                بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
+                التوفر، والحجز الفوري من خلال موقعنا انطلقنا بهدف تسهيل الوصول
+                إلى الملاعب وتشجيع الناس على ممارسة الرياضة بشكل منتظم، سواء كنت
+                لاعب محترف أو هاوي. ومع ماتشي، كل اللي عليك تختار الرياضة، تحدد
+                الوقت، وتحجز ماتشك في دقائق
+              </p>
+            </div>
+            <div class="col-12 col-md-auto">
+              <div class="about-img">
+                <img
+                  src="images/about.png"
+                  alt
+                  data-aos="zoom-in"
+                />
+                <div
+                  class="about-shape"
+                  data-aos="fade-right"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-3 align-items-center justify-content-between">
+            <div class="col-12 col-md-6 col-lg-5">
+              <div class="about-img">
+                <img
+                  src="images/about-2.jpg"
+                  alt
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-in-sine"
+                />
+                <div
+                  class="about-shape"
+                  data-aos="fade-left"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="col-auto col-md-6"
+              data-aos="fade-up-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <h2 data-aos="zoom-in-up" class="section-title">استكشف خدماتنا</h2>
+              <p>كل ما تحتاجه لتجربة رياضية أسهل وأسرع</p>
+              <p>
+                في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
+                وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
+                والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
+                تخلّي يومك الرياضي أسهل نقدم مجموعة متكاملة من الخدمات المصممة
+                لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية باحترافية
+                وسلاسة
+              </p>
+              <ul class="d-flex gap-3 flex-wrap about-feature mt-5">
+                <li>حجز الملاعب الرياضية</li>
+                <li>البحث عن ملاعب قريبة</li>
+                <li>لوحة تحكم لأصحاب الملاعب</li>
+                <li>الدفع الإلكتروني الآمن</li>
+                <li>إدارة حساب اللاعب</li>
+                <li>جدولة المواعيد</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- أكثر الملاعب بحثًا -->
+    <section class="stadiums secondary-bg py-5">
+      <div class="container-fluid">
+        <h2 data-aos="zoom-in-up" class="section-title text-center">أكثر الملاعب بحثًا</h2>
+
+        <div class="owl-carousel outer-carousel">
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <a href="car_details.html" class="link"></a>
+            <div class="position-relative">
+              <div class="badge">
+                <i class="bi bi-star-fill"></i>
+                4.7
+              </div>
+              <div class="card-img-top">
+                <div class="inner-carousel owl-carousel">
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                <button
+                  class="fav bg-transparent position-relative z-3"
+                  type="button"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="row g-2 my-2">
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                   <i class="fa-solid fa-futbol"></i>
+                    ملعب كرة القدم
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt"></i>
+                    مسقط
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-clock"></i>
+                    أقرب موعد : اليوم 8 مساءًا
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="hero-search">
-                  <form action>
-                    <h3 class="main mb-4 fw-bold fs-5">ابحث عن سيارة</h3>
-                    <div class="row row-cols-lg-1 row-cols-2 g-3">
-                      <div class="col">
-                        <select name id class="form-select form-control">
-                          <option value hidden>اختر الماركة</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <select name id class="form-select form-control">
-                          <option value hidden>اختر النوع</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <select name id class="form-select form-control">
-                          <option value hidden>اختر الفئة</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <select name id class="form-select form-control">
-                          <option value hidden>اختر اللون</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <select name id class="form-select form-control">
-                          <option value hidden>اختر الموديل</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <button class="white-btn w-100">بحث</button>
-                      </div>
+              <div class="card-footer mt-3 pb-1">
+                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <a href="car_details.html" class="link"></a>
+            <div class="position-relative">
+              <div class="badge">
+                <i class="bi bi-star-fill"></i>
+                4.7
+              </div>
+              <div class="card-img-top">
+                <div class="inner-carousel owl-carousel">
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                <button
+                  class="fav bg-transparent position-relative z-3"
+                  type="button"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="row g-2 my-2">
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                   <i class="fa-solid fa-futbol"></i>
+                    ملعب كرة القدم
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt"></i>
+                    مسقط
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-clock"></i>
+                    أقرب موعد : اليوم 8 مساءًا
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer mt-3 pb-1">
+                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="900">
+            <a href="car_details.html" class="link"></a>
+            <div class="position-relative">
+              <div class="badge">
+                <i class="bi bi-star-fill"></i>
+                4.7
+              </div>
+              <div class="card-img-top">
+                <div class="inner-carousel owl-carousel">
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                <button
+                  class="fav bg-transparent position-relative z-3"
+                  type="button"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="row g-2 my-2">
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                   <i class="fa-solid fa-futbol"></i>
+                    ملعب كرة القدم
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt"></i>
+                    مسقط
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-clock"></i>
+                    أقرب موعد : اليوم 8 مساءًا
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer mt-3 pb-1">
+                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="1200">
+            <a href="car_details.html" class="link"></a>
+            <div class="position-relative">
+              <div class="badge">
+                <i class="bi bi-star-fill"></i>
+                4.7
+              </div>
+              <div class="card-img-top">
+                <div class="inner-carousel owl-carousel">
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                  <img src="images/stadium-1.png" alt />
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                <button
+                  class="fav bg-transparent position-relative z-3"
+                  type="button"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="row g-2 my-2">
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                   <i class="fa-solid fa-futbol"></i>
+                    ملعب كرة القدم
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt"></i>
+                    مسقط
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-clock"></i>
+                    أقرب موعد : اليوم 8 مساءًا
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer mt-3 pb-1">
+                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الملاعب -->
+    <section class="stadiums py-5">
+      <div class="container-fluid">
+        <h2 data-aos="zoom-in-up" class="section-title text-center">الملاعب</h2>
+
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
                     </div>
-                  </form>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <a href="car_details.html" class="link"></a>
+              <div class="position-relative">
+                <div class="badge">
+                  <i class="bi bi-star-fill"></i>
+                  4.7
+                </div>
+                <div class="card-img-top">
+                  <div class="inner-carousel owl-carousel">
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                    <img src="images/stadium-1.png" alt />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
+                  <button
+                    class="fav bg-transparent position-relative z-3"
+                    type="button"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-futbol"></i>
+                      ملعب كرة القدم
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt"></i>
+                      مسقط
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock"></i>
+                      أقرب موعد : اليوم 8 مساءًا
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer mt-3 pb-1">
+                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
                 </div>
               </div>
             </div>
@@ -163,548 +805,69 @@
       </div>
     </section>
 
-    <!-- ماركة السيارات -->
-    <section class="car_brand py-5">
+    <!-- نتائج تتحدث عن نفسها -->
+    <section class="review py-5">
       <div class="container-fluid">
-        <h2 class="section-title text-center mb-4 mb-md-5">
-          تصفح السيارات حسب الماركة
-        </h2>
+        <h2 data-aos="zoom-in-up" class="section-title text-center">نتائج تتحدث عن نفسها</h2>
         <div class="owl-carousel">
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/35.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/37.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/38.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/58.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/60.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/35.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/37.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/38.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/58.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-          <div class="card">
-            <a href="cars.html" class="link"></a>
-            <div class="card-img-top">
-              <img src="images/60.png" alt />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">شيفورليه</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- من نحن -->
-    <section class="about-us py-5">
-      <div class="container-fluid">
-        <div class="row gy-3 align-items-center justify-content-between">
-          <div class="col-12 col-lg-6">
-            <div class="title-link">
-              <h2 class="section-title">بوصلتنا نحو مستقبل السيارات</h2>
-            </div>
-            <p class="about-desc">
-              نحن في السيارة الوطنية لا نقدّم حلول تمويل تقليدية، بل نؤمن بأننا
-              شركاء حقيقيون في رحلتك نحو امتلاك السيارة التي تستحقها. نحرص على
-              أن تكون تجربتك معنا مريحة، واضحة، وخالية من التعقيدات، من لحظة
-              اختيار السيارة وحتى استلامها نوفّر لك خيارات تمويل مرنة وسهلة،
-              مصمّمة لتناسب احتياجاتك المختلفة وتتماشى مع إمكانياتك، دون شروط
-              مبهمة أو خطوات معقدة هدفنا أن نجعل من التمويل خطوة داعمة لتحقيق
-              حلمك، مدفوعة بالشفافية، ومحاطة بالثقة
-            </p>
-            <ul class="about-feature">
-              <li>
-                <p>
-                  اختر الخطة التمويلية التي تتماشى مع إمكانياتك دون أي ضغط مالي
-                </p>
-              </li>
-              <li>
-                <p>نوفّر تجربة تمويل مبسطة بدون تعقيدات أو شروط مخفية</p>
-              </li>
-            </ul>
-            <a href="about_us.html" class="main-outline-btn brdrt">
-              المزيد
-              <i class="bi bi-arrow-left"></i>
-            </a>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="about-img">
-              <img src="images/about.jpg" alt />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- السيارات -->
-    <section class="cars py-5">
-      <div class="container-fluid">
-        <div class="title-link">
-          <div>
-            <h2 class="section-title">سيارات مقترحة</h2>
-          </div>
-          <a href="cars.html">
-            <span>كل السيارات</span>
-            <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
-
-        <div class="row row-cols-md-3 row-cols-1 g-3">
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
+          <div class="card" data-aos="fade-right">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="card-title m-0">Ahmed Ali</h5>
+                <i class="fa-solid fa-quote-right fs-3"></i>
               </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
-              </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
-              </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
-              </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
-              </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="badge">
-                <i class="fa-solid fa-key"></i>
-                جديدة
-              </div>
-              <a href="car_details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/06.jpg" alt />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">سوزوكي فرونكس فل كامل 2025</h5>
-                <p class="price">
-                  <b>51,000</b>
-                  <b>ريال</b>
-                  <span>/</span>
-                  <span>3200</span>
-                  <span>شهريًا</span>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="button-group d-flex gap-2">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingRequest_modal"
-                    class="main-outline-btn flex-grow-1"
-                  >
-                    طلب تمويل
-                  </button>
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#financingCalculator_modal"
-                    class="main-outline-btn brdrt flex-grow-1"
-                  >
-                    حاسبة التمويل
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- كيف تحصل على تمويلك؟ -->
-    <section class="financing py-5">
-      <div class="container-fluid">
-        <div
-          class="title-link flex-column justify-content-center gap-4 text-center"
-        >
-          <h2 class="section-title">كيف تحصل على تمويلك؟</h2>
-          <p class="col-md-6">
-            نسهّل عليك خطوات التمويل من البداية حتى الاستلام. كل ما عليك هو
-            اختيار السيارة، واتباع خطوات بسيطة وواضحة، وسنكون معك في كل مرحلة
-            لضمان تجربة سلسة وآمنة
-          </p>
-        </div>
-        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1 g-3 mt-3">
-          <div class="col">
-            <div class="financing-wrapper">
-              <div class="financing-box">
-                <div class="financing">
-                  <div class="financing-icon">1</div>
-                  <h3 class="financing-name">التمويل البنكي</h3>
-                  <p class="financing-desc text-center mb-2">
-                    نوفّر لك خيارات تمويل عبر مجموعة من البنوك المعتمدة بشروط
-                    ميسّرة وسداد مريح
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="financing-wrapper">
-              <div class="financing-box">
-                <div class="financing">
-                  <div class="financing-icon">2</div>
-                  <h3 class="financing-name">التمويل عبر الجهات المعتمدة</h3>
-                  <p class="financing-desc text-center mb-2">
-                    شراكاتنا مع جهات تمويلية موثوقة تتيح لك خطط تمويل مرنة بدون
-                    الحاجة إلى تحويل راتب
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="financing-wrapper">
-              <div class="financing-box">
-                <div class="financing">
-                  <div class="financing-icon">3</div>
-                  <h3 class="financing-name">
-                    التمويل المباشر من السيارة الوطنية
-                  </h3>
-                  <p class="financing-desc text-center mb-2">
-                    خدمة تمويل خاصة نقدّمها مباشرة لعملائنا بشروط واضحة وإجراءات
-                    سريعة دون وسطاء
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="financing-wrapper">
-              <div class="financing-box">
-                <div class="financing">
-                  <div class="financing-icon">4</div>
-                  <h3 class="financing-name">التمويل التأجيري</h3>
-                  <p class="financing-desc text-center mb-2">
-                    اختر سيارتك وادفع أقساطًا شهرية مع إمكانية التملك في نهاية
-                    مدة العقد
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- سجّل كصاحب معرض وابدأ رحلتك معنا -->
-    <section class="join-us-wrapper">
-      <div class="container-fluid py-5">
-        <div class="join-us" style="background: url('images/car-sec-2.png')">
-          <div class="overlay py-5">
-            <div
-              class="title-link flex-column justify-content-center gap-4 text-center mb-0 py-4"
-            >
-              <h2 class="section-title">سجّل كصاحب معرض وابدأ رحلتك معنا</h2>
-              <p class="col-md-6">
-                سواء كنت تمتلك معرضًا صغيرًا أو كبيرًا، نتيح لك فرصة الوصول إلى
-                شريحة واسعة من العملاء، مع أدوات تسويقية ذكية وخدمات دعم متكاملة
-                تساعدك على النمو وتحقيق المزيد من المبيعات
+              <p>
+                ماتشي وفرت عليا وقت ومجهود كبير! بقيت أحجز الملعب اللي عايزه في
+                ثواني، وكل حاجة واضحة وسهلة
               </p>
-              <a href="join_us.html" class="main-btn m-auto">
-                التسجيل الآن
-                <i class="bi bi-arrow-left"></i>
-              </a>
+              <div class="Stars mt-2 text-center" style="--rating: 4"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ماركة السيارات -->
-    <section class="partners py-5">
-      <div class="container-fluid">
-        <h2 class="section-title mb-4 mb-md-5">
-          شركاء التمويل مع السيارة الوطنية
-        </h2>
-        <div class="owl-carousel">
-          <div class="card">
-            <div class="card-img-top">
-              <img src="images/35.png" alt />
+          <div class="card" data-aos="fade-right">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="card-title m-0">Ahmed Ali</h5>
+                <i class="fa-solid fa-quote-right fs-3"></i>
+              </div>
+              <p>
+                ماتشي وفرت عليا وقت ومجهود كبير! بقيت أحجز الملعب اللي عايزه في
+                ثواني، وكل حاجة واضحة وسهلة
+              </p>
+              <div class="Stars mt-2 text-center" style="--rating: 4"></div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-img-top">
-              <img src="images/37.png" alt />
+          <div class="card" data-aos="fade-right">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="card-title m-0">Ahmed Ali</h5>
+                <i class="fa-solid fa-quote-right fs-3"></i>
+              </div>
+              <p>
+                ماتشي وفرت عليا وقت ومجهود كبير! بقيت أحجز الملعب اللي عايزه في
+                ثواني، وكل حاجة واضحة وسهلة
+              </p>
+              <div class="Stars mt-2 text-center" style="--rating: 4"></div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-img-top">
-              <img src="images/38.png" alt />
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img-top">
-              <img src="images/58.png" alt />
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img-top">
-              <img src="images/60.png" alt />
+          <div class="card" data-aos="fade-right">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="card-title m-0">Ahmed Ali</h5>
+                <i class="fa-solid fa-quote-right fs-3"></i>
+              </div>
+              <p>
+                ماتشي وفرت عليا وقت ومجهود كبير! بقيت أحجز الملعب اللي عايزه في
+                ثواني، وكل حاجة واضحة وسهلة
+              </p>
+              <div class="Stars mt-2 text-center" style="--rating: 4"></div>
             </div>
           </div>
         </div>
@@ -714,75 +877,69 @@
     <!-- المقالات -->
     <section class="blogs py-5">
       <div class="container-fluid">
-        <div class="title-link">
-          <div>
-            <h2 class="section-title">المدونة</h2>
-          </div>
-          <a href="blogs.html">
-            <span>كل المدونة</span>
-            <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
-
-        <div class="row row-cols-md-3 row-cols-1 g-3">
-          <div class="col">
-            <div class="card">
-              <a href="blog-details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/02.jpg" loading="lazy" alt="سيارات للبيع" />
+        <h2 data-aos="zoom-in-up" class="section-title text-center">المدونة</h2>
+        <div class="owl-carousel">
+          <div class="card" data-aos="fade-left">
+            <a href="blog-details.html" class="link"></a>
+            <div class="card-img-top">
+              <img
+                src="images/blog-1.png"
+                loading="lazy"
+                alt=" نصائح لحجز ملعبك"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="blog-title">... نصائح لحجز ملعبك</h3>
+                <small>19-06-2025</small>
               </div>
-              <div class="card-body">
-                <div class="blog-head">
-                  <small>19-06-2025</small>
-                </div>
-                <h3 class="blog-title">سيارات للبيع</h3>
-                <p class="blog-desc">
-                  نقدم في منصة محرك خدمة بيع السيارات والتأكد من البائع والسيارة
-                  وفحصها والتأكد من جميع الوثائق الخاصة بها قبل الشراء. ومن
-                  فوائد هذه الإجراءات الأمان العالي عند عملية شراء السيارة من
-                  جميع النواحي.
-                </p>
-              </div>
+              <p class="blog-desc">
+                اكتشف أهم النصائح اللي هتساعدك تحجز ملعبك الرياضي بسهولة،
+                وتستمتع بتجربة خالية من التعقيدات عبر منصة ماتشي. وفر وقتك
+                واستعد لماتشك القادم بكفاءة
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <a href="blog-details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/02.jpg" loading="lazy" alt="سيارات للبيع" />
+          <div class="card" data-aos="fade-left">
+            <a href="blog-details.html" class="link"></a>
+            <div class="card-img-top">
+              <img
+                src="images/blog-1.png"
+                loading="lazy"
+                alt=" نصائح لحجز ملعبك"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="blog-title">... نصائح لحجز ملعبك</h3>
+                <small>19-06-2025</small>
               </div>
-              <div class="card-body">
-                <div class="blog-head">
-                  <small>19-06-2025</small>
-                </div>
-                <h3 class="blog-title">سيارات للبيع</h3>
-                <p class="blog-desc">
-                  نقدم في منصة محرك خدمة بيع السيارات والتأكد من البائع والسيارة
-                  وفحصها والتأكد من جميع الوثائق الخاصة بها قبل الشراء. ومن
-                  فوائد هذه الإجراءات الأمان العالي عند عملية شراء السيارة من
-                  جميع النواحي.
-                </p>
-              </div>
+              <p class="blog-desc">
+                اكتشف أهم النصائح اللي هتساعدك تحجز ملعبك الرياضي بسهولة،
+                وتستمتع بتجربة خالية من التعقيدات عبر منصة ماتشي. وفر وقتك
+                واستعد لماتشك القادم بكفاءة
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <a href="blog-details.html" class="link"></a>
-              <div class="card-img-top">
-                <img src="images/02.jpg" loading="lazy" alt="سيارات للبيع" />
+          <div class="card" data-aos="fade-left">
+            <a href="blog-details.html" class="link"></a>
+            <div class="card-img-top">
+              <img
+                src="images/blog-1.png"
+                loading="lazy"
+                alt=" نصائح لحجز ملعبك"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="blog-title">... نصائح لحجز ملعبك</h3>
+                <small>19-06-2025</small>
               </div>
-              <div class="card-body">
-                <div class="blog-head">
-                  <small>19-06-2025</small>
-                </div>
-                <h3 class="blog-title">سيارات للبيع</h3>
-                <p class="blog-desc">
-                  نقدم في منصة محرك خدمة بيع السيارات والتأكد من البائع والسيارة
-                  وفحصها والتأكد من جميع الوثائق الخاصة بها قبل الشراء. ومن
-                  فوائد هذه الإجراءات الأمان العالي عند عملية شراء السيارة من
-                  جميع النواحي.
-                </p>
-              </div>
+              <p class="blog-desc">
+                اكتشف أهم النصائح اللي هتساعدك تحجز ملعبك الرياضي بسهولة،
+                وتستمتع بتجربة خالية من التعقيدات عبر منصة ماتشي. وفر وقتك
+                واستعد لماتشك القادم بكفاءة
+              </p>
             </div>
           </div>
         </div>
@@ -790,34 +947,49 @@
     </section>
 
     <!-- النشرة البريدية -->
-    <section class="subscribe">
-      <div class="send-email">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-lg-5 mb-4 mb-lg-0">
-            <div class="d-flex flex-column gap-2 fs-4 fw-semibold">
-              <span> هل أنــــت مستعـــــــد للبـــدء؟</span>
-              <span> اشترك في النشرة البريدية لدينا </span>
+    <section class="subscribe py-5">
+      <div class="container-fluid py-4">
+        <div class="send-email">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+              <div class="d-flex flex-column gap-4 fs-4 fw-semibold">
+                <span class="text-start">ابدأ رحلتك الرياضية مع ماتشي</span>
+                <a href="" class="white-btn book-btn rounded-pill px-5">
+                  <span class="px-5">ابدأ الآن</span>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-5">
-            <div class="send-email-box">
-              <input type="text" placeholder="اكتب بريدك الالكترونى" />
-              <button><i class="bi bi-arrow-up-left"></i></button>
+            <div class="col-12 col-lg-5" data-aos="fade-left">
+              <div
+                class="d-flex align-items-center gap-2 fs-4 fw-semibold mb-4"
+              >
+                <span> اشترك في النشرة البريدية لدينا </span>
+                <i class="fa-regular fa-hand-point-right"></i>
+              </div>
+              <div class="send-email-box">
+                <input type="text" placeholder="اكتب بريدك الالكترونى" />
+                <button><i class="bi bi-arrow-up-left"></i></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <a href="#" id="scroll-top">
-      <i class="bi bi-chevron-double-up"></i>
+    <a
+      href="https://api.whatsapp.com/send?phone="
+      target="_blank"
+      aria-label="تواصل معنا عن الواتساب"
+      id="whatsapp"
+    >
+      <i class="bi bi-whatsapp"></i>
     </a>
 
     <footer>
-      <div class="container-fluid">
+      <div class="container-fluid" data-aos="fade-up">
         <div class="logo-wrapper">
           <div></div>
-          <img src="images/logo.svg" alt />
+          <img src="images/f_logo.png" alt />
           <div></div>
         </div>
         <div
@@ -833,36 +1005,18 @@
               <a class="nav-link" href="about.html">من نحن؟</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cars.html">السيارات</a>
+              <a class="nav-link" href="stadiums.html">الملاعب</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">المدونة</a>
+              <a class="nav-link" href="blogs.html">المدونة</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact_us.html">تواصل معنا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="join_us.html">تسجيل صاحب معرض</a>
             </li>
           </ul>
 
           <nav aria-label="Social Media Links">
             <ul class="social-icons">
-              <li>
-                <a href="" target="_blank" aria-label="Visit our Facebook page">
-                  <i class="fa-brands fa-facebook-f"></i>
-                </a>
-              </li>
-              <li>
-                <a href="" target="_blank" aria-label="Visit our snapchat page">
-                  <i class="fa-brands fa-snapchat"></i>
-                </a>
-              </li>
-              <li>
-                <a href="" target="_blank" aria-label="Visit our tiktok page">
-                  <i class="fa-brands fa-tiktok"></i>
-                </a>
-              </li>
               <li>
                 <a
                   href=""
@@ -883,26 +1037,8 @@
                 </a>
               </li>
               <li>
-                <a
-                  href=""
-                  target="_blank"
-                  aria-label="Visit our Pinterest page"
-                >
-                  <i class="fa-brands fa-pinterest"></i>
-                </a>
-              </li>
-              <li>
-                <a href="" target="_blank" aria-label="Visit our Behance page">
-                  <i class="fa-brands fa-behance"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  target="_blank"
-                  aria-label="Visit our YouTube channel"
-                >
-                  <i class="fa-brands fa-youtube"></i>
+                <a href="" target="_blank" aria-label="Visit our Facebook page">
+                  <i class="fa-brands fa-facebook-f"></i>
                 </a>
               </li>
             </ul>
@@ -913,10 +1049,9 @@
           <div
             class="d-flex flex-wrap gap-3 w-100 align-items-center justify-content-md-between justify-content-center"
           >
-            <div class="d-flex gap-2">
-              <span>الشروط والأحكام </span>
-              <span>|</span>
+            <div class="d-flex gap-4">
               <a href>سياسة الخصوصية</a>
+              <a href="">الشروط والأحكام </a>
             </div>
             <div>
               <a href="https://smartvision4p.com" class="link" target="_blank">
@@ -929,317 +1064,6 @@
       </div>
     </footer>
 
-    <!-- Financing request modal -->
-    <div
-      class="modal fade"
-      id="financingRequest_modal"
-      tabindex="-1"
-      aria-labelledby="financingRequest_modalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="financingRequest_modalLabel">
-              قدّم طلبك لتمويل السيارة الآن
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الاسم الكامل"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="رقم الهوية / الإقامة"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الحالة الوظيفية (موظف / متقاعد / غير موظف)"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="جهة العمل (اختياري)"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الراتب الشهري"
-                />
-              </div>
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="المدينة" />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="رقم الجوال"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="البريد الإلكتروني"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start">
-            <button type="button" class="main-outline-btn brdrt m-0">
-              ارسال
-              <i class="bi bi-arrow-left"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Financing calculator modal -->
-    <div
-      class="modal fade"
-      id="financingCalculator_modal"
-      tabindex="-1"
-      aria-labelledby="financingCalculator_modalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="financingCalculator_modalLabel">
-              احسب تمويلك بسهولة
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="سعر السيارة"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الدفعة الأولى (لا تتعدى نسبة 50%)"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الاسم الكامل"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الدفعة الأخيرة (لا تتعدى نسبة 45%)"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="مدة التمويل"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start">
-            <button
-              type="button"
-              class="main-outline-btn brdrt m-0"
-              data-bs-target="#financingResult_modal"
-              data-bs-toggle="modal"
-            >
-              ارسال
-              <i class="bi bi-arrow-left"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Financing result modal -->
-    <div
-      class="modal fade"
-      id="financingResult_modal"
-      tabindex="-1"
-      aria-labelledby="financingResult_modalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div>
-              <h1 class="modal-title fs-5" id="financingResult_modalLabel">
-                نتيجة التمويل
-              </h1>
-              <p>النتيجة المبدئية للحسبة أدناه تعتمد على اختياراتك</p>
-            </div>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>سعر السيارة</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>54698</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>الدفعة الأولى</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>2500</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>الدفعة الأخيرة</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>2500</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>مدة التمويل</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>2500</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>الأرباح</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>2500</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-8">
-                <span>الرسوم</span>
-                <span>:</span>
-              </div>
-              <div class="col-4">
-                <span>2500</span>
-                <span>ريال سعودي</span>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer gap-3 justify-content-start">
-            <button
-              type="button"
-              class="main-btn m-0"
-              data-bs-target="#financingCalculator_modal"
-              data-bs-toggle="modal"
-            >
-              الرجوع للحاسبة
-              <i class="bi bi-arrow-left"></i>
-            </button>
-            <button
-              type="button"
-              class="main-outline-btn brdrt m-0"
-              data-bs-target="#financingResult_modal"
-              data-bs-toggle="modal"
-            >
-              ارسال
-              <i class="bi bi-arrow-left"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- payment request modal -->
-    <div
-      class="modal fade"
-      id="paymentRequest_modal"
-      tabindex="-1"
-      aria-labelledby="paymentRequest_modalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header justify-content-center">
-            <h1 class="modal-title fs-5" id="paymentRequest_modalLabel">
-              بيانات المعرض
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="car_feature pb-4">
-              <div class="text-center">
-                <h2 class="owner-name justify-content-center fs-6 mb-2">
-                  <img src="images/02.jpg" alt="اسم المعرض" />
-                  <b>معرض الشركة الوطنية للسيارات</b>
-                </h2>
-                <a href="tel:+966568023169" class="">
-                  <i class="fa-solid fa-phone-volume"></i>
-                  <span>+966568023169</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- jQuery script -->
     <script src="js/jquery-3.6.0.min.js"></script>
 
@@ -1248,9 +1072,18 @@
 
     <!-- owl-carousel script -->
     <script src="js/owl.carousel.min.js"></script>
-    
+
+    <script src="js/wow.min.js"></script>
+
     <!-- select2 script -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
