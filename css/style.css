@@ -995,12 +995,12 @@ a.nav-link.custom-link:hover .nav-text {
    background-size: contain;
 }
 
-.about-wrapper {
+/* .about-wrapper {
    background: url(../images/path.svg);
    background-repeat: repeat-y;
    background-position: center;
    background-size: contain;
-}
+} */
 
 .about-us p:not(:last-child) {
    margin-bottom: 1rem;
