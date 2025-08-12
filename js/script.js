@@ -11,6 +11,133 @@ $(document).ready(function () {
     dirAr = false;
   }
 
+  // CSS class name for dark theme
+  const darkTheme = "dark-theme";
+
+  const darkThemeSetUp = () => {
+    if (getCurrentTheme() === "dark") {
+      document.getElementById("toggleBtn").checked = true;
+    } else {
+      document.getElementById("toggleBtn").checked = false;
+    }
+  };
+
+
+
+  const getCurrentTheme = () =>
+    document.body.classList.contains(darkTheme) ? "dark" : "light";
+
+  //   Get user's theme preference from local storage
+  const selectedTheme = localStorage.getItem("selected-theme");
+  if (selectedTheme === "dark") {
+    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+      darkTheme
+    );
+    darkThemeSetUp();
+  }
+
+  const themeButton = document.getElementById("toggleBtn");
+  themeButton.addEventListener("change", () => {
+    document.body.classList.toggle(darkTheme);
+    localStorage.setItem("selected-theme", getCurrentTheme());
+    darkThemeSetUp();
+    $('#themeIcon').toggleClass("bi-cloud-moon bi-brightness-high");
+  });
+
+  /*
+  Clean Arabic Typewriter
+  - multiple phrases
+  - respects prefers-reduced-motion
+  - pause on hover (no control buttons)
+*/
+
+  (() => {
+    const prefsReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // CONFIG: phrases and speeds
+    const phrases = [
+      "احجز ملعبك بسهولة مع ماتشي",
+      "استكشف الملاعب القريبة واختر الأنسب",
+      "ادفع بأمان واحصل على تأكيد فوري"
+    ];
+    const charDelay = 50;      // ms per character (typing)
+    const backspaceDelay = 35; // ms per character when deleting
+    const phrasePause = 1000;  // ms pause when phrase complete
+    const loop = true;         // loop phrases
+
+    // elements
+    const el = document.getElementById('typeText');
+    const caret = document.getElementById('caret');
+
+    // state
+    let running = true;       // pause/resume on hover
+    let currentPhrase = 0;
+    let charIndex = 0;
+    let deleting = false;
+    let timeoutId = null;
+
+    const sleep = (ms) => new Promise(res => { timeoutId = setTimeout(res, ms); });
+
+    // Reduced motion fallback: show first phrase fully
+    if (prefsReduce) {
+      el.textContent = phrases[0];
+      caret.style.opacity = 0.9;
+      return;
+    }
+
+    // Pause on hover
+    const container = document.querySelector('.type-wrap');
+    if (container) {
+      container.addEventListener('mouseenter', () => running = false);
+      container.addEventListener('mouseleave', () => running = true);
+    }
+
+    // Main async typing loop
+    async function typeLoop() {
+      while (true) {
+        const phrase = phrases[currentPhrase];
+
+        // Type forward
+        while (charIndex < phrase.length) {
+          if (!running) { await sleep(100); continue; }
+          charIndex++;
+          el.textContent = phrase.slice(0, charIndex);
+          await sleep(charDelay);
+        }
+
+        // after finishing phrase
+        await sleep(phrasePause);
+
+        if (!loop) break;
+
+        // delete back (optional loop effect)
+        deleting = true;
+        while (charIndex > 0) {
+          if (!running) { await sleep(100); continue; }
+          charIndex--;
+          el.textContent = phrase.slice(0, charIndex);
+          await sleep(backspaceDelay);
+        }
+        deleting = false;
+
+        // next phrase
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        await sleep(250);
+      }
+    }
+
+    // start
+    typeLoop();
+
+    // expose minimal API if needed later
+    window.SimpleTypewriter = {
+      pause: () => running = false,
+      resume: () => running = true,
+      setPhrases: (arr) => { if (Array.isArray(arr) && arr.length) { phrases.length = 0; phrases.push(...arr); currentPhrase = 0; charIndex = 0; el.textContent = ''; } }
+    };
+  })();
+
+
   // toggle password type
   $('.pass').click(function () {
     $(this).children('i').toggleClass("bi-unlock bi-lock");
@@ -96,7 +223,6 @@ $(document).ready(function () {
   $(".outer-carousel").owlCarousel({
     nav: false,
     dots: false,
-    loop: false,
     responsiveClass: true,
     margin: 16,
     rtl: dirAr,
@@ -119,7 +245,7 @@ $(document).ready(function () {
       nav: false,
       dots: true,
       loop: false,
-      margin: 8,
+      margin: 16,
       rtl: dirAr,
       items: 1
     });
@@ -168,9 +294,6 @@ $(document).ready(function () {
       }
     }
   });
-
-
-
 
   // car details carousel
   // Resize and refresh page. slider-two slideBy bug remove
@@ -412,8 +535,8 @@ $(document).ready(function () {
   $('select').select2();
 
   AOS.init({
-  duration: 1000
-});
+    duration: 1000
+  });
 
 
 });

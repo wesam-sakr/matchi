@@ -52,141 +52,284 @@
     />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .wrap {
+        max-width: 40%;
+        margin: 0px auto;
+      }
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+      /* show curved on desktop, straight on mobile */
+      #straightGroup {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #curvedGroup {
+          display: none;
+        }
+        #straightGroup {
+          display: block;
+        }
+      }
+
+      /* step base style */
+      .stepOuter {
+        fill: none;
+        stroke: var(--base);
+        stroke-width: 3;
+        stroke-dasharray: 20 20;
+      }
+      .stepInner {
+        transition: transform 0.28s ease, fill 0.28s ease;
+        transform-origin: center;
+        transform: scale(1);
+        fill: var(--base);
+      }
+      .stepInner.active {
+        fill: var(--active);
+      }
+      /* marker */
+      #marker {
+        opacity: 0;
+      }
+    </style>
   </head>
 
-  <body>
-    <div
-      class="head-hero-wrapper"
-      style="background: url('images/hero-sec-bg.png')"
-    >
-      <div class="overlay">
-        <header data-aos="fade-down">
-          <div class="container-fluid">
-            <nav class="navbar top-nav p-0">
-              <div
-                class="helper-links w-100 d-flex align-items-center justify-content-between py-2"
-              >
-                <ul class="helper-pages m-0 d-flex align-items-center">
-                  <li class="d-block">
-                    <a href="login.html" aria-label=" الذهاب إلى التسجيل ">
-                      <i class="bi bi-person"></i>
-                      <span>التسجيل</span>
-                    </a>
-                  </li>
-                  <li class="d-md-block d-none">
-                    <a
-                      href="policy.html"
-                      aria-label="الذهاب إلى سياسة الخصوصية"
-                    >
-                      <span>سياسة الخصوصية</span>
-                    </a>
-                  </li>
-                  <li class="d-md-block d-none">
-                    <a href="terms.html" aria-label="الذهاب إلى  ">
-                      <span>الشروط والأحكام</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="m-0 d-flex gap-4 align-items-center">
-                  <li>
-                    <a href="" aria-label="">
-                      <i class="bi bi-brightness-high fs-4"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      id="lang"
-                      aria-label="تغيير اللغة إلى الإنجليزية"
-                    >
-                      <span id="lang-text">English</span>
-                      <i class="bi bi-globe"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <nav class="navbar navbar-expand-lg navbar-light p-0 pt-2 top-0">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand m-0" href="index.html">
-                <img src="images/logo.png" alt />
-              </a>
-              <div
-                class="collapse navbar-collapse justify-content-between align-items-center"
-                id="navbarSupportedContent"
-              >
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a href="index.html" class="nav-link custom-link active">
-                      <i class="fa-regular fa-house"></i>
-                      <span class="nav-text">الرئيسية</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about_us.html" class="nav-link">من نحن ؟</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="stadiums.html" class="nav-link">الملاعب</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="blogs.html" class="nav-link">المدونة</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="contact_us.html" class="nav-link">تواصل معنا</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="join_us.html" class="nav-link">التسجيل</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav m-0">
-                  <li class="nav-item">
-                    <a href="login.html" class="nav-link book-btn white-btn">
-                      احجز الآن
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </header>
+  <body class="">
+    <header>
+      <nav class="navbar top-nav p-0" data-aos="fade-right">
+        <div class="container-fluid">
+          <div
+            class="helper-links w-100 d-flex align-items-center justify-content-between py-2"
+          >
+            <ul class="helper-pages m-0 d-flex align-items-center">
+              <li class="d-block">
+                <a href="login.html" aria-label=" الذهاب إلى التسجيل ">
+                  <div class="auth-icon">
+                    <i class="bi bi-person"></i>
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="d-md-block d-none">
+                <a href="policy.html" aria-label="الذهاب إلى سياسة الخصوصية">
+                  <span>سياسة الخصوصية</span>
+                </a>
+              </li>
+              <li class="d-md-block d-none">
+                <a href="terms.html" aria-label="الذهاب إلى  ">
+                  <span>الشروط والأحكام</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="m-0 d-flex gap-4 align-items-center">
+              <li>
+                <!-- <a href="" aria-label="">
+                  <i class="bi bi-brightness-high fs-4"></i>
+                </a> -->
 
-        <section class="hero-sec" data-aos="fade-up">
-          <div class="container-fluid h-100">
-            <div class="content">
-              <h1>احجز ملعبك بسهولة مع ماتشي</h1>
-              <p class="col-md-7 mx-auto">
-                استكشف أفضل الملاعب القريبة منك، وحدد الوقت المناسب، واحجز في
-                ثواني. ماتشي هو رفيقك الرياضي للحجز السريع والمريح، من أي مكان
-                وفي أي وقت
-              </p>
-              <ul class="btn-group">
-                <li>
-                  <a href="login.html" class="white-btn book-btn"> احجز الآن </a>
-                </li>
-                <li>
-                  <a href="login.html" class="enroll main-outline-btn">
-                    انضم كصاحب ملعب
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <!--==================== Dark Mode Toggle Button ====================-->
+                <div class="theme-toggle">
+                  <input
+                    id="toggleBtn"
+                    type="checkbox"
+                    class="d-none"
+                    aria-label="تبديل الثيم"
+                  />
+                  <label
+                    for="toggleBtn"
+                    class="switch"
+                    role="button"
+                    aria-pressed="false"
+                    tabindex="0"
+                  >
+                    <i id="themeIcon" class="bi bi-brightness-high fs-4"></i>
+                  </label>
+                </div>
+                <!--==================== End====================-->
+              </li>
+              <li>
+                <a href="#" id="lang" aria-label="تغيير اللغة إلى الإنجليزية">
+                  <span id="lang-text">English</span>
+                  <i class="bi bi-globe"></i>
+                </a>
+              </li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </nav>
+      <nav
+        class="navbar main-nav navbar-expand-lg navbar-light p-0 pt-2 top-0"
+        data-aos="fade-left"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand m-0" href="index.html">
+            <img src="images/logo.png" alt />
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link custom-link active">
+                  <i class="fa-regular fa-house"></i>
+                  <span class="nav-text">الرئيسية</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="about_us.html" class="nav-link">من نحن ؟</a>
+              </li>
+              <li class="nav-item">
+                <a href="stadiums.html" class="nav-link">الملاعب</a>
+              </li>
+              <li class="nav-item">
+                <a href="blogs.html" class="nav-link">المدونة</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact_us.html" class="nav-link">تواصل معنا</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav m-0">
+              <li class="nav-item">
+                <a href="login.html" class="nav-link white-btn px-3">
+                  <small> انضم كصاحب ملعب </small>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="hero-sec"
+      style="background: url('images/line.svg') var(--main)"
+    >
+      <div class="container-fluid h-100">
+        <div class="content" data-aos="zoom-out">
+          <div class="type-wrap" aria-live="polite">
+            <h1 id="typeText" class="type-text"></h1>
+            <span id="caret" class="caret" aria-hidden="true"></span>
+          </div>
+          <p class="col-md-7 mx-auto">
+            استكشف أفضل الملاعب القريبة منك، وحدد الوقت المناسب، واحجز في ثواني.
+            ماتشي هو رفيقك الرياضي للحجز السريع والمريح، من أي مكان وفي أي وقت
+          </p>
+          <div class="col-lg-auto col-12 mx-auto">
+            <a href="login.html" class="white-btn book-btn w-100 px-md-4">
+              <span>احجز الآن</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- من نحن -->
     <section class="about-us">
+      <div class="wrap">
+        <!-- SVG (من الكود الذي زودتني به) -->
+        <svg
+          id="rihalSVG"
+          viewBox="0 0 800 3140"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- CURVED (desktop) -->
+          <g id="curvedGroup">
+            <!-- base dashed path -->
+            <path
+              id="curvedBase"
+              d="M3 3C45.6084 42.2125 137.999 163.864 220.677 163.864C324.025 163.864 270.175 22.6988 220.677 69.7538C171.179 116.809 163.02 201.632 220.677 272.214C266.803 328.68 308.586 374.069 343 407.5C483 543.5 711.743 965.41 691.727 1259.13C666.705 1626.29 385.184 1908 451 2105.5C516.816 2303.01 853.425 2584.07 600 3117"
+              stroke="#E4E4E4"
+              stroke-width="8"
+              fill="none"
+              stroke-dasharray="30 30"
+            />
+            <!-- animated solid path (drawn on top) -->
+            <path
+              id="curvedAnim"
+              d="M3 3C45.6084 42.2125 137.999 163.864 220.677 163.864C324.025 163.864 270.175 22.6988 220.677 69.7538C171.179 116.809 163.02 201.632 220.677 272.214C266.803 328.68 308.586 374.069 343 407.5C483 543.5 711.743 965.41 691.727 1259.13C666.705 1626.29 385.184 1908 451 2105.5C516.816 2303.01 853.425 2584.07 600 3117"
+              stroke="var(--line)"
+              stroke-width="8"
+              fill="none"
+            />
+            <!-- steps (curved) -->
+            <g id="curvedSteps">
+              <g id="c-step1">
+                <circle class="stepOuter" cx="307" cy="369.4" r="40" />
+                <circle class="stepInner" cx="307" cy="369.4" r="30" />
+              </g>
+              <g id="c-step2">
+                <circle class="stepOuter" cx="692" cy="1187.4" r="40" />
+                <circle class="stepInner" cx="692" cy="1187.4" r="30" />
+              </g>
+              <g id="c-step3">
+                <circle class="stepOuter" cx="440" cy="2053" r="40" />
+                <circle class="stepInner" cx="440" cy="2053" r="30" />
+              </g>
+              <g id="c-step4">
+                <circle class="stepOuter" cx="610" cy="3090" r="40" />
+                <circle class="stepInner" cx="610" cy="3090" r="30" />
+              </g>
+            </g>
+          </g>
+
+          <!-- STRAIGHT (mobile) -->
+          <g id="straightGroup">
+            <path
+              id="straightBase"
+              d="M 370 50 V 3130"
+              stroke="#E4E4E4"
+              stroke-width="4"
+              fill="none"
+              stroke-dasharray="20 20"
+            />
+            <path
+              id="straightAnim"
+              d="M 370 50 V 3130"
+              stroke="var(--line)"
+              stroke-width="4"
+              fill="none"
+            />
+            <g id="straightSteps">
+              <g id="s-step1">
+                <circle class="stepOuter" cx="370" cy="369.4" r="40" />
+                <circle class="stepInner" cx="370" cy="369.4" r="30" />
+              </g>
+              <g id="s-step2">
+                <circle class="stepOuter" cx="370" cy="1187.4" r="40" />
+                <circle class="stepInner" cx="370" cy="1187.4" r="30" />
+              </g>
+              <g id="s-step3">
+                <circle class="stepOuter" cx="370" cy="2053" r="40" />
+                <circle class="stepInner" cx="370" cy="2053" r="30" />
+              </g>
+              <g id="s-step4">
+                <circle class="stepOuter" cx="370" cy="3100" r="40" />
+                <circle class="stepInner" cx="370" cy="3100" r="30" />
+              </g>
+            </g>
+          </g>
+
+          <!-- marker -->
+          <circle id="marker" r="12" fill="var(--active)" cx="-50" cy="-50" />
+        </svg>
+      </div>
       <div class="about-wrapper">
         <div class="container-fluid py-5">
           <div class="row gy-3 align-items-center justify-content-between">
@@ -196,35 +339,22 @@
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 data-aos="zoom-in" class="section-title">من نحن؟</h2>
+              <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
               <p>
                 ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
                 بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
-                التوفر، والحجز الفوري من خلال موقعنا انطلقنا بهدف تسهيل الوصول
-                إلى الملاعب وتشجيع الناس على ممارسة الرياضة بشكل منتظم، سواء كنت
-                لاعب محترف أو هاوي. ومع ماتشي، كل اللي عليك تختار الرياضة، تحدد
-                الوقت، وتحجز ماتشك في دقائق
+                التوفر، والحجز الفوري من خلال موقعنا
               </p>
               <p>
-                ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
-                بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
-                التوفر، والحجز الفوري من خلال موقعنا انطلقنا بهدف تسهيل الوصول
-                إلى الملاعب وتشجيع الناس على ممارسة الرياضة بشكل منتظم، سواء كنت
-                لاعب محترف أو هاوي. ومع ماتشي، كل اللي عليك تختار الرياضة، تحدد
-                الوقت، وتحجز ماتشك في دقائق
+                انطلقنا بهدف تسهيل الوصول إلى الملاعب وتشجيع الناس على ممارسة
+                الرياضة بشكل منتظم، سواء كنت لاعب محترف أو هاوي. ومع ماتشي، كل
+                اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
               </p>
             </div>
             <div class="col-12 col-md-auto">
               <div class="about-img">
-                <img
-                  src="images/about.png"
-                  alt
-                  data-aos="zoom-in"
-                />
-                <div
-                  class="about-shape"
-                  data-aos="fade-right"
-                ></div>
+                <img src="images/about.png" alt data-aos="zoom-in" />
+                <div class="about-shape" data-aos="fade-right"></div>
               </div>
             </div>
           </div>
@@ -237,10 +367,7 @@
                   data-aos="zoom-in"
                   data-aos-easing="ease-in-sine"
                 />
-                <div
-                  class="about-shape"
-                  data-aos="fade-left"
-                ></div>
+                <div class="about-shape" data-aos="fade-left"></div>
               </div>
             </div>
             <div
@@ -249,24 +376,21 @@
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 data-aos="zoom-in" class="section-title">استكشف خدماتنا</h2>
-              <p>كل ما تحتاجه لتجربة رياضية أسهل وأسرع</p>
+              <h2 data-aos="zoom-in-up" class="section-title">
+                استكشف خدماتنا
+              </h2>
               <p>
                 في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
                 وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
                 والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
-                تخلّي يومك الرياضي أسهل نقدم مجموعة متكاملة من الخدمات المصممة
+                تخلّي يومك الرياضي أسهل. نقدم مجموعة متكاملة من الخدمات المصممة
                 لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية باحترافية
-                وسلاسة
+                وسلاسة، بداية من إمكانية حجز الملاعب الرياضية والبحث عن أقرب
+                الملاعب ليك، مرورًا بلوحة تحكم مخصصة لأصحاب الملاعب لإدارة
+                حجوزاتهم بكل سهولة، والدفع الإلكتروني الآمن اللي يضمن لك راحة
+                ومرونة، وانتهاءً بإدارة حساب اللاعب وجدولة المواعيد بشكل منظم
+                وسلس
               </p>
-              <ul class="d-flex gap-3 flex-wrap about-feature mt-5">
-                <li>حجز الملاعب الرياضية</li>
-                <li>البحث عن ملاعب قريبة</li>
-                <li>لوحة تحكم لأصحاب الملاعب</li>
-                <li>الدفع الإلكتروني الآمن</li>
-                <li>إدارة حساب اللاعب</li>
-                <li>جدولة المواعيد</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -274,9 +398,11 @@
     </section>
 
     <!-- أكثر الملاعب بحثًا -->
-    <section class="stadiums secondary-bg py-5">
+    <section class="stadiums main-bg py-5">
       <div class="container-fluid">
-        <h2 data-aos="zoom-in" class="section-title text-center">أكثر الملاعب بحثًا</h2>
+        <h2 data-aos="zoom-in-up" class="section-title text-center">
+          أكثر الملاعب بحثًا
+        </h2>
 
         <div class="owl-carousel outer-carousel">
           <div class="card" data-aos="fade-up" data-aos-delay="300">
@@ -307,7 +433,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                   <i class="fa-solid fa-futbol"></i>
+                    <i class="fa-solid fa-futbol"></i>
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -325,7 +451,9 @@
                 </div>
               </div>
               <div class="card-footer mt-3 pb-1">
-                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                <a href="" class="main-btn book-btn m-auto">
+                  <span>احجز الآن</span>
+                </a>
               </div>
             </div>
           </div>
@@ -357,7 +485,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                   <i class="fa-solid fa-futbol"></i>
+                    <i class="fa-solid fa-futbol"></i>
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -375,7 +503,9 @@
                 </div>
               </div>
               <div class="card-footer mt-3 pb-1">
-                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                <a href="" class="main-btn book-btn m-auto">
+                  <span>احجز الآن</span>
+                </a>
               </div>
             </div>
           </div>
@@ -407,7 +537,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                   <i class="fa-solid fa-futbol"></i>
+                    <i class="fa-solid fa-futbol"></i>
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -425,7 +555,9 @@
                 </div>
               </div>
               <div class="card-footer mt-3 pb-1">
-                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                <a href="" class="main-btn book-btn m-auto">
+                  <span>احجز الآن</span>
+                </a>
               </div>
             </div>
           </div>
@@ -457,7 +589,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                   <i class="fa-solid fa-futbol"></i>
+                    <i class="fa-solid fa-futbol"></i>
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -475,7 +607,9 @@
                 </div>
               </div>
               <div class="card-footer mt-3 pb-1">
-                <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                <a href="" class="main-btn book-btn m-auto">
+                  <span>احجز الآن</span>
+                </a>
               </div>
             </div>
           </div>
@@ -486,7 +620,7 @@
     <!-- الملاعب -->
     <section class="stadiums py-5">
       <div class="container-fluid">
-        <h2 data-aos="zoom-in" class="section-title text-center">الملاعب</h2>
+        <h2 data-aos="zoom-in-up" class="section-title text-center">الملاعب</h2>
 
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
           <div class="col">
@@ -536,7 +670,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -588,7 +724,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -640,7 +778,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -692,7 +832,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -744,7 +886,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -796,7 +940,9 @@
                   </div>
                 </div>
                 <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-outline-btn book-btn m-auto"> احجز الآن </a>
+                  <a href="" class="main-btn book-btn m-auto">
+                    <span>احجز الآن</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -808,7 +954,9 @@
     <!-- نتائج تتحدث عن نفسها -->
     <section class="review py-5">
       <div class="container-fluid">
-        <h2 data-aos="zoom-in" class="section-title text-center">نتائج تتحدث عن نفسها</h2>
+        <h2 data-aos="zoom-in-up" class="section-title text-center">
+          نتائج تتحدث عن نفسها
+        </h2>
         <div class="owl-carousel">
           <div class="card" data-aos="fade-right">
             <div class="card-body p-4">
@@ -877,7 +1025,7 @@
     <!-- المقالات -->
     <section class="blogs py-5">
       <div class="container-fluid">
-        <h2 data-aos="zoom-in" class="section-title text-center">المدونة</h2>
+        <h2 data-aos="zoom-in-up" class="section-title text-center">المدونة</h2>
         <div class="owl-carousel">
           <div class="card" data-aos="fade-left">
             <a href="blog-details.html" class="link"></a>
@@ -947,14 +1095,18 @@
     </section>
 
     <!-- النشرة البريدية -->
-    <section class="subscribe py-5">
+    <section class="subscribe main-bg py-5">
       <div class="container-fluid py-4">
         <div class="send-email">
-          <div class="row align-items-center justify-content-between">
+          <div
+            class="row align-items-center justify-content-md-between justify-content-center"
+          >
             <div class="col-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-              <div class="d-flex flex-column gap-4 fs-4 fw-semibold">
-                <span class="text-start">ابدأ رحلتك الرياضية مع ماتشي</span>
-                <a href="" class="white-btn book-btn rounded-pill px-5">
+              <div class="d-flex flex-column gap-4 fw-semibold">
+                <span class="text-md-start fs-4"
+                  >ابدأ رحلتك الرياضية مع ماتشي</span
+                >
+                <a href="" class="white-btn py-3 rounded-pill">
                   <span class="px-5">ابدأ الآن</span>
                 </a>
               </div>
@@ -986,16 +1138,24 @@
     </a>
 
     <footer>
-      <div class="container-fluid" >
-        <div class="logo-wrapper" >
-          <div data-aos="fade-left"></div>
-          <img src="images/f_logo.png" alt data-aos="zoom-in"/>
-          <div data-aos="fade-right"></div>
+      <div class="container-fluid">
+        <div class="logo-wrapper">
+          <div data-aos="fade-left" class="aos-init aos-animate"></div>
+          <img
+            src="images/f_logo.png"
+            alt=""
+            data-aos="zoom-in"
+            class="aos-init aos-animate"
+          />
+          <div data-aos="fade-right" class="aos-init aos-animate"></div>
         </div>
         <div
           class="d-flex flex-wrap gap-3 justify-content-md-between justify-content-center py-3 mb-3"
         >
-          <ul class="nav justify-content-md-start justify-content-center" data-aos="fade-left">
+          <ul
+            class="nav justify-content-md-start justify-content-center aos-init aos-animate"
+            data-aos="fade-left"
+          >
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
                 >الرئيسية</a
@@ -1015,7 +1175,11 @@
             </li>
           </ul>
 
-          <nav aria-label="Social Media Links" data-aos="fade-right">
+          <nav
+            aria-label="Social Media Links"
+            data-aos="fade-right"
+            class="aos-init aos-animate"
+          >
             <ul class="social-icons">
               <li>
                 <a
@@ -1050,7 +1214,7 @@
             class="d-flex flex-wrap gap-3 w-100 align-items-center justify-content-md-between justify-content-center"
           >
             <div class="d-flex gap-4">
-              <a href>سياسة الخصوصية</a>
+              <a href="">سياسة الخصوصية</a>
               <a href="">الشروط والأحكام </a>
             </div>
             <div>
@@ -1085,7 +1249,146 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // sample path points in screen coordinates and map steps by screen center
+      function computeStepFractions_byScreen(svgEl, pathEl, stepEls) {
+        const total = pathEl.getTotalLength();
+        const samples = [];
+        const stepPx = 3; // دقة العيّنة (كل 3px) — قلل لزيادة الدقة
+        const svgPoint = svgEl.createSVGPoint();
+        const screenCTM = svgEl.getScreenCTM();
+
+        for (let L = 0; L <= total; L += stepPx) {
+          const p = pathEl.getPointAtLength(L);
+          svgPoint.x = p.x;
+          svgPoint.y = p.y;
+          const sp = svgPoint.matrixTransform(screenCTM);
+          samples.push({ L, x: sp.x, y: sp.y });
+        }
+
+        const fractions = [];
+        stepEls.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          let best = { L: 0, d: Infinity };
+          for (const s of samples) {
+            const dx = s.x - cx,
+              dy = s.y - cy;
+            const d = dx * dx + dy * dy;
+            if (d < best.d) best = { L: s.L, d };
+          }
+          fractions.push(Math.min(1, Math.max(0, best.L / total)));
+        });
+
+        return fractions;
+      }
+
+      function initAnimation() {
+        // cleanup previous
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+        gsap.killTweensOf("#marker");
+
+        const svg = document.getElementById("rihalSVG");
+        const isMobile = window.matchMedia("(max-width:768px)").matches;
+
+        const animPath = isMobile
+          ? document.getElementById("straightAnim")
+          : document.getElementById("curvedAnim");
+        const basePath = isMobile
+          ? document.getElementById("straightBase")
+          : document.getElementById("curvedBase");
+        const stepGroup = isMobile
+          ? document.getElementById("straightSteps")
+          : document.getElementById("curvedSteps");
+
+        // ensure base dashed
+        basePath.setAttribute("stroke-dasharray", isMobile ? "20 20" : "30 30");
+
+        // prepare animated stroke
+        const length = animPath.getTotalLength();
+        animPath.style.strokeDasharray = length;
+        animPath.style.strokeDashoffset = length;
+
+        // step elements (inner circles)
+        const stepEls = Array.from(stepGroup.querySelectorAll(".stepInner"));
+
+        // compute fractions (screen based)
+        const fractions = computeStepFractions_byScreen(svg, animPath, stepEls);
+
+        // START / END tuning to make animation start earlier and progress smoothly
+        const svgRect = svg.getBoundingClientRect();
+        const startStr = "top 80%"; // يبدأ مبكراً عندما يصل top الخاص بـ SVG إلى 80% من الڤيوبورت
+        const desiredScroll = Math.max(
+          svgRect.height + window.innerHeight * 0.6,
+          window.innerHeight * 1.2
+        );
+        const endStr = "+=" + Math.round(desiredScroll);
+        const scrubSmooth = 0.45; // قيمة التنعيم (0.45 يعطي إحساس سلس)
+
+        // Main ScrollTrigger (onUpdate uses gsap.to smoothing)
+        ScrollTrigger.create({
+          trigger: svg,
+          start: startStr,
+          end: endStr,
+          scrub: scrubSmooth,
+          onUpdate(self) {
+            const p = self.progress;
+
+            // target offset and tween it for smoothing
+            const targetOffset = length * (1 - p);
+            gsap.to(animPath, {
+              strokeDashoffset: targetOffset,
+              duration: 0.28,
+              ease: "power1.out",
+              overwrite: true,
+            });
+
+            // move marker smoothly to point at progress
+            const point = animPath.getPointAtLength(
+              Math.max(0, Math.min(length, p * length))
+            );
+            gsap.to("#marker", {
+              attr: { cx: point.x, cy: point.y },
+              duration: 0.28,
+              ease: "power2.out",
+              overwrite: true,
+            });
+
+            // activate steps when passed
+            stepEls.forEach((el, i) => {
+              if (p + 0.01 >= fractions[i]) el.classList.add("active");
+              else el.classList.remove("active");
+            });
+          },
+        });
+
+        // set initial marker pos at start of path
+        const start = animPath.getPointAtLength(0);
+        const marker = document.getElementById("marker");
+        marker.setAttribute("cx", start.x);
+        marker.setAttribute("cy", start.y);
+      }
+
+      // debounce resize & init
+      let resizeTimer;
+      window.addEventListener("load", () => {
+        initAnimation();
+        setTimeout(initAnimation, 120); // ensure fonts/layout settled
+      });
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(initAnimation, 160);
+      });
+    </script>
   </body>
 </html>
