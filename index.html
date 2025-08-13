@@ -52,51 +52,6 @@
     />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .wrap {
-        max-width: 40%;
-        margin: 0px auto;
-      }
-      svg {
-        display: block;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-      }
-      /* show curved on desktop, straight on mobile */
-      #straightGroup {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        #curvedGroup {
-          display: none;
-        }
-        #straightGroup {
-          display: block;
-        }
-      }
-
-      /* step base style */
-      .stepOuter {
-        fill: none;
-        stroke: var(--base);
-        stroke-width: 3;
-        stroke-dasharray: 20 20;
-      }
-      .stepInner {
-        transition: transform 0.28s ease, fill 0.28s ease;
-        transform-origin: center;
-        transform: scale(1);
-        fill: var(--base);
-      }
-      .stepInner.active {
-        fill: var(--active);
-      }
-      /* marker */
-      #marker {
-        opacity: 0;
-      }
-    </style>
   </head>
 
   <body class="">
@@ -128,11 +83,7 @@
             </ul>
             <ul class="m-0 d-flex gap-4 align-items-center">
               <li>
-                <!-- <a href="" aria-label="">
-                  <i class="bi bi-brightness-high fs-4"></i>
-                </a> -->
-
-                <!--==================== Dark Mode Toggle Button ====================-->
+                <!--=== Dark Mode Toggle Button ===-->
                 <div class="theme-toggle">
                   <input
                     id="toggleBtn"
@@ -147,10 +98,10 @@
                     aria-pressed="false"
                     tabindex="0"
                   >
-                    <i id="themeIcon" class="bi bi-brightness-high fs-4"></i>
+                    <i id="themeIcon" class="bi bi-brightness-high fs-5"></i>
                   </label>
                 </div>
-                <!--==================== End====================-->
+                <!--=== End===-->
               </li>
               <li>
                 <a href="#" id="lang" aria-label="تغيير اللغة إلى الإنجليزية">
@@ -243,7 +194,7 @@
     <!-- من نحن -->
     <section class="about-us">
       <div class="wrap">
-        <!-- SVG (من الكود الذي زودتني به) -->
+        <!-- LINE SVG  -->
         <svg
           id="rihalSVG"
           viewBox="0 0 800 3140"
@@ -351,20 +302,19 @@
                 اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
               </p>
             </div>
-            <div class="col-12 col-md-auto">
+            <div class="col-12 col-md-auto" data-aos="fade-up-right">
               <div class="about-img">
-                <img src="images/about.png" alt data-aos="zoom-in" />
+                <img src="images/about.png" alt />
                 <div class="about-shape" data-aos="fade-right"></div>
               </div>
             </div>
           </div>
           <div class="row gy-3 align-items-center justify-content-between">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up-left">
               <div class="about-img">
                 <img
                   src="images/about-2.jpg"
                   alt
-                  data-aos="zoom-in"
                   data-aos-easing="ease-in-sine"
                 />
                 <div class="about-shape" data-aos="fade-left"></div>
@@ -406,7 +356,7 @@
 
         <div class="owl-carousel outer-carousel">
           <div class="card" data-aos="fade-up" data-aos-delay="300">
-            <a href="car_details.html" class="link"></a>
+            <a href="stadium_details.html" class="link"></a>
             <div class="position-relative">
               <div class="badge">
                 <i class="bi bi-star-fill"></i>
@@ -433,7 +383,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-futbol"></i>
+                    <img src="images/stadium.svg" alt />
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -445,8 +395,8 @@
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-clock"></i>
-                    أقرب موعد : اليوم 8 مساءًا
+                    <img src="images/currency.svg" alt />
+                    220 ريال عماني
                   </div>
                 </div>
               </div>
@@ -458,7 +408,7 @@
             </div>
           </div>
           <div class="card" data-aos="fade-up" data-aos-delay="600">
-            <a href="car_details.html" class="link"></a>
+            <a href="stadium_details.html" class="link"></a>
             <div class="position-relative">
               <div class="badge">
                 <i class="bi bi-star-fill"></i>
@@ -485,7 +435,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-futbol"></i>
+                    <img src="images/stadium.svg" alt />
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -497,8 +447,8 @@
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-clock"></i>
-                    أقرب موعد : اليوم 8 مساءًا
+                    <img src="images/currency.svg" alt />
+                    220 ريال عماني
                   </div>
                 </div>
               </div>
@@ -510,7 +460,7 @@
             </div>
           </div>
           <div class="card" data-aos="fade-up" data-aos-delay="900">
-            <a href="car_details.html" class="link"></a>
+            <a href="stadium_details.html" class="link"></a>
             <div class="position-relative">
               <div class="badge">
                 <i class="bi bi-star-fill"></i>
@@ -537,7 +487,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-futbol"></i>
+                    <img src="images/stadium.svg" alt />
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -549,8 +499,8 @@
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-clock"></i>
-                    أقرب موعد : اليوم 8 مساءًا
+                    <img src="images/currency.svg" alt />
+                    220 ريال عماني
                   </div>
                 </div>
               </div>
@@ -562,7 +512,7 @@
             </div>
           </div>
           <div class="card" data-aos="fade-up" data-aos-delay="1200">
-            <a href="car_details.html" class="link"></a>
+            <a href="stadium_details.html" class="link"></a>
             <div class="position-relative">
               <div class="badge">
                 <i class="bi bi-star-fill"></i>
@@ -589,7 +539,7 @@
               <div class="row g-2 my-2">
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-futbol"></i>
+                    <img src="images/stadium.svg" alt />
                     ملعب كرة القدم
                   </div>
                 </div>
@@ -601,8 +551,8 @@
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-clock"></i>
-                    أقرب موعد : اليوم 8 مساءًا
+                    <img src="images/currency.svg" alt />
+                    220 ريال عماني
                   </div>
                 </div>
               </div>
@@ -625,7 +575,7 @@
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -652,7 +602,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -664,8 +614,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -679,7 +629,7 @@
           </div>
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -706,7 +656,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -718,8 +668,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -733,7 +683,7 @@
           </div>
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -760,7 +710,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -772,8 +722,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -787,7 +737,7 @@
           </div>
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -814,7 +764,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -826,8 +776,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -841,7 +791,7 @@
           </div>
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -868,7 +818,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -880,8 +830,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -895,7 +845,7 @@
           </div>
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="car_details.html" class="link"></a>
+              <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
                   <i class="bi bi-star-fill"></i>
@@ -922,7 +872,7 @@
                 <div class="row g-2 my-2">
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="fa-solid fa-futbol"></i>
+                      <img src="images/stadium.svg" alt />
                       ملعب كرة القدم
                     </div>
                   </div>
@@ -934,8 +884,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-clock"></i>
-                      أقرب موعد : اليوم 8 مساءًا
+                      <img src="images/currency.svg" alt />
+                      220 ريال عماني
                     </div>
                   </div>
                 </div>
@@ -1128,6 +1078,10 @@
       </div>
     </section>
 
+    <a href="#" aria-label="تواصل معنا عن الواتساب" id="scrollUp">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
     <a
       href="https://api.whatsapp.com/send?phone="
       target="_blank"
@@ -1237,8 +1191,6 @@
     <!-- owl-carousel script -->
     <script src="js/owl.carousel.min.js"></script>
 
-    <script src="js/wow.min.js"></script>
-
     <!-- select2 script -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
@@ -1255,140 +1207,5 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      // sample path points in screen coordinates and map steps by screen center
-      function computeStepFractions_byScreen(svgEl, pathEl, stepEls) {
-        const total = pathEl.getTotalLength();
-        const samples = [];
-        const stepPx = 3; // دقة العيّنة (كل 3px) — قلل لزيادة الدقة
-        const svgPoint = svgEl.createSVGPoint();
-        const screenCTM = svgEl.getScreenCTM();
-
-        for (let L = 0; L <= total; L += stepPx) {
-          const p = pathEl.getPointAtLength(L);
-          svgPoint.x = p.x;
-          svgPoint.y = p.y;
-          const sp = svgPoint.matrixTransform(screenCTM);
-          samples.push({ L, x: sp.x, y: sp.y });
-        }
-
-        const fractions = [];
-        stepEls.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          const cx = rect.left + rect.width / 2;
-          const cy = rect.top + rect.height / 2;
-          let best = { L: 0, d: Infinity };
-          for (const s of samples) {
-            const dx = s.x - cx,
-              dy = s.y - cy;
-            const d = dx * dx + dy * dy;
-            if (d < best.d) best = { L: s.L, d };
-          }
-          fractions.push(Math.min(1, Math.max(0, best.L / total)));
-        });
-
-        return fractions;
-      }
-
-      function initAnimation() {
-        // cleanup previous
-        ScrollTrigger.getAll().forEach((t) => t.kill());
-        gsap.killTweensOf("#marker");
-
-        const svg = document.getElementById("rihalSVG");
-        const isMobile = window.matchMedia("(max-width:768px)").matches;
-
-        const animPath = isMobile
-          ? document.getElementById("straightAnim")
-          : document.getElementById("curvedAnim");
-        const basePath = isMobile
-          ? document.getElementById("straightBase")
-          : document.getElementById("curvedBase");
-        const stepGroup = isMobile
-          ? document.getElementById("straightSteps")
-          : document.getElementById("curvedSteps");
-
-        // ensure base dashed
-        basePath.setAttribute("stroke-dasharray", isMobile ? "20 20" : "30 30");
-
-        // prepare animated stroke
-        const length = animPath.getTotalLength();
-        animPath.style.strokeDasharray = length;
-        animPath.style.strokeDashoffset = length;
-
-        // step elements (inner circles)
-        const stepEls = Array.from(stepGroup.querySelectorAll(".stepInner"));
-
-        // compute fractions (screen based)
-        const fractions = computeStepFractions_byScreen(svg, animPath, stepEls);
-
-        // START / END tuning to make animation start earlier and progress smoothly
-        const svgRect = svg.getBoundingClientRect();
-        const startStr = "top 80%"; // يبدأ مبكراً عندما يصل top الخاص بـ SVG إلى 80% من الڤيوبورت
-        const desiredScroll = Math.max(
-          svgRect.height + window.innerHeight * 0.6,
-          window.innerHeight * 1.2
-        );
-        const endStr = "+=" + Math.round(desiredScroll);
-        const scrubSmooth = 0.45; // قيمة التنعيم (0.45 يعطي إحساس سلس)
-
-        // Main ScrollTrigger (onUpdate uses gsap.to smoothing)
-        ScrollTrigger.create({
-          trigger: svg,
-          start: startStr,
-          end: endStr,
-          scrub: scrubSmooth,
-          onUpdate(self) {
-            const p = self.progress;
-
-            // target offset and tween it for smoothing
-            const targetOffset = length * (1 - p);
-            gsap.to(animPath, {
-              strokeDashoffset: targetOffset,
-              duration: 0.28,
-              ease: "power1.out",
-              overwrite: true,
-            });
-
-            // move marker smoothly to point at progress
-            const point = animPath.getPointAtLength(
-              Math.max(0, Math.min(length, p * length))
-            );
-            gsap.to("#marker", {
-              attr: { cx: point.x, cy: point.y },
-              duration: 0.28,
-              ease: "power2.out",
-              overwrite: true,
-            });
-
-            // activate steps when passed
-            stepEls.forEach((el, i) => {
-              if (p + 0.01 >= fractions[i]) el.classList.add("active");
-              else el.classList.remove("active");
-            });
-          },
-        });
-
-        // set initial marker pos at start of path
-        const start = animPath.getPointAtLength(0);
-        const marker = document.getElementById("marker");
-        marker.setAttribute("cx", start.x);
-        marker.setAttribute("cy", start.y);
-      }
-
-      // debounce resize & init
-      let resizeTimer;
-      window.addEventListener("load", () => {
-        initAnimation();
-        setTimeout(initAnimation, 120); // ensure fonts/layout settled
-      });
-      window.addEventListener("resize", () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(initAnimation, 160);
-      });
-    </script>
   </body>
 </html>

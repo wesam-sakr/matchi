@@ -612,6 +612,7 @@ header {
 .navbar .nav-link {
    color: var(--white) !important;
 }
+
 a.nav-link.custom-link {
    background: var(--secondary) !important;
    color: var(--main) !important;
@@ -626,7 +627,8 @@ a.nav-link.custom-link {
    overflow: visible;
    transition: all 0.3s ease;
 }
-a .auth-icon{
+
+a .auth-icon {
    display: flex;
    align-items: center;
    padding: 6px 8px !important;
@@ -639,7 +641,16 @@ a .auth-icon{
    -ms-border-radius: 70px;
    -o-border-radius: 70px;
 }
-.theme-toggle i{ color: var(--white); }
+
+.theme-toggle {
+   display: flex;
+   align-items: center;
+}
+
+.theme-toggle i {
+   color: var(--white);
+}
+
 a.nav-link.custom-link .nav-text {
    position: absolute;
    inset-inline-end: 100%;
@@ -703,9 +714,10 @@ a.nav-link.custom-link:hover .nav-text {
    position: relative;
    --bs-breadcrumb-divider: '>>';
    background-size: cover !important;
-   background-position: center center !important;
+   background-position: top center !important;
    background: var(--main);
    padding-block: 2rem 4.5rem;
+   background-image: url('../images/line.svg');
 }
 
 .breadcrumb {
@@ -744,48 +756,60 @@ a.nav-link.custom-link:hover .nav-text {
    background-position: 30% 50% !important;
    height: 88vh;
 }
+
 .hero-sec .content h1 {
-    font-size: 28px;
-    height: 33.6px;
-    color: var(--white);
-    margin-bottom: 1rem;
-    font-weight: 700;
+   font-size: 28px;
+   height: 33.6px;
+   color: var(--white);
+   margin-bottom: 1rem;
+   font-weight: 700;
    direction: rtl;
-    unicode-bidi: isolate;
+   unicode-bidi: isolate;
 }
+
 .type-wrap {
-    display: inline-block;
-    direction: rtl;
-    unicode-bidi: isolate;
-    overflow: visible;
-    vertical-align: middle;
-  }
+   display: inline-block;
+   direction: rtl;
+   unicode-bidi: isolate;
+   overflow: visible;
+   vertical-align: middle;
+}
 
-  /* العنصر الذي يُكتب فيه النص */
-  .type-text {
-    display: inline-block;
-    white-space: pre; /* يحافظ على المسافات */
-    will-change: transform, opacity;
-    -webkit-font-smoothing: antialiased;
-  }
+/* العنصر الذي يُكتب فيه النص */
+.type-text {
+   display: inline-block;
+   /* white-space: pre; */
+   /* يحافظ على المسافات */
+   will-change: transform, opacity;
+   -webkit-font-smoothing: antialiased;
+}
 
-  /* الـ caret (الشّريط اللامع) — سيظهر على اليسار بصريًا في RTL */
-  .caret {
-    display: inline-block;
-    width: 2px;
-    height: 1.05em;
-    background: var(--caret-color);
-    vertical-align: middle;
-    margin-inline-start: 10px; /* يضع الـ caret على يسار النص في الـ RTL */
-    animation: blink 0.8s steps(1) infinite;
-    transform-origin: center;
-  }
-  @keyframes blink { 50% { opacity: 0 } }
+/* الـ caret (الشّريط اللامع) — سيظهر على اليسار بصريًا في RTL */
+.caret {
+   display: inline-block;
+   width: 2px;
+   height: 1.05em;
+   background: var(--caret-color);
+   vertical-align: middle;
+   margin-inline-start: 10px;
+   /* يضع الـ caret على يسار النص في الـ RTL */
+   animation: blink 0.8s steps(1) infinite;
+   transform-origin: center;
+}
 
-  /* Reduced motion: لا نحرك الـ caret، ونُظهر النص كاملاً فورًا */
-  @media (prefers-reduced-motion: reduce) {
-    .caret { animation: none; opacity: .9 }
-  }
+@keyframes blink {
+   50% {
+      opacity: 0
+   }
+}
+
+/* Reduced motion: لا نحرك الـ caret، ونُظهر النص كاملاً فورًا */
+@media (prefers-reduced-motion: reduce) {
+   .caret {
+      animation: none;
+      opacity: .9
+   }
+}
 
 /* .hero-sec .overlay {
 } */
@@ -983,6 +1007,12 @@ body.dark-theme .card .card-footer .main-btn {
    color: var(--main);
 }
 
+.stadiums .card .card-body i,
+.stadiums .card .card-body img {
+   width: 20px;
+   font-size: 20px;
+}
+
 .fav:hover {
    animation: heartbeat 1s ease-in-out infinite;
    -webkit-animation: heartbeat 1s ease-in-out infinite;
@@ -1176,21 +1206,55 @@ body.dark-theme .card .card-footer .main-btn {
    inset: 0;
    top: -10px;
    inset-inline-start: 10%;
+   max-width: 40%;
+   margin: 0px auto;
 }
 
-/* .about-us {
-   background: url(../images/path_animated.svg);
-   background-repeat: repeat-y;
-   background-position: center;
-   background-size: contain;
+.about-us svg {
+   display: block;
+   width: 100%;
+   height: auto;
+   overflow: visible;
 }
 
-.about-wrapper {
-   background: url(../images/path.svg);
-   background-repeat: repeat-y;
-   background-position: center;
-   background-size: contain;
-} */
+/* show curved on desktop, straight on mobile */
+#straightGroup {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   #curvedGroup {
+      display: none;
+   }
+
+   #straightGroup {
+      display: block;
+   }
+}
+
+/* step base style */
+.stepOuter {
+   fill: none;
+   stroke: var(--base);
+   stroke-width: 3;
+   stroke-dasharray: 20 20;
+}
+
+.stepInner {
+   transition: transform 0.28s ease, fill 0.28s ease;
+   transform-origin: center;
+   transform: scale(1);
+   fill: var(--base);
+}
+
+.stepInner.active {
+   fill: var(--active);
+}
+
+/* marker */
+#marker {
+   opacity: 0;
+}
 
 .about-us p:not(:last-child) {
    margin-bottom: 1rem;
@@ -1287,10 +1351,10 @@ body.dark-theme .card .card-footer .main-btn {
    -o-transform: rotate(45deg);
 } */
 
-.about-us .row{
-
-   min-height: 650px;
+.about-us .row {
+   min-height: 600px;
 }
+
 .about-us .row:nth-child(even) .about-img {
    direction: ltr;
 }
@@ -1540,7 +1604,7 @@ body.dark-theme .logo-wrapper img {
    -webkit-filter: brightness(0) invert(1);
 }
 
-footer a{
+footer a {
    color: var(--black) !important;
 }
 
@@ -1553,6 +1617,7 @@ body.dark-theme footer .social-icons i {
    color: var(--white) !important;
 }
 
+#scrollUp,
 #whatsapp {
    position: fixed;
    bottom: 2.8rem;
@@ -1571,6 +1636,13 @@ body.dark-theme footer .social-icons i {
    border-radius: 50%;
    z-index: 999;
    box-shadow: 0px -10px 25px #B2B2B22B;
+}
+
+#scrollUp {
+   background: var(--white);
+   color: var(--main);
+   bottom: 7rem;
+   box-shadow: 0px 3px 6px #00000029;
 }
 
 /* #whatsapp i {
@@ -2852,11 +2924,17 @@ footer .copyrights img {
    }
 
    .navbar-toggler {
-      padding: 0 !important;
       border: unset !important;
       box-shadow: unset !important;
-      filter: brightness(0) invert(1);
-      -webkit-filter: brightness(0) invert(1);
+      width: 2rem;
+      height: 2rem;
+      background: var(--secondary);
+      border-radius: 50%;
+      padding: 0px !important;
+   }
+
+   .navbar-toggler-icon {
+    background-image: url('../images/ball.svg') !important;
    }
 
    a.nav-link.custom-link:hover .nav-text {
@@ -2956,7 +3034,8 @@ footer .copyrights img {
    .hero-sec .content .btn-group {
       gap: 10px;
    }
-   .subscribe .white-btn{
+
+   .subscribe .white-btn {
       width: 100%;
    }
 

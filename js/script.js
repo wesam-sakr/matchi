@@ -209,13 +209,137 @@ $(document).ready(function () {
     });
   }
 
-  // ads limit progress
-  document.querySelectorAll('[role="progressbar"]').forEach(bar => {
-    const value = parseFloat(bar.getAttribute('aria-valuenow')) || 0;
-    const max = parseFloat(bar.getAttribute('aria-valuemax')) || 100;
-    const progress = (value / max) * 100;
-    bar.style.setProperty('--progress', progress);
-    bar.style.setProperty('--value', value);
+  gsap.registerPlugin(ScrollTrigger);
+
+  // sample path points in screen coordinates and map steps by screen center
+  function computeStepFractions_byScreen(svgEl, pathEl, stepEls) {
+    const total = pathEl.getTotalLength();
+    const samples = [];
+    const stepPx = 3; // دقة العيّنة (كل 3px) — قلل لزيادة الدقة
+    const svgPoint = svgEl.createSVGPoint();
+    const screenCTM = svgEl.getScreenCTM();
+
+    for (let L = 0; L <= total; L += stepPx) {
+      const p = pathEl.getPointAtLength(L);
+      svgPoint.x = p.x;
+      svgPoint.y = p.y;
+      const sp = svgPoint.matrixTransform(screenCTM);
+      samples.push({ L, x: sp.x, y: sp.y });
+    }
+
+    const fractions = [];
+    stepEls.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      let best = { L: 0, d: Infinity };
+      for (const s of samples) {
+        const dx = s.x - cx,
+          dy = s.y - cy;
+        const d = dx * dx + dy * dy;
+        if (d < best.d) best = { L: s.L, d };
+      }
+      fractions.push(Math.min(1, Math.max(0, best.L / total)));
+    });
+
+    return fractions;
+  }
+
+  function initAnimation() {
+    // cleanup previous
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+    gsap.killTweensOf("#marker");
+
+    const svg = document.getElementById("rihalSVG");
+    const isMobile = window.matchMedia("(max-width:768px)").matches;
+
+    const animPath = isMobile
+      ? document.getElementById("straightAnim")
+      : document.getElementById("curvedAnim");
+    const basePath = isMobile
+      ? document.getElementById("straightBase")
+      : document.getElementById("curvedBase");
+    const stepGroup = isMobile
+      ? document.getElementById("straightSteps")
+      : document.getElementById("curvedSteps");
+
+    // ensure base dashed
+    basePath.setAttribute("stroke-dasharray", isMobile ? "20 20" : "30 30");
+
+    // prepare animated stroke
+    const length = animPath.getTotalLength();
+    animPath.style.strokeDasharray = length;
+    animPath.style.strokeDashoffset = length;
+
+    // step elements (inner circles)
+    const stepEls = Array.from(stepGroup.querySelectorAll(".stepInner"));
+
+    // compute fractions (screen based)
+    const fractions = computeStepFractions_byScreen(svg, animPath, stepEls);
+
+    // START / END tuning to make animation start earlier and progress smoothly
+    const svgRect = svg.getBoundingClientRect();
+    const startStr = "top 80%"; // يبدأ مبكراً عندما يصل top الخاص بـ SVG إلى 80% من الڤيوبورت
+    const desiredScroll = Math.max(
+      svgRect.height + window.innerHeight * 0.6,
+      window.innerHeight * 1.2
+    );
+    const endStr = "+=" + Math.round(desiredScroll);
+    const scrubSmooth = 0.45; // قيمة التنعيم (0.45 يعطي إحساس سلس)
+
+    // Main ScrollTrigger (onUpdate uses gsap.to smoothing)
+    ScrollTrigger.create({
+      trigger: svg,
+      start: startStr,
+      end: endStr,
+      scrub: scrubSmooth,
+      onUpdate(self) {
+        const p = self.progress;
+
+        // target offset and tween it for smoothing
+        const targetOffset = length * (1 - p);
+        gsap.to(animPath, {
+          strokeDashoffset: targetOffset,
+          duration: 0.28,
+          ease: "power1.out",
+          overwrite: true,
+        });
+
+        // move marker smoothly to point at progress
+        const point = animPath.getPointAtLength(
+          Math.max(0, Math.min(length, p * length))
+        );
+        gsap.to("#marker", {
+          attr: { cx: point.x, cy: point.y },
+          duration: 0.28,
+          ease: "power2.out",
+          overwrite: true,
+        });
+
+        // activate steps when passed
+        stepEls.forEach((el, i) => {
+          if (p + 0.01 >= fractions[i]) el.classList.add("active");
+          else el.classList.remove("active");
+        });
+      },
+    });
+
+    // set initial marker pos at start of path
+    const start = animPath.getPointAtLength(0);
+    const marker = document.getElementById("marker");
+    marker.setAttribute("cx", start.x);
+    marker.setAttribute("cy", start.y);
+  }
+
+  // debounce resize & init
+  let resizeTimer;
+  window.addEventListener("load", () => {
+    initAnimation();
+    setTimeout(initAnimation, 120); // ensure fonts/layout settled
+  });
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initAnimation, 160);
   });
 
   // carousels
@@ -228,10 +352,12 @@ $(document).ready(function () {
     rtl: dirAr,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        stagePadding: 16,
       },
       578: {
-        items: 2
+        items: 2,
+        stagePadding: 50,
       },
       992: {
         items: 3
@@ -245,7 +371,7 @@ $(document).ready(function () {
       nav: false,
       dots: true,
       loop: false,
-      margin: 16,
+      margin: 1,
       rtl: dirAr,
       items: 1
     });
@@ -264,10 +390,12 @@ $(document).ready(function () {
     rtl: dirAr,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        stagePadding: 50,
       },
       578: {
-        items: 2
+        items: 2,
+        stagePadding: 50,
       },
       992: {
         items: 3
@@ -287,7 +415,8 @@ $(document).ready(function () {
         items: 1
       },
       578: {
-        items: 2
+        items: 2,
+        stagePadding: 50,
       },
       992: {
         items: 3
@@ -540,5 +669,3 @@ $(document).ready(function () {
 
 
 });
-
-new WOW().init();
