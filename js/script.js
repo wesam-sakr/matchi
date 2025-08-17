@@ -11,6 +11,17 @@ $(document).ready(function () {
     dirAr = false;
   }
 
+
+  // make navbar fixed while scrolling
+  window.addEventListener("scroll", () =>
+    document.getElementById("mainNav").classList.toggle("fixed", window.scrollY > 40)
+  );
+
+  // Scroll to the top of the page
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollUp').style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+
   // CSS class name for dark theme
   const darkTheme = "dark-theme";
 
@@ -251,7 +262,7 @@ $(document).ready(function () {
     gsap.killTweensOf("#marker");
 
     const svg = document.getElementById("rihalSVG");
-    const isMobile = window.matchMedia("(max-width:768px)").matches;
+    const isMobile = window.matchMedia("(max-width:992px)").matches;
 
     const animPath = isMobile
       ? document.getElementById("straightAnim")

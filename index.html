@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="">
+  <body>
     <header>
       <nav class="navbar top-nav p-0" data-aos="fade-right">
         <div class="container-fluid">
@@ -63,7 +63,12 @@
           >
             <ul class="helper-pages m-0 d-flex align-items-center">
               <li class="d-block">
-                <a href="login.html" aria-label=" الذهاب إلى التسجيل ">
+                <a
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  aria-label=" الذهاب إلى التسجيل "
+                >
                   <div class="auth-icon">
                     <i class="bi bi-person"></i>
                     <i class="bi bi-chevron-left"></i>
@@ -114,6 +119,7 @@
         </div>
       </nav>
       <nav
+        id="mainNav"
         class="navbar main-nav navbar-expand-lg navbar-light p-0 pt-2 top-0"
         data-aos="fade-left"
       >
@@ -290,17 +296,19 @@
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
-              <p>
-                ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
-                بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
-                التوفر، والحجز الفوري من خلال موقعنا
-              </p>
-              <p>
-                انطلقنا بهدف تسهيل الوصول إلى الملاعب وتشجيع الناس على ممارسة
-                الرياضة بشكل منتظم، سواء كنت لاعب محترف أو هاوي. ومع ماتشي، كل
-                اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
-              </p>
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
+                <p>
+                  ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة
+                  وسرعة. بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة،
+                  ومعرفة مواعيد التوفر، والحجز الفوري من خلال موقعنا
+                </p>
+                <p>
+                  انطلقنا بهدف تسهيل الوصول إلى الملاعب وتشجيع الناس على ممارسة
+                  الرياضة بشكل منتظم، سواء كنت لاعب محترف أو هاوي. ومع ماتشي، كل
+                  اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
+                </p>
+              </div>
             </div>
             <div class="col-12 col-md-auto" data-aos="fade-up-right">
               <div class="about-img">
@@ -310,6 +318,30 @@
             </div>
           </div>
           <div class="row gy-3 align-items-center justify-content-between">
+            <div
+              class="col-auto col-md-6"
+              data-aos="fade-up-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">
+                  استكشف خدماتنا
+                </h2>
+                <p>
+                  في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
+                  وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
+                  والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
+                  تخلّي يومك الرياضي أسهل. نقدم مجموعة متكاملة من الخدمات
+                  المصممة لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية
+                  باحترافية وسلاسة، بداية من إمكانية حجز الملاعب الرياضية والبحث
+                  عن أقرب الملاعب ليك، مرورًا بلوحة تحكم مخصصة لأصحاب الملاعب
+                  لإدارة حجوزاتهم بكل سهولة، والدفع الإلكتروني الآمن اللي يضمن
+                  لك راحة ومرونة، وانتهاءً بإدارة حساب اللاعب وجدولة المواعيد
+                  بشكل منظم وسلس
+                </p>
+              </div>
+            </div>
             <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up-left">
               <div class="about-img">
                 <img
@@ -319,28 +351,6 @@
                 />
                 <div class="about-shape" data-aos="fade-left"></div>
               </div>
-            </div>
-            <div
-              class="col-auto col-md-6"
-              data-aos="fade-up-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
-              <h2 data-aos="zoom-in-up" class="section-title">
-                استكشف خدماتنا
-              </h2>
-              <p>
-                في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
-                وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
-                والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
-                تخلّي يومك الرياضي أسهل. نقدم مجموعة متكاملة من الخدمات المصممة
-                لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية باحترافية
-                وسلاسة، بداية من إمكانية حجز الملاعب الرياضية والبحث عن أقرب
-                الملاعب ليك، مرورًا بلوحة تحكم مخصصة لأصحاب الملاعب لإدارة
-                حجوزاتهم بكل سهولة، والدفع الإلكتروني الآمن اللي يضمن لك راحة
-                ومرونة، وانتهاءً بإدارة حساب اللاعب وجدولة المواعيد بشكل منظم
-                وسلس
-              </p>
             </div>
           </div>
         </div>
@@ -1078,7 +1088,7 @@
       </div>
     </section>
 
-    <a href="#" aria-label="تواصل معنا عن الواتساب" id="scrollUp">
+    <a href="#" aria-label="الذهاب للأعلى" id="scrollUp">
       <i class="fa-solid fa-chevron-up"></i>
     </a>
 
@@ -1106,10 +1116,7 @@
         <div
           class="d-flex flex-wrap gap-3 justify-content-md-between justify-content-center py-3 mb-3"
         >
-          <ul
-            class="nav justify-content-md-start justify-content-center aos-init aos-animate"
-            data-aos="fade-left"
-          >
+          <ul class="nav justify-content-md-start justify-content-center">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
                 >الرئيسية</a
@@ -1129,11 +1136,7 @@
             </li>
           </ul>
 
-          <nav
-            aria-label="Social Media Links"
-            data-aos="fade-right"
-            class="aos-init aos-animate"
-          >
+          <nav aria-label="Social Media Links">
             <ul class="social-icons">
               <li>
                 <a
@@ -1172,15 +1175,234 @@
               <a href="">الشروط والأحكام </a>
             </div>
             <div>
-              <a href="https://smartvision4p.com" class="link" target="_blank">
-              </a>
-              <span>كل الحقوق محفوظة لشركة سمارت فيجن</span>
-              <img src="images/smart-logo.svg" alt="شركة سمارت فيجن" />
+              <span>جميع الحقوق محفوظة لماتشي</span>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-center main fs-4" id="loginModalLabel">
+              تسجيل الدخول
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الجوال"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
+                <div>
+                  <a href="" class="forgot text-decoration-underline">
+                    نسيت كلمة المرور
+                  </a>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-login-form">
+                    التسجيل
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <p class="login_replace text-center">
+                  ليس لديك حساب ؟
+                  <a
+                    role="button"
+                    data-bs-target="#registerModal"
+                    data-bs-toggle="modal"
+                  >
+                    <span class="main">إنشاء حساب جديد</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="registerModalLabel"
+            >
+              إنشاء حساب جديد
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="الاسم "
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الهاتف"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="email"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="البريد الإلكتروني"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg email-error"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                    title="show pass"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="تأكيد كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text bg-transparent pass"
+                    title="show pass"
+                    aria-label="اظهار كلمة المرور"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+                <small
+                  class="text-danger error-msg password_confirmation-error"
+                ></small>
+              </div>
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <p class="login_replace text-center">
+                  هل لديك حساب ؟
+                  <a
+                    role="button"
+                    data-bs-target="#loginModal"
+                    data-bs-toggle="modal"
+                  >
+                    <span class="main">تسجيل الدخول</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery script -->
     <script src="js/jquery-3.6.0.min.js"></script>

@@ -52,51 +52,6 @@
     />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .wrap {
-        max-width: 40%;
-        margin: 0px auto;
-      }
-      svg {
-        display: block;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-      }
-      /* show curved on desktop, straight on mobile */
-      #straightGroup {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        #curvedGroup {
-          display: none;
-        }
-        #straightGroup {
-          display: block;
-        }
-      }
-
-      /* step base style */
-      .stepOuter {
-        fill: none;
-        stroke: var(--base);
-        stroke-width: 3;
-        stroke-dasharray: 20 20;
-      }
-      .stepInner {
-        transition: transform 0.28s ease, fill 0.28s ease;
-        transform-origin: center;
-        transform: scale(1);
-        fill: var(--base);
-      }
-      .stepInner.active {
-        fill: var(--active);
-      }
-      /* marker */
-      #marker {
-        opacity: 0;
-      }
-    </style>
   </head>
 
   <body class="">
@@ -163,6 +118,7 @@
         </div>
       </nav>
       <nav
+        id="mainNav"
         class="navbar main-nav navbar-expand-lg navbar-light p-0 pt-2 top-0"
         data-aos="fade-left"
       >
@@ -218,15 +174,15 @@
     </header>
 
     <section class="breadcrumb-wrapper" aria-label="breadcrumb">
-        <div class="container-fluid">
-          <ol class="breadcrumb m-0">
-            <li class="breadcrumb-item">
-              <a href="https://alwataniacar.com"> الرئيسية</a>
-            </li>
+      <div class="container-fluid">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item">
+            <a href="https://alwataniacar.com"> الرئيسية</a>
+          </li>
 
-            <li class="breadcrumb-item active" aria-current="page">من نحن ؟</li>
-          </ol>
-        </div>
+          <li class="breadcrumb-item active" aria-current="page">من نحن ؟</li>
+        </ol>
+      </div>
     </section>
 
     <!-- من نحن -->
@@ -321,33 +277,59 @@
       </div>
       <div class="about-wrapper">
         <div class="container-fluid py-5">
-          <div class="row gy-3 align-items-center justify-content-between">
+          <div class="row gy-3 mb-3 align-items-center justify-content-between">
             <div
               class="col-12 col-md-6 col-lg-5"
               data-aos="fade-up-left"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
-              <p>
-                ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة وسرعة.
-                بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة، ومعرفة مواعيد
-                التوفر، والحجز الفوري من خلال موقعنا
-              </p>
-              <p>
-                انطلقنا بهدف تسهيل الوصول إلى الملاعب وتشجيع الناس على ممارسة
-                الرياضة بشكل منتظم، سواء كنت لاعب محترف أو هاوي. ومع ماتشي، كل
-                اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
-              </p>
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">من نحن؟</h2>
+                <p>
+                  ماتشي منصة إلكترونية مبتكرة لحجز الملاعب الرياضية بسهولة
+                  وسرعة. بنوفر تجربة سلسة تتيح لك استكشاف الملاعب القريبة،
+                  ومعرفة مواعيد التوفر، والحجز الفوري من خلال موقعنا
+                </p>
+                <p>
+                  انطلقنا بهدف تسهيل الوصول إلى الملاعب وتشجيع الناس على ممارسة
+                  الرياضة بشكل منتظم، سواء كنت لاعب محترف أو هاوي. ومع ماتشي، كل
+                  اللي عليك تختار الرياضة، تحدد الوقت، وتحجز ماتشك في دقائق
+                </p>
+              </div>
             </div>
             <div class="col-12 col-md-auto" data-aos="fade-up-right">
               <div class="about-img">
-                <img src="images/about.png" alt  />
+                <img src="images/about.png" alt />
                 <div class="about-shape" data-aos="fade-right"></div>
               </div>
             </div>
           </div>
-          <div class="row gy-3 align-items-center justify-content-between">
+          <div class="row gy-3 mb-3 align-items-center justify-content-between">
+            <div
+              class="col-auto col-md-6"
+              data-aos="fade-up-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">
+                  استكشف خدماتنا
+                </h2>
+                <p>
+                  في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
+                  وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
+                  والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
+                  تخلّي يومك الرياضي أسهل. نقدم مجموعة متكاملة من الخدمات
+                  المصممة لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية
+                  باحترافية وسلاسة، بداية من إمكانية حجز الملاعب الرياضية والبحث
+                  عن أقرب الملاعب ليك، مرورًا بلوحة تحكم مخصصة لأصحاب الملاعب
+                  لإدارة حجوزاتهم بكل سهولة، والدفع الإلكتروني الآمن اللي يضمن
+                  لك راحة ومرونة، وانتهاءً بإدارة حساب اللاعب وجدولة المواعيد
+                  بشكل منظم وسلس
+                </p>
+              </div>
+            </div>
             <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up-left">
               <div class="about-img">
                 <img
@@ -358,54 +340,56 @@
                 <div class="about-shape" data-aos="fade-left"></div>
               </div>
             </div>
-            <div
-              class="col-auto col-md-6"
-              data-aos="fade-up-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
-              <h2 data-aos="zoom-in-up" class="section-title">
-                استكشف خدماتنا
-              </h2>
-              <p>
-                في ماتشي، بنوفر لك كل الأدوات اللي تحتاجها لتجربة رياضية سهلة
-                وسريعة. من حجز الملاعب وإدارة مواعيدك، لخيارات الدفع المرنة
-                والبحث عن لاعبين تشاركهم شغفك. كل ده في منصة واحدة مصممة عشان
-                تخلّي يومك الرياضي أسهل. نقدم مجموعة متكاملة من الخدمات المصممة
-                لتسهيل تجربة حجز الملاعب وإدارة الأنشطة الرياضية باحترافية
-                وسلاسة، بداية من إمكانية حجز الملاعب الرياضية والبحث عن أقرب
-                الملاعب ليك، مرورًا بلوحة تحكم مخصصة لأصحاب الملاعب لإدارة
-                حجوزاتهم بكل سهولة، والدفع الإلكتروني الآمن اللي يضمن لك راحة
-                ومرونة، وانتهاءً بإدارة حساب اللاعب وجدولة المواعيد بشكل منظم
-                وسلس
-              </p>
-            </div>
           </div>
-          <div class="row gy-3 align-items-center justify-content-between">
+          <div class="row gy-3 mb-3 align-items-center justify-content-between">
             <div
               class="col-12 col-md-6 col-lg-5"
               data-aos="fade-up-left"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 data-aos="zoom-in-up" class="section-title">ليش ماتشي؟</h2>
-              <p>
-                في ماتشي، نولي اهتمامًا كبيرًا بكل تفاصيل تجربتك الرياضية. سواء
-                كنت تبحث عن ملعب قريب بسرعة، أو ترغب في تنسيق مباراة مع أصدقائك،
-                أو حتى إن كنت مالك ملعب وتسعى لإدارة حجوزاتك باحترافية، فإن
-                منصتنا توفّر لك كل ذلك في مكان واحد. نُقدّم واجهة استخدام سهلة،
-                ودعمًا فنيًا سريعًا، وتجربة مصمّمة لتلبي احتياجاتك بدقة. ومع كل
-                استخدام، ستجد أن تنظيم نشاطك الرياضي أصبح أسهل، أسرع، وأكثر متعة
-              </p>
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">ليش ماتشي؟</h2>
+                <p>
+                  في ماتشي، نولي اهتمامًا كبيرًا بكل تفاصيل تجربتك الرياضية.
+                  سواء كنت تبحث عن ملعب قريب بسرعة، أو ترغب في تنسيق مباراة مع
+                  أصدقائك، أو حتى إن كنت مالك ملعب وتسعى لإدارة حجوزاتك
+                  باحترافية، فإن منصتنا توفّر لك كل ذلك في مكان واحد. نُقدّم
+                  واجهة استخدام سهلة، ودعمًا فنيًا سريعًا، وتجربة مصمّمة لتلبي
+                  احتياجاتك بدقة. ومع كل استخدام، ستجد أن تنظيم نشاطك الرياضي
+                  أصبح أسهل، أسرع، وأكثر متعة
+                </p>
+              </div>
             </div>
             <div class="col-12 col-md-auto" data-aos="fade-up-right">
               <div class="about-img">
-                <img src="images/about.png" alt/>
+                <img src="images/about.png" alt />
                 <div class="about-shape" data-aos="fade-right"></div>
               </div>
             </div>
           </div>
-          <div class="row gy-3 align-items-center justify-content-between">
+          <div class="row gy-3 mb-3 align-items-center justify-content-between">
+            <div
+              class="col-auto col-md-6"
+              data-aos="fade-up-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="about-txt">
+                <h2 data-aos="zoom-in-up" class="section-title">
+                  رؤيتنا المستقبلية
+                </h2>
+                <p>
+                  ي ماتشي، نؤمن بأن الرياضة أسلوب حياة، وليست مجرد نشاط ترفيهي.
+                  ومن هذا المنطلق، نسعى لأن نكون المنصة الأولى لكل من يهتم
+                  بالرياضة في المنطقة. نعمل باستمرار على تطوير خدماتنا، ودعم
+                  المزيد من الرياضات، ودمج تقنيات ذكية تهدف إلى تحسين تجربة
+                  المستخدم وتنظيم وقته الرياضي بكفاءة. رؤيتنا أن نُسهم في نشر
+                  ثقافة ممارسة الرياضة، وأن نُسهل الوصول إليها، لتصبح جزءًا
+                  أساسيًا من حياة كل فرد، ونُساهم في بناء مجتمع رياضي متكامل
+                </p>
+              </div>
+            </div>
             <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up-left">
               <div class="about-img">
                 <img
@@ -415,25 +399,6 @@
                 />
                 <div class="about-shape" data-aos="fade-left"></div>
               </div>
-            </div>
-            <div
-              class="col-auto col-md-6"
-              data-aos="fade-up-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
-              <h2 data-aos="zoom-in-up" class="section-title">
-                رؤيتنا المستقبلية
-              </h2>
-              <p>
-                ي ماتشي، نؤمن بأن الرياضة أسلوب حياة، وليست مجرد نشاط ترفيهي.
-                ومن هذا المنطلق، نسعى لأن نكون المنصة الأولى لكل من يهتم
-                بالرياضة في المنطقة. نعمل باستمرار على تطوير خدماتنا، ودعم
-                المزيد من الرياضات، ودمج تقنيات ذكية تهدف إلى تحسين تجربة
-                المستخدم وتنظيم وقته الرياضي بكفاءة. رؤيتنا أن نُسهم في نشر
-                ثقافة ممارسة الرياضة، وأن نُسهل الوصول إليها، لتصبح جزءًا
-                أساسيًا من حياة كل فرد، ونُساهم في بناء مجتمع رياضي متكامل
-              </p>
             </div>
           </div>
         </div>
@@ -474,6 +439,9 @@
       </div>
     </section>
 
+    <a href="#" aria-label="الذهاب للأعلى" id="scrollUp">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
     <a
       href="https://api.whatsapp.com/send?phone="
       target="_blank"
@@ -499,8 +467,7 @@
           class="d-flex flex-wrap gap-3 justify-content-md-between justify-content-center py-3 mb-3"
         >
           <ul
-            class="nav justify-content-md-start justify-content-center aos-init aos-animate"
-            data-aos="fade-left"
+            class="nav justify-content-md-start justify-content-center"
           >
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
@@ -523,8 +490,6 @@
 
           <nav
             aria-label="Social Media Links"
-            data-aos="fade-right"
-            class="aos-init aos-animate"
           >
             <ul class="social-icons">
               <li>
@@ -564,10 +529,7 @@
               <a href="">الشروط والأحكام </a>
             </div>
             <div>
-              <a href="https://smartvision4p.com" class="link" target="_blank">
-              </a>
-              <span>كل الحقوق محفوظة لشركة سمارت فيجن</span>
-              <img src="images/smart-logo.svg" alt="شركة سمارت فيجن" />
+              <span>جميع الحقوق محفوظة لماتشي</span>
             </div>
           </div>
         </div>
