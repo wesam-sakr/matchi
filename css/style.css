@@ -551,6 +551,10 @@ button.white-btn {
    background-color: var(--lite-sec);
 }
 
+#joinUsModal .modal-dialog {
+    min-width: 65%;
+}
+
 /* .btn-close {
    filter: brightness(0) invert(1);
    margin: unset !important;
@@ -992,10 +996,10 @@ a.nav-link.custom-link:hover .nav-text {
 }
 
 .card {
+   position: relative;
    background: #F6F6F6;
    border-radius: 22px;
    border: 1px solid var(--white);
-   /* color: var(--white); */
 }
 
 body.dark-theme .card {
@@ -1011,6 +1015,40 @@ body.dark-theme .card .card-title {
 body.dark-theme .card .card-footer .main-btn {
    color: var(--main) !important;
    background: var(--white) !important;
+}
+
+.ribbon {
+   top: 0;
+   width: 110px;
+   height: 110px;
+   z-index: 9;
+   display: block;
+   position: absolute;
+   overflow: hidden;
+}
+
+.ribbon span {
+   width: 150px;
+   height: 34px;
+   top: 20px;
+   inset-inline-start: -40px;
+   position: absolute;
+   display: block;
+   background: var(--secondary);
+   color: var(--main);
+   font-size: 18px;
+   text-align: center;
+   line-height: 34px;
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+}
+
+.old-price {
+   text-decoration: line-through;
+   color: #818181;
 }
 
 .blogs .card {
@@ -1417,24 +1455,6 @@ body.dark-theme .card .card-footer .main-btn {
    -o-transition: .4s;
 }
 
-/* .about-us .about-img::before {
-   content: '';
-   width: 300px;
-   height: 100%;
-   display: block;
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   inset-inline-start: 50px;
-   background-color: var(--main);
-   border-radius: 161px;
-   transform: rotate(336deg);
-   -webkit-transform: rotate(340deg);
-   -moz-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   -o-transform: rotate(45deg);
-} */
-
 .about-us .row {
    min-height: 600px;
 }
@@ -1446,14 +1466,6 @@ body.dark-theme .card .card-footer .main-btn {
 .about-us .row:nth-child(even) .about-img {
    direction: ltr;
 }
-
-/* .about-us .row:hover .about-img img {
-   transform: scale(0.9);
-   -webkit-transform: scale(0.9);
-   -moz-transform: scale(0.9);
-   -ms-transform: scale(0.9);
-   -o-transform: scale(0.9);
-} */
 
 .about-us .row:nth-child(even) .about-img .about-shape {
    transform: rotate(-340deg);
@@ -1553,6 +1565,26 @@ body.dark-theme .card .card-footer .main-btn {
    background: var(--dark-gray);
    border-radius: 23px;
    padding: 2rem;
+}
+
+/* ------------------------- */
+
+.stadiums_filter .form-select,
+.stadiums_filter .form-control{
+   border: unset !important;
+
+}
+
+.stadiums_filter .col-8{
+   box-shadow: 0px 0px 15px #00000017;
+   border-radius: 17px;
+   padding: .8rem;
+   background: var(--white);
+   transform: translateY(-30px);
+   -webkit-transform: translateY(-30px);
+   -moz-transform: translateY(-30px);
+   -ms-transform: translateY(-30px);
+   -o-transform: translateY(-30px);
 }
 
 /* ------------------------- */

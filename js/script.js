@@ -672,7 +672,7 @@ $(document).ready(function () {
   }
 
   // select2
-  $('select').select2();
+  // $('select').select2();
 
   AOS.init({
     duration: 1000

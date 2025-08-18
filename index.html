@@ -164,7 +164,9 @@
             </ul>
             <ul class="navbar-nav m-0">
               <li class="nav-item">
-                <a href="login.html" class="nav-link white-btn px-3">
+                <a role="button"
+                    data-bs-target="#joinUsModal"
+                    data-bs-toggle="modal" class="nav-link white-btn px-3">
                   <small> انضم كصاحب ملعب </small>
                 </a>
               </li>
@@ -585,6 +587,9 @@
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
           <div class="col">
             <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <div class="ribbon">
+                <span>10%</span>
+              </div>
               <a href="stadium_details.html" class="link"></a>
               <div class="position-relative">
                 <div class="badge">
@@ -625,7 +630,14 @@
                   <div class="col-12">
                     <div class="d-flex align-items-center gap-2">
                       <img src="images/currency.svg" alt />
-                      220 ريال عماني
+                      <div
+                        class="prices d-flex gap-2 align-items-center justify-content-center"
+                      >
+                        <p class="card-price">
+                          <span> 40 ريال عماني</span>
+                        </p>
+                        <p class="old-price">45.00 ريال عماني</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1182,6 +1194,7 @@
       </div>
     </footer>
 
+    <!-- login modal -->
     <div
       class="modal"
       id="loginModal"
@@ -1238,7 +1251,12 @@
 
                 <small class="text-danger password"></small>
                 <div>
-                  <a href="" class="forgot text-decoration-underline">
+                  <a
+                    role="button"
+                    data-bs-target="#forgotPassModal"
+                    data-bs-toggle="modal"
+                    class="forgot text-decoration-underline"
+                  >
                     نسيت كلمة المرور
                   </a>
                 </div>
@@ -1269,6 +1287,7 @@
       </div>
     </div>
 
+    <!-- register modal -->
     <div
       class="modal"
       id="registerModal"
@@ -1397,6 +1416,347 @@
                     <span class="main">تسجيل الدخول</span>
                   </a>
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- forgot password -->
+    <div
+      class="modal"
+      id="forgotPassModal"
+      tabindex="-1"
+      aria-labelledby="forgotPassModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="forgotPassModalLabel"
+            >
+              نسيت كلمة المرور
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    class="form-control"
+                    placeholder="رقم الجوال"
+                    required=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="button" class="main-btn w-100 send-login-form"
+                    data-bs-target="#OTP_Modal"
+                    data-bs-toggle="modal">
+                    إرسال رابط التحقق
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- otp password -->
+    <div
+      class="modal"
+      id="OTP_Modal"
+      tabindex="-1"
+      aria-labelledby="OTP_ModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-center main fs-4" id="OTP_ModalLabel">
+              رمز التحقق
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div id="verification-input">
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                </div>
+                <small class="text-danger error-msg code-error"></small>
+              </div>
+
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="button" class="main-btn w-100 send-code-btn"
+                    data-bs-target="#changePassModal"
+                    data-bs-toggle="modal">
+                    تأكيد الكود
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- changePass modal -->
+    <div
+      class="modal"
+      id="changePassModal"
+      tabindex="-1"
+      aria-labelledby="changePassModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="changePassModalLabel"
+            >
+              تغيير كلمة المرور
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                    title="show pass"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="تأكيد كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text bg-transparent pass"
+                    title="show pass"
+                    aria-label="اظهار كلمة المرور"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+                <small
+                  class="text-danger error-msg password_confirmation-error"
+                ></small>
+              </div>
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    تغيير
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- join us modal -->
+    <div
+      class="modal"
+      id="joinUsModal"
+      tabindex="-1"
+      aria-labelledby="joinUsModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="joinUsModalLabel"
+            >
+              انضم كصاحب ملعب
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="الاسم الكامل"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الهاتف"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="email"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="البريد الإلكتروني"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg email-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="اسم الملعب"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="نوع الرياضة المتوفرة"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <select name="" id="" class="form-select">
+                    <option value=" " hidden>المدينة / الموقع</option>
+                  </select>
+                  
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-4">
+                <div class="loading-indicator mt-3">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    انضمام
+                  </button>
+                </div>
               </div>
             </div>
           </div>
