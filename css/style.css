@@ -366,19 +366,22 @@ option {
    background-color: var(--dark-gray);
 }
 
-.form-select {
+/* .form-select {
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-}
+} */
 
 .pagination {
    margin: 3rem auto 0;
    justify-content: center;
    align-items: center;
+   gap: 10px;
    overflow: hidden;
    width: fit-content;
    box-shadow: 0px 3px 6px #B4B4B41C;
    border: 1px solid #EBEBEB;
    border-radius: 35px;
+   padding: .5rem 1.5rem;
+   background-color: var(--main)
 }
 
 .page-item {
@@ -387,14 +390,30 @@ option {
    -moz-border-radius: 0 !important;
    -ms-border-radius: 0 !important;
    -o-border-radius: 0 !important;
+   background: transparent;
 }
 
 .page-link {
-   padding: .65rem 1rem;
+   padding: 0;
+   background: transparent;
    border: unset !important;
-   color: var(--secondary) !important;
+   color: var(--white) ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 50% !important;
+   -webkit-border-radius: 50% !important;
+   -moz-border-radius: 50% !important;
+   -ms-border-radius: 50% !important;
+   -o-border-radius: 50% !important;
+   -webkit-border-radius: 50%;
 }
-
+.current>.page-link, .page-link.current{
+   background: var(--secondary);
+   color: var(--main) !important;
+}
 
 .main {
    color: var(--main) !important;
@@ -1085,6 +1104,10 @@ body.dark-theme .card .card-footer .main-btn {
    width: 20px;
    font-size: 20px;
 }
+body.dark-theme .stadiums .card .card-body img {
+   filter: brightness(0) invert(1);
+   -webkit-filter: brightness(0) invert(1);
+}
 
 .fav:hover {
    animation: heartbeat 1s ease-in-out infinite;
@@ -1569,16 +1592,21 @@ body.dark-theme .card .card-footer .main-btn {
 
 /* ------------------------- */
 
-.stadiums_filter .form-select,
+/* .stadiums_filter .form-select,
 .stadiums_filter .form-control{
    border: unset !important;
+   border-bottom: 1px solid rgba(var(--blackOp), .15) !important;
+   border-radius: 0 !important;
+   -webkit-border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+   -ms-border-radius: 0 !important;
+   -o-border-radius: 0 !important;
+} */
 
-}
-
-.stadiums_filter .col-8{
+.stadiums_filter form{
    box-shadow: 0px 0px 15px #00000017;
    border-radius: 17px;
-   padding: .8rem;
+   padding: 1.5rem 2rem;
    background: var(--white);
    transform: translateY(-30px);
    -webkit-transform: translateY(-30px);
@@ -1587,15 +1615,46 @@ body.dark-theme .card .card-footer .main-btn {
    -o-transform: translateY(-30px);
 }
 
+.stadiums_filter .d-flex .form-control{
+   width: calc(100% - 56px);
+}
+
+.filter_search{
+   width: 47px !important;
+   flex-grow: 1;
+   height: 47px;
+   background-color: var(--main);
+   color: var(--white);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
 /* ------------------------- */
 
-.car-details .car_feature {
+.stadium_details .car_feature {
    display: flex;
    justify-content: space-between;
    padding: 1.25rem 0;
    border-bottom: 1px solid #ECECEC;
 }
 
+.sticky-side {
+  display: inline-block;
+  position: sticky;
+  top: 70px;
+  height: fit-content;
+}
+
+.main-side {
+  display: inline-block;
+  vertical-align: top;
+}
 
 .car_feature .owner-name {
    display: flex;
@@ -1665,7 +1724,7 @@ body.dark-theme .card .card-footer .main-btn {
    gap: 20px;
 }
 
-.car-details {
+.stadium_details {
    padding: 0rem 1rem;
    position: relative;
    z-index: 9;

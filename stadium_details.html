@@ -189,582 +189,182 @@
           <li class="breadcrumb-item active" aria-current="page">الملاعب</li>
         </ol>
       </div>
-    </section>
+    </section>   
 
-    <div class="stadiums_filter">
+    <!-- تفاصيل السيارات -->
+    <div class="car-single py-5">
       <div class="container-fluid">
-        <form action="" class="col-8 m-auto">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <select name="" id="" class="form-select">
-                <option value="">اختر الولاية</option>
-              </select>
+        <div class="car-wrapper">
+          <main class="stick-next-to col-12 col-md-8">
+            <!-- slider images -->
+            <div class="single-img">
+              <div class="all">
+                <div class="slider">
+                  <div class="owl-carousel owl-theme one">
+                    <div class="item-box">
+                      <img src="images/01.jpg" alt />
+                    </div>
+                    <div class="item-box">
+                      <img src="images/02.jpg" alt />
+                    </div>
+                    <div class="item-box">
+                      <img src="images/03.jpg" alt />
+                    </div>
+                    <div class="item-box">
+                      <img src="images/04.webp" alt />
+                    </div>
+                    <div class="item-box">
+                      <img src="images/06.jpg" alt />
+                    </div>
+                    <div class="item-box">
+                      <img src="images/35.png" alt />
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-two">
+                  <div class="owl-carousel owl-theme two">
+                    <div class="item active">
+                      <img src="images/01.jpg" alt />
+                    </div>
+                    <div class="item">
+                      <img src="images/02.jpg" alt />
+                    </div>
+                    <div class="item">
+                      <img src="images/03.jpg" alt />
+                    </div>
+                    <div class="item">
+                      <img src="images/04.webp" alt />
+                    </div>
+                    <div class="item">
+                      <img src="images/06.jpg" alt />
+                    </div>
+                    <div class="item">
+                      <img src="images/35.png" alt />
+                    </div>
+                  </div>
+                  <div class="left-t nonl-t">
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                  <div class="right-t">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6">
-              <select name="" id="" class="form-select">
-                <option value="">نوع الرياضه</option>
-              </select>
+
+            <!-- car information -->
+            <div class="car-info mt-4">
+              <ul>
+                <li>
+                  <span class="d-flex align-items-center gap-1 flex-grow-1">
+                    <i class="bi bi-speedometer2"></i>
+                    النوع
+                  </span>
+                  <span class="flex-grow-1">بى ام دبليو</span>
+                </li>
+                <li>
+                  <span class="d-flex align-items-center gap-1 flex-grow-1">
+                    <i class="bi bi-speedometer2"></i>
+                    النوع
+                  </span>
+                  <span class="flex-grow-1">بى ام دبليو</span>
+                </li>
+                <li>
+                  <span class="d-flex align-items-center gap-1 flex-grow-1">
+                    <i class="bi bi-speedometer2"></i>
+                    النوع
+                  </span>
+                  <span class="flex-grow-1">بى ام دبليو</span>
+                </li>
+              </ul>
             </div>
-            <div class="col-12">
-              <div class="d-flex align-items-center gap-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="ابحث عن ملعب"
-                />
-                <button class="filter_search">
-                  <i class="bi bi-search"></i>
+          </main>
+          <!-- sticky aside -->
+          <aside class="sticky-wrapper col-12 col-md-4">
+            <div class="stadium_details sticky">
+              <div class="car_feature flex-column gap-3 pt-0">
+                <h1 class="fs-5">سوزوكي فرونكس فل كامل 2025</h1>
+                <div class="d-flex gap-2">
+                  <div class="c_badge">
+                    <i class="fa-solid fa-key"></i>
+                    <span>جديدة</span>
+                  </div>
+                  <div class="c_badge">
+                    <i class="bi bi-speedometer2"></i>
+                    112,000 كيلومتر
+                  </div>
+                </div>
+              </div>
+              <div class="car_feature">
+                <div class="w-100">
+                  <span>السعر </span>
+                  <p class="price fs-5">
+                    <b>51,000</b>
+                    <b>ريال</b>
+                    <span>/</span>
+                    <span>3200</span>
+                    <span>شهريًا</span>
+                  </p>
+                  <div class="car_actions">
+                    <button
+                      class="main-outline-btn w-100 my-3"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#financingRequest_modal"
+                    >
+                      طلب تمويل
+                    </button>
+                    <button
+                      class="main-outline-btn w-100 my-3"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#paymentRequest_modal"
+                    >
+                      دفع كاش
+                    </button>
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#financingCalculator_modal"
+                      class="main-outline-btn brdrt w-100"
+                    >
+                      حاسبة التمويل
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="car_feature">
+                <div class>
+                  <h2 class="owner-name fs-6 mb-2">
+                    <img src="images/02.jpg" alt="اسم المعرض" />
+                    <b>معرض الشركة الوطنية للسيارات</b>
+                  </h2>
+                  <a href="tel:+966568023169" class="">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>+966568023169</span>
+                  </a>
+                </div>
+              </div>
+              <div class="car_feature border-0">
+                <button class="heart flex-grow-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <span>إضافة إلى المفضلة</span>
+                </button>
+                <!-- action : open share ad modal -->
+                <button
+                  class="share flex-grow-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#shareAd_modal"
+                >
+                  <i class="fa-solid fa-share"></i>
+                  <span>مشاركة</span>
                 </button>
               </div>
             </div>
-          </div>
-        </form>
+          </aside>
+        </div>
       </div>
     </div>
-
-    <!-- الملاعب -->
-    <section class="stadiums py-5">
-      <div class="container-fluid">
-        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <div class="ribbon">
-                <span>10%</span>
-              </div>
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      <div
-                        class="prices d-flex gap-2 align-items-center justify-content-center"
-                      >
-                        <p class="card-price">
-                          <span> 40 ريال عماني</span>
-                        </p>
-                        <p class="old-price">45.00 ريال عماني</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <div class="ribbon">
-                <span>10%</span>
-              </div>
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      <div
-                        class="prices d-flex gap-2 align-items-center justify-content-center"
-                      >
-                        <p class="card-price">
-                          <span> 40 ريال عماني</span>
-                        </p>
-                        <p class="old-price">45.00 ريال عماني</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="stadium_details.html" class="link"></a>
-              <div class="position-relative">
-                <div class="badge">
-                  <i class="bi bi-star-fill"></i>
-                  4.7
-                </div>
-                <div class="card-img-top">
-                  <div class="inner-carousel owl-carousel">
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                    <img src="images/stadium-1.png" alt />
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0">ملعب ساحة الرياضة</h5>
-                  <button
-                    class="fav bg-transparent position-relative z-3"
-                    type="button"
-                  >
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-                <div class="row g-2 my-2">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/stadium.svg" alt />
-                      ملعب كرة القدم
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <i class="bi bi-geo-alt"></i>
-                      مسقط
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="images/currency.svg" alt />
-                      220 ريال عماني
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer mt-3 pb-1">
-                  <a href="" class="main-btn book-btn m-auto">
-                    <span>احجز الآن</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="" rel="next">
-                <span aria-hidden="true">
-                  <i class="fa-solid fa-chevron-right"></i> </span
-              ></a>
-            </li>
-
-            <li class="current page-item"><a class="page-link">1</a></li>
-            <li class="page-item">
-              <a
-                class="page-link"
-                href=""
-                >2</a
-              >
-            </li>
-
-            <li class="page-item">
-              <a
-                class="page-link"
-                href=""
-                rel="next"
-                ><span aria-hidden="true">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </section>
 
     <!-- النشرة البريدية -->
     <section class="subscribe main-bg py-5">
