@@ -397,7 +397,7 @@ option {
    padding: 0;
    background: transparent;
    border: unset !important;
-   color: var(--white) ;
+   color: var(--white);
    display: flex;
    justify-content: center;
    align-items: center;
@@ -410,7 +410,9 @@ option {
    -o-border-radius: 50% !important;
    -webkit-border-radius: 50%;
 }
-.current>.page-link, .page-link.current{
+
+.current>.page-link,
+.page-link.current {
    background: var(--secondary);
    color: var(--main) !important;
 }
@@ -571,7 +573,7 @@ button.white-btn {
 }
 
 #joinUsModal .modal-dialog {
-    min-width: 65%;
+   min-width: 65%;
 }
 
 /* .btn-close {
@@ -618,7 +620,7 @@ header {
    position: fixed;
    top: -1px !important;
    width: 100%;
-   z-index: 9;
+   z-index: 999;
    background: var(--main);
    padding: 0 !important;
 }
@@ -1099,11 +1101,16 @@ body.dark-theme .card .card-footer .main-btn {
    color: var(--main);
 }
 
+.stadiums .card .card-img-top {
+   position: relative;
+}
+
 .stadiums .card .card-body i,
 .stadiums .card .card-body img {
    width: 20px;
    font-size: 20px;
 }
+
 body.dark-theme .stadiums .card .card-body img {
    filter: brightness(0) invert(1);
    -webkit-filter: brightness(0) invert(1);
@@ -1603,7 +1610,7 @@ body.dark-theme .stadiums .card .card-body img {
    -o-border-radius: 0 !important;
 } */
 
-.stadiums_filter form{
+.stadiums_filter form {
    box-shadow: 0px 0px 15px #00000017;
    border-radius: 17px;
    padding: 1.5rem 2rem;
@@ -1615,11 +1622,11 @@ body.dark-theme .stadiums .card .card-body img {
    -o-transform: translateY(-30px);
 }
 
-.stadiums_filter .d-flex .form-control{
+.stadiums_filter .d-flex .form-control {
    width: calc(100% - 56px);
 }
 
-.filter_search{
+.filter_search {
    width: 47px !important;
    flex-grow: 1;
    height: 47px;
@@ -1645,15 +1652,15 @@ body.dark-theme .stadiums .card .card-body img {
 }
 
 .sticky-side {
-  display: inline-block;
-  position: sticky;
-  top: 70px;
-  height: fit-content;
+   display: inline-block;
+   position: sticky;
+   top: 70px;
+   height: fit-content;
 }
 
 .main-side {
-  display: inline-block;
-  vertical-align: top;
+   display: inline-block;
+   vertical-align: top;
 }
 
 .car_feature .owner-name {
@@ -1718,7 +1725,7 @@ body.dark-theme .stadiums .card .card-body img {
 }
 
 /* TO MAKE ASIDE STICKY */
-.car-single .car-wrapper {
+.stadium-single .stadium-wrapper {
    display: flex;
    align-items: flex-start;
    gap: 20px;
@@ -2245,6 +2252,10 @@ footer .copyrights img {
    overflow: hidden;
 }
 
+.single_blog .card {
+   height: auto;
+}
+
 .single_blog .card:not(:last-child) {
    margin-bottom: 1.25rem;
 }
@@ -2253,9 +2264,19 @@ footer .copyrights img {
    aspect-ratio: 7 / 4;
 }
 
+.blogs .blog_details .blog-title {
+   color: var(--main);
+   padding-bottom: .85rem;
+   margin-bottom: .85rem;
+   border-bottom: 1px solid rgba(var(--mainOp), .25);
+}
+
 .blogs .blog_details .blog-desc {
-   display: block;
-   color: #4E4E4E;
+   display: flex;
+   color: #4E4E4E !important;
+   flex-direction: column;
+   gap: .65rem;
+
 }
 
 .blog-search {
@@ -2369,9 +2390,13 @@ footer .copyrights img {
 }
 
 .profile-nav {
-   background: var(--dark-gray);
+   background: var(--main);
    padding: .5rem 0;
-   border-radius: 8px;
+   border-radius: 40px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   -ms-border-radius: 40px;
+   -o-border-radius: 40px;
 }
 
 .profile .profile-pic-icon {
@@ -2438,7 +2463,7 @@ footer .copyrights img {
 }
 
 .user_info {
-   color: #6D6D6D;
+   color: var(--white);
    text-align: center;
    padding-bottom: .85rem;
 }
@@ -2452,9 +2477,10 @@ footer .copyrights img {
    display: flex;
    align-items: center;
    gap: 8px;
-   color: #C2C2C2;
+   color: var(--white);
    position: relative;
    margin-bottom: .5rem;
+   margin-inline-end: 1rem;
    padding-inline: 1.4rem;
    font-weight: 600;
    background: transparent;
@@ -2466,8 +2492,10 @@ footer .copyrights img {
 }
 
 .profile-nav .nav-link.active {
-   color: var(--secondary);
+   /* color: var(--secondary); */
    background: rgba(var(--whiteOp), 0.5);
+   border-end-end-radius: 70px;
+   border-start-end-radius: 70px;
 }
 
 .profile-nav .nav-link.active::before {
@@ -2491,7 +2519,7 @@ footer .copyrights img {
 
 .profile-data {
    height: auto;
-   background: var(--dark-gray);
+   background: #FBFBFB;
    border-radius: 8px;
    padding: 5rem 3rem;
 }
@@ -2502,17 +2530,21 @@ footer .copyrights img {
    z-index: 99;
 }
 
+.profile-data .favourite .main-btn {
+   margin: unset !important;
+}
+
 .profile-data .filter-orders a {
-   padding: .5rem 1rem;
-   min-width: 18%;
+   padding: .5rem 2rem;
    text-align: center;
-   border: 1px solid white;
-   border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   -ms-border-radius: 8px;
-   -o-border-radius: 8px;
-   font-weight: 600;
+   border: 1px solid #D1D1D1;
+   color: #404040;
+   border-radius: 70px;
+   font-size: 14px;
+   -webkit-border-radius: 70px;
+   -moz-border-radius: 70px;
+   -ms-border-radius: 70px;
+   -o-border-radius: 70px;
 }
 
 .car_filters .select2-container .select2-selection--single {
@@ -2583,8 +2615,8 @@ footer .copyrights img {
 }
 
 .profile-data .filter-orders a.active {
-   background-color: var(--white);
-   color: var(--secondary);
+   background-color: var(--secondary);
+   border-color: var(--secondary);
 }
 
 .car_action .white-btn {
@@ -2736,7 +2768,7 @@ footer .copyrights img {
 
 
 /*==-------- workshop page  --------==*/
-.all {
+/* .all {
    width: 100%;
    height: auto;
    display: inline-block;
@@ -2747,9 +2779,9 @@ footer .copyrights img {
    border-radius: 3px;
    border-radius: 10px;
    position: relative;
-}
+} */
 
-
+/* 
 .item-box {
    background: #fcfcfc;
    border-radius: 12px;
@@ -2759,37 +2791,36 @@ footer .copyrights img {
    aspect-ratio: 22 / 18;
    position: relative;
    background-size: cover;
-}
+} */
 
-.car-single .item-box {
+.stadium-single .item-box {
    aspect-ratio: 11 / 7;
    border-radius: 18px;
    -webkit-border-radius: 18px;
    -moz-border-radius: 18px;
    -ms-border-radius: 18px;
    -o-border-radius: 18px;
+   overflow: hidden;
 }
 
-.stick-next-to li {
-   padding: 1rem 0;
-   display: flex;
-   justify-content: space-between;
+.stadium-single .card {
+   background: rgba(var(--mainOp), .07);
+   border-radius: 42px;
+   opacity: 1;
+   backdrop-filter: blur(14px);
+   -webkit-backdrop-filter: blur(14px);
+   border: unset !important;
+   padding: 2rem;
+   -webkit-border-radius: 42px;
+   -moz-border-radius: 42px;
+   -ms-border-radius: 42px;
+   -o-border-radius: 42px;
+
 }
 
-.car-info li:not(:last-child) {
-   border-bottom: 1px solid #ddd;
-}
-
-.car-info {
+.stadium-info ul {
    background-color: var(--dark-gray);
    margin-bottom: 10px;
-   border: unset !important;
-   border-radius: 24px;
-   padding: 2rem;
-   -webkit-border-radius: 24px;
-   -moz-border-radius: 24px;
-   -ms-border-radius: 24px;
-   -o-border-radius: 24px;
 }
 
 .item-box:after {
@@ -2875,7 +2906,8 @@ footer .copyrights img {
 
 /*  */
 .contact-data .contact-info {
-   background: var(--dark-gray);
+   background: var(--main);
+   height: 100%;
    border-radius: 18px;
    text-align: center;
    padding: 1.85rem 1rem;
@@ -2883,6 +2915,7 @@ footer .copyrights img {
    -moz-border-radius: 18px;
    -ms-border-radius: 18px;
    -o-border-radius: 18px;
+   color: var(--white);
 }
 
 .contact-data .contact-info:not(:last-child) {
@@ -2894,23 +2927,17 @@ footer .copyrights img {
    align-items: center;
    justify-content: center;
    width: 80px;
-   height: 80px;
+   height: 40px;
    margin: auto;
    margin-bottom: 1rem;
    aspect-ratio: 1/1;
-   border-radius: 50%;
-   background: transparent linear-gradient(180deg, #890000 0%, #A500008F 59%, #2E2E2E00 100%) 0% 0% no-repeat padding-box;
-   box-shadow: inset 0px 10px 5px #00000029;
    font-size: 28px;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   -ms-border-radius: 50%;
-   -o-border-radius: 50%;
+   color: var(--white);
 }
 
 .contact-data .contact-form {
    height: 100%;
-   background: var(--dark-gray);
+   background: #FBFBFB;
    border-radius: 18px;
    padding: 4rem 1.5rem;
    -webkit-border-radius: 18px;
@@ -2919,6 +2946,9 @@ footer .copyrights img {
    -o-border-radius: 18px;
 }
 
+.contact-data .contact-form textarea.form-control {
+   border-radius: 5px;
+}
 
 
 .all .offer-badge {
@@ -3135,6 +3165,17 @@ footer .copyrights img {
       margin-top: -2px;
    }
 
+   .navbar-light .navbar-brand img {
+    width: 100px;
+   }
+   .breadcrumb-wrapper {
+      padding-block: 0rem 0.5rem;
+   }
+   
+   .breadcrumb {
+      padding: 2rem 0;
+   }
+
    .partners .card .card-img-top {
       aspect-ratio: 4 / 4;
    }
@@ -3197,17 +3238,16 @@ footer .copyrights img {
    .profile-data .favourite .card-img-top img {
       height: 100%;
    }
+
+   .profile-data .favourite .card {
+      flex-direction: row;
+   }
+   
 }
 
 
 @media (max-width: 578px) {
-   .navbar-light .navbar-brand img {
-      width: 100px;
-   }
 
-   .breadcrumb-wrapper .overlay {
-      padding-block: 5rem 0.5rem;
-   }
 
    /* .about-us .about-img {
       width: 100%;
@@ -3259,7 +3299,7 @@ footer .copyrights img {
       font-size: 1.5rem;
    }
 
-   .car-single .car-wrapper {
+   .stadium-single .stadium-wrapper {
       flex-wrap: wrap;
    }
 

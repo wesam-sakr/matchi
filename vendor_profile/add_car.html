@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AL WATANIA CAR</title>
+
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg" />
+
+    <!-- Bootstrap link  -->
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font awesom link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- owl-carousel link -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
+
+    <!-- select2 link -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+<body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light p-0 top-0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand m-0" href="../index.html">
+          <img src="../images/logo.svg" alt />
+        </a>
+        <div
+          class="collapse navbar-collapse justify-content-between align-items-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link"> الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a href="../about_us.html" class="nav-link">من نحن ؟</a>
+            </li>
+            <li class="nav-item">
+              <a href="../cars.html" class="nav-link">السيارات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../blogs.html" class="nav-link">المدونة</a>
+            </li>
+            <li class="nav-item">
+              <a href="../contact_us.html" class="nav-link">تواصل معنا</a>
+            </li>
+            <li class="nav-item">
+              <a href="../join_us.html" class="nav-link">تسجيل صاحب معرض</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav m-0">
+            <li class="nav-item lang">
+              <a href="#" class="nav-link" id="lang">English</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="../login.html" class="nav-link white-btn"> التسجيل </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==== start breadcrumb ==== -->
+    <section>
+      <nav
+        class="breadcrumb-wrapper"
+        aria-label="breadcrumb"
+        style="background: url('../images/bredcrumb.png')"
+      >
+        <div class="overlay">
+          <div class="container-fluid">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="../index.html">الرئيسية</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                الملف الشخصي
+              </li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- ==== end breadcrumb ==== -->
+
+    <!-- profile -->
+    <section class="profile py-5 mb-5">
+      <div class="container-fluid">
+        <div class="row">
+          <aside class="col-md-4 col-lg-3">
+            <div class="profile-nav">
+              <div class="profile-header d-md-none">
+                <h5>الملف الشخصي</h5>
+                <button class="btn-close"></button>
+              </div>
+              <!-- profile-picture -->
+              <form action="">
+                <div class="profile-pic position-relative">
+                  <img
+                    class="w-100"
+                    src="../images/avatar.png"
+                    alt=""
+                    id="photo"
+                  />
+                  <div class="profile-pic-icon">
+                    <i class="bi bi-camera-fill"></i>
+                  </div>
+                  <input
+                    type="file"
+                    id="file"
+                    name="photo_profile"
+                    accept="image/*"
+                  />
+                  <button type="submit" class="save_img">
+                    <i class="bi bi-check-lg"></i>
+                  </button>
+                </div>
+              </form>
+              <!-- user info -->
+              <div class="user_info">
+                <b>USERNAME</b>
+                <p class="mt-2">admin@gmail.com</p>
+              </div>
+              <!-- profile navigation -->
+              <ul class="nav w-100 flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="dashboard.html">
+                    <i class="bi bi-unlock2"></i>
+                    <span> لوحة التحكم </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="profile.html">
+                    <i class="bi bi-person"></i>
+                    <span> الملف الشخصي </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="changePass.html">
+                    <i class="bi bi-lock"></i>
+                    <span> كلمة المرور </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="vendor_cars.html">
+                    <i class="bi bi-car-front-fill"></i>
+                    <span> السيارات </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="add_car.html">
+                    <i class="bi bi-plus-lg"></i>
+                    <span> إضافة سيارة </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <form action="">
+                    <button class="logout nav-link">تسجيل خروج</button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <main class="col col-md-8 col-lg-9">
+            <!-- action : open profile nav @ sm media -->
+            <button id="profile_nav" class="d-md-none">
+              <p class="fs-6">الملف الشخصي</p>
+              <i class="bi bi-sliders fs-5"></i>
+            </button>
+            <!-- end -->
+            <div class="profile-data py-4">
+              <h2 class="fs-5 fw-bold mb-4">إضافة سيارة</h2>
+              <form action="" method="post">
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="اسم السيارة"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <select name="" id="" class="form-select">
+                      <option value="" hidden>النوع</option>
+                      <option value="">النوع</option>
+                      <option value="">النوع</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="الموديل"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="اللون"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="عدد الكيلومترات"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="نوع الوقود"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="ناقل الحركة"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="سعة المحرك"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      name="name"
+                      value=""
+                      type="text"
+                      placeholder="السعر"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <select name="" id="" class="form-select">
+                      <option value="" hidden>هل تقبل التمويل؟</option>
+                      <option value="">نعم</option>
+                      <option value="">لا</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <textarea
+                      name=""
+                      class="form-control"
+                      id=""
+                      placeholder="تفاصيل السيارة"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="upload-wrapper mb-3">
+                      <div class="upload__box">
+                        <div class="upload__btn-box">
+                          <button
+                            type="button"
+                            class="upload__btn col-lg-3 col-6 d-inline-flex flex-column gap-3"
+                          >
+                            <h5 class="fw-normal fs-6 upload__box_title">
+                              صور السيارة
+                            </h5>
+                            <i class="bi bi-camera fs-2"></i>
+
+                            <input
+                              type="file"
+                              accept="images/*"
+                              name="document[]"
+                              multiple=""
+                              data-max_length="20"
+                              class="upload__inputfile"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          class="upload__img-wrap row g-3 row-cols-lg-5"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button
+                    type="submit"
+                    class="main-outline-btn brdrt w-100 mt-3"
+                  >
+                    إضافة
+                  </button>
+                </div>
+              </form>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- النشرة البريدية -->
+    <section class="subscribe">
+      <div class="send-email">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-6 col-lg-5 mb-4 mb-lg-0">
+            <div class="d-flex flex-column gap-2 fs-4 fw-semibold">
+              <span> هل أنــــت مستعـــــــد للبـــدء؟</span>
+              <span> اشترك في النشرة البريدية لدينا </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <div class="send-email-box">
+              <input type="text" placeholder="اكتب بريدك الالكترونى" />
+              <button><i class="bi bi-arrow-up-left"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="../#" id="scroll-top">
+      <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="logo-wrapper">
+          <div></div>
+          <img src="../images/logo.svg" alt />
+          <div></div>
+        </div>
+        <div
+          class="d-flex flex-wrap gap-3 justify-content-md-between justify-content-center py-3 mb-3"
+        >
+          <ul class="nav justify-content-md-start justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >الرئيسية</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">من نحن؟</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../cars.html">السيارات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../blog.html">المدونة</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact_us.html">تواصل معنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../join_us.html">تسجيل صاحب معرض</a>
+            </li>
+          </ul>
+          <nav aria-label="Social Media Links">
+            <ul class="social-icons">
+              <li>
+                <a
+                  href="../"
+                  target="_blank"
+                  aria-label="Visit our Instagram page"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../"
+                  target="_blank"
+                  aria-label="Visit our LinkedIn page"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../"
+                  target="_blank"
+                  aria-label="Visit our Twitter page"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../"
+                  target="_blank"
+                  aria-label="Visit our Facebook page"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="copyrights">
+          <div
+            class="d-flex flex-wrap gap-3 w-100 align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="d-flex gap-2">
+              <a href="../terms.html">الشروط والأحكام </a>
+              <span>|</span>
+              <a href="../policy.html">سياسة الخصوصية</a>
+            </div>
+            <div>
+              <a
+                href="../https://smartvision4p.com"
+                class="link"
+                target="_blank"
+              >
+              </a>
+              <span>كل الحقوق محفوظة لشركة سمارت فيجن</span>
+              <img src="../images/smart-logo.svg" alt="شركة سمارت فيجن" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Financing request modal -->
+    <div
+      class="modal fade"
+      id="financingRequest_modal"
+      tabindex="-1"
+      aria-labelledby="financingRequest_modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="financingRequest_modalLabel">
+              قدّم طلبك لتمويل السيارة الآن
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الاسم الكامل"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="رقم الهوية / الإقامة"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الحالة الوظيفية (موظف / متقاعد / غير موظف)"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="جهة العمل (اختياري)"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الراتب الشهري"
+                />
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="المدينة" />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="رقم الجوال"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <button type="button" class="main-outline-btn brdrt m-0">
+              ارسال
+              <i class="bi bi-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financing calculator modal -->
+    <div
+      class="modal fade"
+      id="financingCalculator_modal"
+      tabindex="-1"
+      aria-labelledby="financingCalculator_modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="financingCalculator_modalLabel">
+              احسب تمويلك بسهولة
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="سعر السيارة"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الدفعة الأولى (لا تتعدى نسبة 50%)"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الاسم الكامل"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الدفعة الأخيرة (لا تتعدى نسبة 45%)"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="مدة التمويل"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <button type="button" class="main-outline-btn brdrt m-0">
+              ارسال
+              <i class="bi bi-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery script -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- owl-carousel script -->
+    <script src="../js/owl.carousel.min.js"></script>
+    
+    <!-- select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
