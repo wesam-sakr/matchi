@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AL WATANIA CAR</title>
+    <title>Matchi</title>
 
-    <link rel="icon" type="image/x-icon" href="../images/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="../images/f_logo.png" />
 
     <!-- Bootstrap link  -->
-    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap.rtl.min.css"
+      id="bootstrap-style"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
@@ -21,8 +25,8 @@
     <!-- font awesom link  -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -31,89 +35,162 @@
     <link rel="stylesheet" href="../css/owl.carousel.min.css" />
     <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
 
-    <!-- select2 link -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/animate.min.css" />
 
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-<body>
 
+  <body class="">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light p-0 top-0">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand m-0" href="../index.html">
-          <img src="../images/logo.svg" alt />
-        </a>
-        <div
-          class="collapse navbar-collapse justify-content-between align-items-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="../index.html" class="nav-link"> الرئيسية</a>
-            </li>
-            <li class="nav-item">
-              <a href="../about_us.html" class="nav-link">من نحن ؟</a>
-            </li>
-            <li class="nav-item">
-              <a href="../cars.html" class="nav-link">السيارات</a>
-            </li>
-            <li class="nav-item">
-              <a href="../blogs.html" class="nav-link">المدونة</a>
-            </li>
-            <li class="nav-item">
-              <a href="../contact_us.html" class="nav-link">تواصل معنا</a>
-            </li>
-            <li class="nav-item">
-              <a href="../join_us.html" class="nav-link">تسجيل صاحب معرض</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav m-0">
-            <li class="nav-item lang">
-              <a href="#" class="nav-link" id="lang">English</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="../login.html" class="nav-link white-btn"> التسجيل </a>
-            </li>
-          </ul>
+      <nav class="navbar top-nav p-0" data-aos="fade-right">
+        <div class="container-fluid">
+          <div
+            class="helper-links w-100 d-flex align-items-center justify-content-between py-2"
+          >
+            <ul class="helper-pages m-0 d-flex align-items-center">
+              <li class="d-block">
+                <a
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  aria-label=" الذهاب إلى التسجيل "
+                >
+                  <div class="auth-icon">
+                    <i class="bi bi-person"></i>
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="d-md-block d-none">
+                <a href="policy.html" aria-label="الذهاب إلى سياسة الخصوصية">
+                  <span>سياسة الخصوصية</span>
+                </a>
+              </li>
+              <li class="d-md-block d-none">
+                <a href="terms.html" aria-label="الذهاب إلى  ">
+                  <span>الشروط والأحكام</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="m-0 d-flex gap-4 align-items-center">
+              <li>
+                <!--=== Dark Mode Toggle Button ===-->
+                <div class="theme-toggle">
+                  <input
+                    id="toggleBtn"
+                    type="checkbox"
+                    class="d-none"
+                    aria-label="تبديل الثيم"
+                  />
+                  <label
+                    for="toggleBtn"
+                    class="switch"
+                    role="button"
+                    aria-pressed="false"
+                    tabindex="0"
+                  >
+                    <i id="themeIcon" class="bi bi-brightness-high fs-5"></i>
+                  </label>
+                </div>
+                <!--=== End===-->
+              </li>
+              <li>
+                <a href="#" id="lang" aria-label="تغيير اللغة إلى الإنجليزية">
+                  <span id="lang-text">English</span>
+                  <i class="bi bi-globe"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav
+        id="mainNav"
+        class="navbar main-nav navbar-expand-lg navbar-light p-0 pt-2 top-0"
+        data-aos="fade-left"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand m-0" href="../index.html">
+            <img src="../images/logo.png" alt />
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link custom-link active">
+                  <i class="fa-regular fa-house"></i>
+                  <span class="nav-text">الرئيسية</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../about_us.html" class="nav-link">من نحن ؟</a>
+              </li>
+              <li class="nav-item">
+                <a href="../stadiums.html" class="nav-link">الملاعب</a>
+              </li>
+              <li class="nav-item">
+                <a href="../blogs.html" class="nav-link">المدونة</a>
+              </li>
+              <li class="nav-item">
+                <a href="../contact_us.html" class="nav-link">تواصل معنا</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav m-0">
+              <li class="nav-item">
+                <a
+                  role="button"
+                  data-bs-target="#joinUsModal"
+                  data-bs-toggle="modal"
+                  class="nav-link white-btn px-3"
+                >
+                  <small> انضم كصاحب ملعب </small>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
-    <!-- ==== start breadcrumb ==== -->
-    <section>
-      <nav
-        class="breadcrumb-wrapper"
-        aria-label="breadcrumb"
-        style="background: url('../images/bredcrumb.png')"
-      >
-        <div class="overlay">
-          <div class="container-fluid">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="../index.html">الرئيسية</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                الملف الشخصي
-              </li>
-            </ol>
-          </div>
-        </div>
-      </nav>
+    <section class="breadcrumb-wrapper" aria-label="breadcrumb">
+      <div class="container-fluid">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item">
+            <a href="../index.html"> الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            الملف الشخصي
+          </li>
+        </ol>
+      </div>
     </section>
-    <!-- ==== end breadcrumb ==== -->
 
     <!-- profile -->
     <section class="profile py-5 mb-5">
@@ -185,16 +262,16 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="vendor_cars.html">
+                  <a class="nav-link" href="vendor_reservations.html">
                     <i class="bi bi-car-front-fill"></i>
-                    <span> السيارات </span>
+                    <span> الحجوزات </span>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="add_car.html">
-                    <i class="bi bi-plus-lg"></i>
-                    <span> إضافة سيارة </span>
+                  <a class="nav-link" href="stadium_info.html">
+                    <i class="bi bi-info-circle"></i>
+                    <span> معلومات الملعب </span>
                   </a>
                 </li>
 
@@ -289,69 +366,91 @@
     </section>
 
     <!-- النشرة البريدية -->
-    <section class="subscribe">
-      <div class="send-email">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-lg-5 mb-4 mb-lg-0">
-            <div class="d-flex flex-column gap-2 fs-4 fw-semibold">
-              <span> هل أنــــت مستعـــــــد للبـــدء؟</span>
-              <span> اشترك في النشرة البريدية لدينا </span>
+    <section class="subscribe main-bg py-5">
+      <div class="container-fluid py-4">
+        <div class="send-email">
+          <div
+            class="row align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="col-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+              <div class="d-flex flex-column gap-4 fw-semibold">
+                <span class="text-md-start fs-4"
+                  >ابدأ رحلتك الرياضية مع ماتشي</span
+                >
+                <a href="" class="white-btn py-3 rounded-pill">
+                  <span class="px-5">ابدأ الآن</span>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-5">
-            <div class="send-email-box">
-              <input type="text" placeholder="اكتب بريدك الالكترونى" />
-              <button><i class="bi bi-arrow-up-left"></i></button>
+            <div class="col-12 col-lg-5" data-aos="fade-left">
+              <div
+                class="d-flex align-items-center gap-2 fs-4 fw-semibold mb-4"
+              >
+                <span> اشترك في النشرة البريدية لدينا </span>
+                <i class="fa-regular fa-hand-point-right"></i>
+              </div>
+              <div class="send-email-box">
+                <input type="text" placeholder="اكتب بريدك الالكترونى" />
+                <button><i class="bi bi-arrow-up-left"></i></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <a href="../#" id="scroll-top">
-      <i class="bi bi-chevron-double-up"></i>
+    <a href="#" aria-label="الذهاب للأعلى" id="scrollUp">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+    <a
+      href="https://api.whatsapp.com/send?phone="
+      target="_blank"
+      aria-label="تواصل معنا عن الواتساب"
+      id="whatsapp"
+    >
+      <i class="bi bi-whatsapp"></i>
     </a>
 
     <footer>
       <div class="container-fluid">
         <div class="logo-wrapper">
-          <div></div>
-          <img src="../images/logo.svg" alt />
-          <div></div>
+          <div data-aos="fade-left" class="aos-init aos-animate"></div>
+          <img
+            src="../images/f_logo.png"
+            alt=""
+            data-aos="zoom-in"
+            class="aos-init aos-animate"
+          />
+          <div data-aos="fade-right" class="aos-init aos-animate"></div>
         </div>
         <div
           class="d-flex flex-wrap gap-3 justify-content-md-between justify-content-center py-3 mb-3"
         >
           <ul class="nav justify-content-md-start justify-content-center">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../index.html"
+              <a class="nav-link active" aria-current="page" href="index.html"
                 >الرئيسية</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about.html">من نحن؟</a>
+              <a class="nav-link" href="about.html">من نحن؟</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../cars.html">السيارات</a>
+              <a class="nav-link" href="stadiums.html">الملاعب</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../blog.html">المدونة</a>
+              <a class="nav-link" href="blogs.html">المدونة</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../contact_us.html">تواصل معنا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../join_us.html">تسجيل صاحب معرض</a>
+              <a class="nav-link" href="contact_us.html">تواصل معنا</a>
             </li>
           </ul>
+
           <nav aria-label="Social Media Links">
             <ul class="social-icons">
               <li>
                 <a
-                  href="../"
+                  href=""
                   target="_blank"
                   aria-label="Visit our Instagram page"
                 >
@@ -359,29 +458,17 @@
                 </a>
               </li>
               <li>
-                <a
-                  href="../"
-                  target="_blank"
-                  aria-label="Visit our LinkedIn page"
-                >
+                <a href="" target="_blank" aria-label="Visit our LinkedIn page">
                   <i class="fa-brands fa-linkedin-in"></i>
                 </a>
               </li>
               <li>
-                <a
-                  href="../"
-                  target="_blank"
-                  aria-label="Visit our Twitter page"
-                >
+                <a href="" target="_blank" aria-label="Visit our Twitter page">
                   <i class="fa-brands fa-x-twitter"></i>
                 </a>
               </li>
               <li>
-                <a
-                  href="../"
-                  target="_blank"
-                  aria-label="Visit our Facebook page"
-                >
+                <a href="" target="_blank" aria-label="Visit our Facebook page">
                   <i class="fa-brands fa-facebook-f"></i>
                 </a>
               </li>
@@ -393,39 +480,32 @@
           <div
             class="d-flex flex-wrap gap-3 w-100 align-items-center justify-content-md-between justify-content-center"
           >
-            <div class="d-flex gap-2">
-              <a href="../terms.html">الشروط والأحكام </a>
-              <span>|</span>
-              <a href="../policy.html">سياسة الخصوصية</a>
+            <div class="d-flex gap-4">
+              <a href="">سياسة الخصوصية</a>
+              <a href="">الشروط والأحكام </a>
             </div>
             <div>
-              <a
-                href="../https://smartvision4p.com"
-                class="link"
-                target="_blank"
-              >
-              </a>
-              <span>كل الحقوق محفوظة لشركة سمارت فيجن</span>
-              <img src="../images/smart-logo.svg" alt="شركة سمارت فيجن" />
+              <span>جميع الحقوق محفوظة لماتشي</span>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Financing request modal -->
+    <!-- login modal -->
     <div
-      class="modal fade"
-      id="financingRequest_modal"
+      class="modal"
+      id="loginModal"
       tabindex="-1"
-      aria-labelledby="financingRequest_modalLabel"
-      aria-hidden="true"
+      aria-labelledby="loginModalLabel"
+      aria-modal="true"
+      role="dialog"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="financingRequest_modalLabel">
-              قدّم طلبك لتمويل السيارة الآن
+            <h1 class="modal-title text-center main fs-4" id="loginModalLabel">
+              تسجيل الدخول
             </h1>
             <button
               type="button"
@@ -435,84 +515,93 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الاسم الكامل"
-                />
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الجوال"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="رقم الهوية / الإقامة"
-                />
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
+                <div>
+                  <a
+                    role="button"
+                    data-bs-target="#forgotPassModal"
+                    data-bs-toggle="modal"
+                    class="forgot text-decoration-underline"
+                  >
+                    نسيت كلمة المرور
+                  </a>
+                </div>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الحالة الوظيفية (موظف / متقاعد / غير موظف)"
-                />
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-login-form">
+                    التسجيل
+                  </button>
+                </div>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="جهة العمل (اختياري)"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الراتب الشهري"
-                />
-              </div>
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="المدينة" />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="رقم الجوال"
-                />
-              </div>
-              <div class="col-md-6">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="البريد الإلكتروني"
-                />
+              <div class="col-12 text-center">
+                <p class="login_replace text-center">
+                  ليس لديك حساب ؟
+                  <a
+                    role="button"
+                    data-bs-target="#registerModal"
+                    data-bs-toggle="modal"
+                  >
+                    <span class="main">إنشاء حساب جديد</span>
+                  </a>
+                </p>
               </div>
             </div>
-          </div>
-          <div class="modal-footer justify-content-start">
-            <button type="button" class="main-outline-btn brdrt m-0">
-              ارسال
-              <i class="bi bi-arrow-left"></i>
-            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Financing calculator modal -->
+    <!-- register modal -->
     <div
-      class="modal fade"
-      id="financingCalculator_modal"
+      class="modal"
+      id="registerModal"
       tabindex="-1"
-      aria-labelledby="financingCalculator_modalLabel"
-      aria-hidden="true"
+      aria-labelledby="registerModalLabel"
+      aria-modal="true"
+      role="dialog"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="financingCalculator_modalLabel">
-              احسب تمويلك بسهولة
+            <h1
+              class="modal-title text-center main fs-4"
+              id="registerModalLabel"
+            >
+              إنشاء حساب جديد
             </h1>
             <button
               type="button"
@@ -522,49 +611,454 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="سعر السيارة"
-                />
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="الاسم "
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الدفعة الأولى (لا تتعدى نسبة 50%)"
-                />
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الهاتف"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الاسم الكامل"
-                />
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="email"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="البريد الإلكتروني"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg email-error"></small>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الدفعة الأخيرة (لا تتعدى نسبة 45%)"
-                />
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                    title="show pass"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="مدة التمويل"
-                />
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="تأكيد كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text bg-transparent pass"
+                    title="show pass"
+                    aria-label="اظهار كلمة المرور"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+                <small
+                  class="text-danger error-msg password_confirmation-error"
+                ></small>
+              </div>
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <p class="login_replace text-center">
+                  هل لديك حساب ؟
+                  <a
+                    role="button"
+                    data-bs-target="#loginModal"
+                    data-bs-toggle="modal"
+                  >
+                    <span class="main">تسجيل الدخول</span>
+                  </a>
+                </p>
               </div>
             </div>
           </div>
-          <div class="modal-footer justify-content-start">
-            <button type="button" class="main-outline-btn brdrt m-0">
-              ارسال
-              <i class="bi bi-arrow-left"></i>
-            </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- forgot password -->
+    <div
+      class="modal"
+      id="forgotPassModal"
+      tabindex="-1"
+      aria-labelledby="forgotPassModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="forgotPassModalLabel"
+            >
+              نسيت كلمة المرور
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    class="form-control"
+                    placeholder="رقم الجوال"
+                    required=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button
+                    type="button"
+                    class="main-btn w-100 send-login-form"
+                    data-bs-target="#OTP_Modal"
+                    data-bs-toggle="modal"
+                  >
+                    إرسال رابط التحقق
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- otp password -->
+    <div
+      class="modal"
+      id="OTP_Modal"
+      tabindex="-1"
+      aria-labelledby="OTP_ModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-center main fs-4" id="OTP_ModalLabel">
+              رمز التحقق
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div id="verification-input">
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                  <input
+                    type="text"
+                    name="otp[]"
+                    maxlength="1"
+                    size="1"
+                    min="0"
+                    max="9"
+                    pattern="[0-9]{1}"
+                  />
+                </div>
+                <small class="text-danger error-msg code-error"></small>
+              </div>
+
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button
+                    type="button"
+                    class="main-btn w-100 send-code-btn"
+                    data-bs-target="#changePassModal"
+                    data-bs-toggle="modal"
+                  >
+                    تأكيد الكود
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- changePass modal -->
+    <div
+      class="modal"
+      id="changePassModal"
+      tabindex="-1"
+      aria-labelledby="changePassModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title text-center main fs-4"
+              id="changePassModalLabel"
+            >
+              تغيير كلمة المرور
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text pass bg-transparent"
+                    id="basic-addon2"
+                    title="show pass"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+
+                <small class="text-danger password"></small>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="تأكيد كلمة المرور"
+                    class="form-control"
+                  />
+                  <button
+                    type="button"
+                    class="input-group-text bg-transparent pass"
+                    title="show pass"
+                    aria-label="اظهار كلمة المرور"
+                  >
+                    <i class="bi bi-lock"></i>
+                  </button>
+                </div>
+                <small
+                  class="text-danger error-msg password_confirmation-error"
+                ></small>
+              </div>
+              <div class="col-12">
+                <div class="loading-indicator">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    تغيير
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- join us modal -->
+    <div
+      class="modal"
+      id="joinUsModal"
+      tabindex="-1"
+      aria-labelledby="joinUsModalLabel"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-center main fs-4" id="joinUsModalLabel">
+              انضم كصاحب ملعب
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="الاسم الكامل"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"> +966 </span>
+                  <input
+                    type="text"
+                    name="mobile"
+                    value=""
+                    class="form-control"
+                    placeholder="رقم الهاتف"
+                    aria-describedby="phone_num"
+                  />
+                </div>
+                <small class="text-danger mobile"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="email"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="البريد الإلكتروني"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg email-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="اسم الملعب"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    aria-label=""
+                    placeholder="نوع الرياضة المتوفرة"
+                    aria-describedby=""
+                  />
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <select name="" id="" class="form-select">
+                    <option value=" " hidden>المدينة / الموقع</option>
+                  </select>
+                </div>
+                <small class="text-danger error-msg name-error"></small>
+              </div>
+              <div class="col-md-4">
+                <div class="loading-indicator mt-3">
+                  <p style="display: none">Loading...</p>
+                  <button type="submit" class="main-btn w-100 send-form">
+                    انضمام
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -578,9 +1072,20 @@
 
     <!-- owl-carousel script -->
     <script src="../js/owl.carousel.min.js"></script>
-    
+
     <!-- select2 script -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- custom js file link  -->
     <script src="../js/script.js"></script>

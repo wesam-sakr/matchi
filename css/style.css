@@ -2515,16 +2515,33 @@ footer .copyrights img {
    padding-top: 1rem;
    justify-content: center;
 }
+body.dark-theme .profile-nav {
+   background: #1f3f29;
+}
 
 
 .profile-data {
    height: auto;
-   background: #FBFBFB;
-   border-radius: 8px;
+   background: #F6F6F6;
+   border-radius: 24px;
    padding: 5rem 3rem;
+   -webkit-border-radius: 24px;
+   -moz-border-radius: 24px;
+   -ms-border-radius: 24px;
+   -o-border-radius: 24px;
 }
-
-
+body.dark-theme .profile-data {
+   background: #213d2a;
+}
+body.dark-theme .profile-data .filter-orders a {
+   color: var(--white);
+}
+body.dark-theme .profile .main{
+   color: var(--white) !important;
+}
+body.dark-theme .profile-data th,body.dark-theme  .profile-data td {
+   color: var(--white) !important;
+}
 .profile-data .favourite .heart {
    position: relative;
    z-index: 99;
@@ -2609,16 +2626,24 @@ footer .copyrights img {
 .profile-data th,
 .profile-data td {
    background-color: transparent !important;
-   color: var(--white);
    padding-block: .85rem;
-   border-bottom: 1px solid rgba(var(--whiteOp), 0.5);
+   border-bottom: 1px solid rgba(var(--blackOp), 0.05);
+   text-align: center;
+}
+.profile-data th {
+   color: var(--main);
+   border-bottom: 1px solid rgba(var(--blackOp), 0.25);
 }
 
 .profile-data .filter-orders a.active {
    background-color: var(--secondary);
    border-color: var(--secondary);
+   color: #404040 !important;
 }
-
+.statistics .profile-data{
+   background: var(--main);
+   color: var(--white);
+}
 .car_action .white-btn {
    position: relative;
    min-width: unset !important;
@@ -3291,8 +3316,8 @@ footer .copyrights img {
    }
 
 
-   .login-form {
-      width: 100%;
+   .profile-data .filter-orders a {
+      padding: .5rem .8rem;
    }
 
    .section-title {

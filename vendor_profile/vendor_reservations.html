@@ -240,11 +240,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="profile.html"
-                  >
+                  <a class="nav-link" aria-current="page" href="profile.html">
                     <i class="bi bi-person"></i>
                     <span> الملف الشخصي </span>
                   </a>
@@ -258,7 +254,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="vendor_reservations.html">
+                  <a class="nav-link active" href="vendor_reservations.html">
                     <i class="bi bi-car-front-fill"></i>
                     <span> الحجوزات </span>
                   </a>
@@ -279,7 +275,6 @@
               </ul>
             </div>
           </aside>
-
           <main class="col col-md-8 col-lg-9">
             <!-- action : open profile nav @ sm media -->
             <button id="profile_nav" class="d-md-none">
@@ -287,53 +282,62 @@
               <i class="bi bi-sliders fs-5"></i>
             </button>
             <!-- end -->
-            <div class="profile-data">
-              <h2 class="fs-5 fw-bold mb-4">البيانات الأساسية</h2>
-              <form action="" method="post">
-                <div class="row gy-4 mb-4">
-                  <!-- الاسم -->
-                  <div class="col-12">
-                    <input
-                      class="form-control"
-                      name="name"
-                      value=""
-                      type="text"
-                      placeholder="الإسم يكتب هنا"
-                    />
-                  </div>
-                  <!-- البريد الالكتروني -->
-                  <div class="col-12">
-                    <input
-                      class="form-control"
-                      name="email"
-                      value=""
-                      type="email"
-                      placeholder="البريد الإلكتروني يكتب هنا"
-                    />
-                  </div>
-                  <!-- رقم الجوال -->
-                  <div class="col-12">
-                    <input
-                      class="form-control"
-                      name="phone"
-                      value=""
-                      type="tel"
-                      placeholder="رقم الجوال يكتب هنا"
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <button
-                      type="submit"
-                      class="main-outline-btn brdrt w-100 mt-3"
-                    >
-                      حفظ وتعديل
-                    </button>
-                  </div>
+
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h2 class="fs-5 main">أحدث الحجوزات</h2>
+              <form action="">
+                <div class="car_filters d-flex align-items-center gap-3">
+                  <select name="" id="" class="form-select form-control">
+                    <option value="" hidden="">الحالة</option>
+                    <option value="">07-2025</option>
+                  </select>
                 </div>
               </form>
             </div>
+            <div class="profile-data p-3">
+              <div class="table-responsive">
+                <table class="table table-hover m-0">
+                  <thead>
+                    <tr>
+                      <th>اللاعب</th>
+                      <th>الملعب</th>
+                      <th>موعد الحجز</th>
+                      <th>المدة</th>
+                      <th>السعر</th>
+                      <th>الحالة</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        اسم اللاعب
+                      </td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>كرة قدم</span>
+                          <span>court 3</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>25/5/2025</span>
+                          <span>1:00 صباحًا</span>
+                        </div>
+                      </td>
+                      <td>ساعة ونصف</td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span> 40 ريال عماني </span>
+                          <span>طريقة الدفع</span>
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </main>
-          
         </div>
       </div>
     </section>
