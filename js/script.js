@@ -436,6 +436,7 @@ $(document).ready(function () {
   // stadium slider carousel
   $(".slider .owl-carousel").owlCarousel({
     nav: true,
+    navText:['<i class="fa-solid fa-chevron-right"></i>','<i class="fa-solid fa-chevron-left"></i>'],
     dots: false,
     loop: false,
     margin: 1,
@@ -578,6 +579,8 @@ $(document).ready(function () {
     });
   }
 
+  $('select').select2();
+  
   AOS.init({
     duration: 1000
   });
